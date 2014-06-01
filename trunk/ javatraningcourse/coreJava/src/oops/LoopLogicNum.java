@@ -2,6 +2,11 @@ package oops;
 
 import java.util.Scanner;
 
+/**
+ * 
+ * @author Chanda
+ *
+ */
 public class LoopLogicNum {
 
 	/**
