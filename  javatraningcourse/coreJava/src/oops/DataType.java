@@ -1,5 +1,7 @@
 package oops;
 
+import javax.print.attribute.IntegerSyntax;
+
 public class DataType {
 	
 	//int, long, float, double,  String[]
