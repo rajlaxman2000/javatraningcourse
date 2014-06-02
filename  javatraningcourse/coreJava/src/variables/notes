@@ -1,0 +1,7 @@
+static variables,
+	There will be only one reference for that static variable across the referenced objects.
+static blocks,
+Static methods,
+static class 
+
+final 
