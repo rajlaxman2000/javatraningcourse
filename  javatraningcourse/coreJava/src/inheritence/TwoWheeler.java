@@ -9,6 +9,14 @@ public class TwoWheeler extends GenericVechile{
 	public TwoWheeler(){
 		noOfWheels=2;
 		seatingCapacity = 2;
+	}
+
+
+
+	@Override
+	public void findPrice() {
+		// TODO Auto-generated method stub
+		
 	}	
 
 }

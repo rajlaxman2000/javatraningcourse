@@ -25,6 +25,34 @@ public class VehicleTest {
 		heroHondaCbz.noOfLights=2;
 		
 		heroHondaCbz.milage=50;
+		
+		Car car = new Car();
+		
+		Truck truck = new Truck();
+		
+		FourWheeler fourWheeler ;
+		
+		fourWheeler	= car ;			
+			
+		fourWheeler.methodVechile();
+			 
+		fourWheeler= truck;
+			 
+		fourWheeler.methodVechile();
+		
+		FourWheeler secondFourWheeler = new FourWheeler();
+		
+		car = (Car) secondFourWheeler;
+		
+		
+		 
+			
+			
+		
+		
+		
+		
+		
 
 	}
 
