@@ -2,6 +2,9 @@ package defaultmethods;
 
 public class TypeCastEx {
 
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args){
 		Parent parent = new Parent();
 		
@@ -15,7 +18,7 @@ public class TypeCastEx {
 		parent = child;
 		
 		Child child2 = (Child)parent;
-		Parent parent2=(Parent)child;
+		Parent parent2=(Parent)child;// y can it be done ?
 		child2.printChildMethod();
 		parent2.printGenaralMethod();
 		
