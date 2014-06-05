@@ -15,7 +15,10 @@ public class TypeCastEx {
 		parent = child;
 		
 		Child child2 = (Child)parent;
+		Parent parent2=(Parent)child;
 		child2.printChildMethod();
+		parent2.printGenaralMethod();
+		
 		
 	}
 }
