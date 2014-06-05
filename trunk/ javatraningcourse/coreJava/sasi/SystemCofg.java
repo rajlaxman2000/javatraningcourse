@@ -1,4 +1,3 @@
-package InheritanceConcept;
 
 public abstract class SystemCofg {
 	public int no_processors;
