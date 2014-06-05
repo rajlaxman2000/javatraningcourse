@@ -1,4 +1,3 @@
-package InheritanceConcept;
 
 public class NotebookConf extends SystemCofg{
 	public int color;
