@@ -12,11 +12,11 @@ public class Student {
 	}
 	
 	public String toString(){
-		return "name="+this.name+"; No:"+this.no;
+		return "name="+name+"; No:"+this.no;
 	}
 	
 	public int hashCode(){		
-		return (this.name).hashCode()+this.no;
+		return (name).hashCode()+no;// what if when both the variables are integers
 	}
 	
 	//Super :: Object
