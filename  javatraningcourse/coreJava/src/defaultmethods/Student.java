@@ -17,7 +17,7 @@ public class Student {
 	
 	public int hashCode(){		
 		return (name).hashCode()+no;// what if when both the variables are integers
-	}
+	}								// variable.hashcode() giving the value of variable.
 	
 	//Super :: Object
 	
