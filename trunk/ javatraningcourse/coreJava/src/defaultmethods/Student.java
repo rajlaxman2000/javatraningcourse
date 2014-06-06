@@ -6,6 +6,8 @@ public class Student {
 	
 	public int no;
 	
+	public Integer age;
+	
 	public Student(String name, int no){
 		this.name=name;
 		this.no=no;
@@ -16,7 +18,7 @@ public class Student {
 	}
 	
 	public int hashCode(){		
-		return (name).hashCode()+no;// what if when both the variables are integers
+		return name.hashCode() + no + age.hashCode();// what if when both the variables are integers
 	}								// variable.hashcode() giving the value of variable.
 	
 	//Super :: Object
@@ -27,6 +29,7 @@ public class Student {
 	 * u can't access its members with out type casting
 	 */
 	public boolean equals(Object obj){
+		
 		Student student = (Student)obj;
 		
 		if(student.name.equalsIgnoreCase(this.name)){
@@ -35,6 +38,12 @@ public class Student {
 		
 		return false;
 	}
+	
+	/* 
+	 * Interface Inheritence/Composiiton Inheritence
+	 * Implementation Inheritence 
+	 * 
+	 */
 	
 	
 
