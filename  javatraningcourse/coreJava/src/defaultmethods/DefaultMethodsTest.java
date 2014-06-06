@@ -1,6 +1,6 @@
 package defaultmethods;
 
-import java.io.ObjectInputStream.GetField;
+
 
 public class DefaultMethodsTest {
 	

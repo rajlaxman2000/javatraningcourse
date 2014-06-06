@@ -17,10 +17,19 @@ public class TypeCastEx {
 		
 		parent = child;
 		
+		
+		
 		Child child2 = (Child)parent;
+		
+		
+		
 		Parent parent2=(Parent)child;// y can it be done ?
+		
+		
+		
 		child2.printChildMethod();
-		parent2.printGenaralMethod();
+		
+		
 		
 		
 	}
