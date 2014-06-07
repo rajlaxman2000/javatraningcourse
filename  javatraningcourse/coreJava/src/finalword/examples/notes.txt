@@ -1,0 +1,3 @@
+static & final can be together for variables and methods
+
+but final & abstart can't be together for any thing bcz both have quite opposite rules and purpose 
