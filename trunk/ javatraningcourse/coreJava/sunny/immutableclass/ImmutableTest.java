@@ -6,7 +6,8 @@ public class ImmutableTest {
 		ImmutableClass obj=new ImmutableClass("sunny","sunny123@gmail.com");
 	System.out.println(obj.getName());
 	System.out.println(obj.getemail());
-		
+				
+	
 	}
 
 }

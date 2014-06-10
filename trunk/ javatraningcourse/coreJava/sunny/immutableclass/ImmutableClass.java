@@ -2,7 +2,7 @@ package immutableclass;
 
 public final class ImmutableClass {
 	
-	private final String name;
+	final private String name;
 	private final String email;
 	
 	public ImmutableClass(String name,String email){

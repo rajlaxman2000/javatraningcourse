@@ -10,18 +10,15 @@ package assignment;
 	public class Factorial {
 	
 	
-	long fact(long a)
-	{
+	long fact(long a){
 	if(a <= 1)
 	return 1;
-	else
-	{
+	else{
 	a= a*fact(a-1);
 	return a;
 	}
 	}
-	public static void main (String arr[]) throws IOException
-	{
+	public static void main (String arr[]) throws IOException{
 	System.out.println("Enter a number to find factorial");
 	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	int num = Integer.parseInt( br.readLine());
