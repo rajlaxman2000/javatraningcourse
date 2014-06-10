@@ -1,5 +1,7 @@
 package assignment;
-
+//this program to print sorting order of elements,duplicate values in array and
+//to count the duplicate value(how many times repeated)
+//in this program am unable to count duplicate value(how many times repeated) 
 import java.util.Arrays;
 import java.util.Scanner;
 
