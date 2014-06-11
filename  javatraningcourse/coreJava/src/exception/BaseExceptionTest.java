@@ -9,7 +9,7 @@ public class BaseExceptionTest {
 		if (a > 10)
 			throw new ArithmeticException();
 		}catch(Exception e){
-			throw new BaseException("Its mine I am modifying it"+e.getMessage());
+			throw new BaseException("Its mine I am modifying it **"+e.getMessage());
 		}
 		System.out.println("Normal exit");
 	}
@@ -21,7 +21,7 @@ public class BaseExceptionTest {
 			compute(20);
 		} catch (BaseException e) {
 			System.out.println("It did came here");
-			System.out.println("Caught " + e.getMessage());
+			System.out.println("**** Caught **** " + e.getMessage());
 		}
 	}
 
