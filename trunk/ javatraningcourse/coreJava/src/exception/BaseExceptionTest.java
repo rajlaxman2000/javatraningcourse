@@ -3,15 +3,19 @@ package exception;
 public class BaseExceptionTest {
 
 	static void compute(int a) throws BaseException {
+		
 		System.out.println("Called compute(" + a + ")");
-		try{
-		int x = 100/0;
-		if (a > 10)
-			throw new ArithmeticException();
+		
+		try{			
+			int x = 100/0;			
+			/*
+			if (a > 10)
+				throw new ArithmeticException();
+			*/
 		}catch(Exception e){
 			throw new BaseException("Its mine I am modifying it **"+e.getMessage());
 		}
-		System.out.println("Normal exit");
+		//System.out.println("Normal exit");
 	}
 
 	public static void main(String args[]) {
