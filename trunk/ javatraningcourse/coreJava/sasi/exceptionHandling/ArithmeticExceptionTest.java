@@ -1,18 +1,26 @@
 package exceptionHandling;
 
 public class ArithmeticExceptionTest {
+	
 	// public static void main(String[] args) throws ArithmeticException {
-	public void exe() {
-		// Exception ex = new Exception("Helllo Am Exception");
+	
+	
+	public void exe() throws MyOwnException{
+		
+		MyOwnException ex = new MyOwnException("Hello Am Exception");
 		int a = 10;
 		int b = 10;
 		int c = 20;
-		try {
+		/*
+		if(a-b!=0){
 			int d = c / (a - b);
-			// throw ex;
-		} catch (Exception e) {
-			System.out.println("Hell Is always goood" + e.getMessage());
-		}
+		}else{
+			throw ex;
+		}*/
+		
+		int d = c / (a - b);
+			
+		
 
 	}
 }
