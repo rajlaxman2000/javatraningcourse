@@ -31,7 +31,7 @@ public class ExceptionTest {
 		
 	}
 	
-	public float  devideMethod(int x, int y) throws Exception{
+	public float  devideMethod(int x, int y) throws ArithmeticException,Exception{
 		
 		float res=0;		
 		res = x/y;	
