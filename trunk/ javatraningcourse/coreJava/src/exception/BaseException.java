@@ -8,6 +8,10 @@ public class BaseException extends Exception {
 	BaseException(int a) {
 		detail = a;
 	}
+	
+	BaseException(String str) {
+		super(str);
+	}
 
 	public String toString() {
 		return "MyException[" + detail + "]";
@@ -15,7 +19,7 @@ public class BaseException extends Exception {
 	
 	public String getMessage(){
 		
-		return "Its mine";
+		return super.getMessage();
 	}
 
 }
