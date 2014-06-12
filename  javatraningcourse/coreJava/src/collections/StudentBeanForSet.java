@@ -10,7 +10,7 @@ public class StudentBeanForSet implements Comparable<StudentBeanForSet>{
 	
 	
 
-	@Override
+	
 	public int compareTo(StudentBeanForSet stdObj) {
 		int res = this.rollno - stdObj.getRollno();// TODO Auto-generated method stub
 		if(res>0)
