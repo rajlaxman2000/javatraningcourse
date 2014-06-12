@@ -2,6 +2,7 @@ package collections;
 
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.TreeSet;
 
@@ -63,6 +64,16 @@ public class SetTestExample {
 		
 		System.out.println("Printing the Linked Hash set which won't allow duplicates: \n Means this requires hash code and equals method on Bean and also comparable concept");		
 		System.out.println(studentTreeSet);
+		
+		System.out.println("Traversing through set by using iterator");
+		
+		Iterator<StudentBeanForSet> iterator = studentSet.iterator();
+		
+		while(iterator.hasNext()){
+			StudentBeanForSet student = (StudentBeanForSet)iterator.next();
+			System.out.println(student);
+			
+		}
 		//studentLinkedHashSet
 		//Collections.sort(studentLinkedHashSet);
 		

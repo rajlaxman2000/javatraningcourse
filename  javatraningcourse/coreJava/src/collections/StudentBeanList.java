@@ -8,6 +8,10 @@ public class StudentBeanList implements Comparable<StudentBeanList> {
 	
 	private String name;
 	
+	public String toString(){
+	return "No:: "+rollno+"; Class:: "+standard+"; Name:: "+name;	
+	}
+	
 	@Override
 	public int compareTo(StudentBeanList stdObj) {
 		int res = this.rollno - stdObj.getRollno();// TODO Auto-generated method stub

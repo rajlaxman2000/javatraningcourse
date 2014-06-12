@@ -3,6 +3,7 @@ package collections;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Iterator;
 import java.util.List;
 
 public class ArrayListSortExample {
@@ -53,6 +54,12 @@ public class ArrayListSortExample {
 			System.out.println("Student name ::"+student.getName());
 		}
 		
+		System.out.println("Traversing the List through iterator concept");
+		//Iterator iterator = arrayList.iterator(); iterator.hasNext();
+		for( Iterator<StudentBeanList> studentItr=students.iterator();studentItr.hasNext();){
+			StudentBeanList student = studentItr.next();
+			System.out.println(student);
+		}
 		
 
 	}
