@@ -11,7 +11,7 @@ import java.util.SortedSet;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
-public class HashMapEx {
+public class HashMapStringKeyEx {
 
 	/**
 	 * @param args
@@ -23,37 +23,37 @@ public class HashMapEx {
 		StudentBeanForMap std3 = new StudentBeanForMap(1,"Sunny",24);
 		StudentBeanForMap std4 = new StudentBeanForMap(186,"Karthik",25);
 		StudentBeanForMap std5 = new StudentBeanForMap(2008,"Chaitu",27);
-		StudentBeanForMap std6 = new StudentBeanForMap(1210,"Rajesh Reddy",27);
-		StudentBeanForMap std7 = new StudentBeanForMap(1210,"raghu Kumar",100);
-		Map<Integer, StudentBeanForMap> stdMap = new HashMap<Integer, StudentBeanForMap>(10); 
+		StudentBeanForMap std6 = new StudentBeanForMap(1210,"RAJESH",27);
+		//StudentBeanForMap std7 = new StudentBeanForMap(1210,"raghu Kumar",100);
+		Map<String, StudentBeanForMap> stdMap = new HashMap<String, StudentBeanForMap>(10); 
 		
-		stdMap.put(std1.getsNo(), std1);
-		stdMap.put(std2.getsNo(), std2);
-		stdMap.put(std3.getsNo(), std3);
-		stdMap.put(std4.getsNo(), std4);
-		stdMap.put(std5.getsNo(), std5);
-		stdMap.put(std6.getsNo(), std6);
-		stdMap.put(std7.getsNo(), std7);
+		stdMap.put(std1.getsName(), std1);
+		stdMap.put(std2.getsName(), std2);
+		stdMap.put(std3.getsName(), std3);
+		stdMap.put(std4.getsName(), std4);
+		stdMap.put(std5.getsName(), std5);
+		stdMap.put(std6.getsName(), std6);
+		//stdMap.put(std7.getsNo(), std7);
 		System.out.println("Normal Map");
 		System.out.println(stdMap);
 		System.out.println("*****************************************");
 		
 		//System.out.println(stdMap.get(104));
 		
-		Map<Integer, StudentBeanForMap>  linkedHasMap = new LinkedHashMap<Integer, StudentBeanForMap>();  
+		Map<String, StudentBeanForMap>  linkedHasMap = new LinkedHashMap<String, StudentBeanForMap>();  
 			
-		linkedHasMap.put(std1.getsNo(), std1);
-		linkedHasMap.put(std2.getsNo(), std2);
-		linkedHasMap.put(std3.getsNo(), std3);
-		linkedHasMap.put(std4.getsNo(), std4);
-		linkedHasMap.put(std5.getsNo(), std5);
-		linkedHasMap.put(std6.getsNo(), std6);
-		linkedHasMap.put(std7.getsNo(), std7);
+		linkedHasMap.put(std1.getsName(), std1);
+		linkedHasMap.put(std2.getsName(), std2);
+		linkedHasMap.put(std3.getsName(), std3);
+		linkedHasMap.put(std4.getsName(), std4);
+		linkedHasMap.put(std5.getsName(), std5);
+		linkedHasMap.put(std6.getsName(), std6);
+		//linkedHasMap.put(std7.getsName(), std7);
 		System.out.println("It is linked Hasp Map wich will preseve insertion order");
 		System.out.println(linkedHasMap);
 		System.out.println("*****************************************");
 		
-		SortedMap<Integer, StudentBeanForMap> treeMap = new TreeMap<Integer, StudentBeanForMap>();
+		SortedMap<String, StudentBeanForMap> treeMap = new TreeMap<String, StudentBeanForMap>();
 		treeMap.putAll(linkedHasMap);
 		
 		
