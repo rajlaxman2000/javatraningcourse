@@ -56,10 +56,15 @@ public class ArrayListSortExample {
 		
 		System.out.println("Traversing the List through iterator concept");
 		//Iterator iterator = arrayList.iterator(); iterator.hasNext();
+		
 		for( Iterator<StudentBeanList> studentItr=students.iterator();studentItr.hasNext();){
+			
 			StudentBeanList student = studentItr.next();
+			//studentItr.remove();
 			System.out.println(student);
 		}
+		
+		System.out.println("Seeing student size():: "+students.size());
 		
 
 	}
