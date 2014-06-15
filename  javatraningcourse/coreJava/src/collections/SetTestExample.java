@@ -55,6 +55,8 @@ public class SetTestExample {
 		System.out.println("Printing the Linked Hash set which won't allow duplicates: \n Means this requires hash code and equals method on Bean");
 		System.out.println(studentLinkedHashSet);
 		
+		
+		
 		TreeSet<StudentBeanForSet> studentTreeSet = new TreeSet<StudentBeanForSet>();
 		studentTreeSet.add(std1);
 		studentTreeSet.add(std2);
@@ -65,6 +67,7 @@ public class SetTestExample {
 		System.out.println("Printing the Linked Hash set which won't allow duplicates: \n Means this requires hash code and equals method on Bean and also comparable concept");		
 		System.out.println(studentTreeSet);
 		
+		/*
 		System.out.println("Traversing through set by using iterator");
 		
 		Iterator<StudentBeanForSet> iterator = studentSet.iterator();
@@ -73,7 +76,7 @@ public class SetTestExample {
 			StudentBeanForSet student = (StudentBeanForSet)iterator.next();
 			System.out.println(student);
 			
-		}
+		}*/
 		//studentLinkedHashSet
 		//Collections.sort(studentLinkedHashSet);
 		

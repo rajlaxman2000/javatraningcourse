@@ -8,11 +8,9 @@ public class StudentBeanForSet implements Comparable<StudentBeanForSet>{
 	
 	private String name;
 	
-	
-
-	
+		
 	public int compareTo(StudentBeanForSet stdObj) {
-		int res = this.rollno - stdObj.getRollno();// TODO Auto-generated method stub
+		int res = this.rollno - stdObj.getRollno();
 		if(res>0)
 			return 1;
 		else if(res<0)
