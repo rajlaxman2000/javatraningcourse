@@ -18,6 +18,14 @@ class Writer1 {
 			newFile = file.createNewFile(); // maybe create a file!
 			System.out.println(newFile); // already there?
 			System.out.println(file.exists()); // look again
+			// path and absolute path is giving the same value
+			/*
+			 * with getParent u will get complete qualified path path
+			 */
+			System.out.println(file.getPath());
+			System.out.println(file.getParentFile());
+			System.out.println(file.getParent());
+			System.out.println(file.toURI());
 		} catch (IOException e) {
 
 		}

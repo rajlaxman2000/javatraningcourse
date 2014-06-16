@@ -1,0 +1,11 @@
+1.	Protected display() method of Test class is overridden by Demo class with default 
+	(not specified at all) access. It raises compilation error. The subclass can have 
+	either same or stronger access like public or same protected. 
+	But, it cannot have default or private.
+
+2.	Why the methods of an interface should be overridden with public only?
+	The methods of an interface must be public, if not mentioned, takes by default as public. 
+	So, the subclass which implements the interface should override with the same specifier or more 
+	but not less. No stronger specifier than public exists in Java. 
+	For this, reason, all the methods of interface must be overridden with public only.
+
