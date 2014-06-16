@@ -7,12 +7,14 @@ public class Case2SubClass1 extends Case2Super1 {
 	public static void main(String[] args) {
 		
 			Case2Super1 s = new Case2SubClass1();// compilation error
-			try {
-				s.show();
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			
+				try {
+					s.show();
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			
 				
 	}
 

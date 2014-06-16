@@ -7,7 +7,8 @@ public class Case1SubClass extends Case1Super {
 		s.show();
 	}
 
-	public void show() throws IOException { // compilation error
+	/*public void show() throws IOException { // compilation error */
+	public void show() { 
 		System.out.println("parent class");
 	}
 }
