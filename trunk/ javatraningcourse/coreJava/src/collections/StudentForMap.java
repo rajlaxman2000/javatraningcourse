@@ -8,7 +8,11 @@ public class StudentForMap implements Comparable<StudentForMap> {
 
 	
 	public boolean equals(Object obj){
+		
+		
 		StudentForMap std = (StudentForMap)obj;
+		
+		std.getId();
 		if(	this.id == std.getId() && 
 					(this.name).equals(std.getName())	){
 			return true;
