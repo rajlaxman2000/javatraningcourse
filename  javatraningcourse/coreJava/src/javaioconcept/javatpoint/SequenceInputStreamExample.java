@@ -31,6 +31,7 @@ public class SequenceInputStreamExample {
 		FileInputStream fin1 = new FileInputStream("f1.txt");
 		FileInputStream fin2 = new FileInputStream("f2.txt");
 
+		
 		SequenceInputStream sis = new SequenceInputStream(fin1, fin2);
 		int i;
 		while ((i = sis.read()) != -1) {

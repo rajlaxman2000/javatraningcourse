@@ -24,7 +24,7 @@ public class ByteArrayOutputStreamExample {
 		FileOutputStream fout2 = new FileOutputStream("f2.txt");
 
 		ByteArrayOutputStream bout = new ByteArrayOutputStream();
-		bout.write(10098);
+		bout.write(67);
 
 		bout.writeTo(fout1);
 		bout.writeTo(fout2);

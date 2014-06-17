@@ -25,8 +25,11 @@ public class SourceJava {
 	public static void copyFile() throws Exception{
 		
 		FileInputStream fin=new FileInputStream("fileWrite2.txt");  
+		
 		FileOutputStream fout=new FileOutputStream("TargetJava.java");
-		int i=0;  
+		
+		int i=0;
+		
 		while((i=fin.read())!=-1){  
 			fout.write((byte)i);  
 		}  		  

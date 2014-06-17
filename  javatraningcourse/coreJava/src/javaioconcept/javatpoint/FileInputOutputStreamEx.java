@@ -9,6 +9,7 @@ import java.io.FileOutputStream;
 public class FileInputOutputStreamEx {
 
 	public static void main(String args[]) {
+		
 		FileInputOutputStreamEx outputInputStreamEx = new FileInputOutputStreamEx();
 
 		//outputInputStreamEx.fileWriteOutPutMethod();
@@ -19,13 +20,17 @@ public class FileInputOutputStreamEx {
 
 	public void fileWriteOutPutMethod() {
 		try {
+			
 			FileOutputStream fout = new FileOutputStream("abc.txt");
+			
 			String s = "Sachin Tendulkar is my favourite player";
 
 			byte b[] = s.getBytes();
+			
 			fout.write(b);
 
 			fout.close();
+			
 			System.out.println("success...");
 		} catch (Exception e) {
 			System.out.println(e);
@@ -37,7 +42,7 @@ public class FileInputOutputStreamEx {
 			FileInputStream fin = new FileInputStream("abc.txt");
 			int i;
 			while ((i = fin.read()) != -1)
-				System.out.println((char) i);
+				System.out.print((char)i);
 				//System.out.print((char) i); try this will realize the difference  between print and println 
 			fin.close();
 		} catch (Exception e) {
