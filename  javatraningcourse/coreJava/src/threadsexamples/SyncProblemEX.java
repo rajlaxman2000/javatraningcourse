@@ -3,7 +3,9 @@ package threadsexamples;
 public class SyncProblemEX {
 
 	public static void main(String args[]) {
-		CallMe target = new CallMe();
+		
+		CallMe target = new CallMe();	
+		
 		Caller ob1 = new Caller(target, "Hello");
 		Caller ob2 = new Caller(target, "Synchronized");
 		Caller ob3 = new Caller(target, "World");

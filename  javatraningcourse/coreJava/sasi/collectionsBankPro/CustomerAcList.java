@@ -131,7 +131,7 @@ public class CustomerAcList {
 					+ " last name: " + cus1.getLname() + " Acount Type: "
 					+ cus1.getAcType()+" Ac No: "+cus1.getAcNo());*/
 		Map<String, CustomarBeanList> keymp=new TreeMap<String, CustomarBeanList>();
-		keymp.put(cust1.toString(), cust1);
-		System.out.println(keymp);
+		/*keymp.put(cust1.toString(), cust1);
+		System.out.println(keymp);*/
 	}
 }
