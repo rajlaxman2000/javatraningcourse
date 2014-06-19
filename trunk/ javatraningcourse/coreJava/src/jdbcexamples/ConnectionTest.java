@@ -50,7 +50,7 @@ public class ConnectionTest {
 			// STEP 4: Execute a query
 			System.out.println("Creating statement...");
 			statement = connection.createStatement();
-			DatabaseMetaData metaData = connection.getMetaData();
+			//DatabaseMetaData metaData = connection.getMetaData();
 			
 			
 			String sql = "SELECT id, first_name, last_name, salary FROM employee";
