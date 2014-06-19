@@ -17,6 +17,9 @@
     <display-name>Sample</display-name>
     <servlet-name>Sample</servlet-name>
     <servlet-class>servlets.Sample</servlet-class>
+    <!--
+    <servlet-class>sasi.servlets.Sample</servlet-class> 
+     -->
   </servlet>
   
   <servlet-mapping>
