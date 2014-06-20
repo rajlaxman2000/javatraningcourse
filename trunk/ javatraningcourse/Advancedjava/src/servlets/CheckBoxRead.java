@@ -22,14 +22,17 @@ public class CheckBoxRead extends HttpServlet {
 		String docType = "<!doctype html public \"-//w3c//dtd html 4.0 transitional//en\">\n";
 		out.println(docType + "<html>\n" + "<head><title>" + title
 				+ "</title></head>\n" + "<body bgcolor=\"#f0f0f0\">\n"
-				+ "<h1 align=\"center\">" + title + "</h1>\n" + "<ul>\n"
-				+ "  <li><b>Maths Flag : </b>: "
-				+ request.getParameter("maths") + "\n"
-				+ "  <li><b>Physics Flag: </b>: "
-				+ request.getParameter("physics") + "\n"
-				+ "  <li><b>Chemistry Flag: </b>: "
-				+ request.getParameter("chemistry") + "\n" + "</ul>\n"
-				+ "</body></html>");
+				+ "<h1 align=\"center\">" + title + "</h1>\n" + "<ul>\n");
+				if(request.getParameter("maths")!=null && request.getParameter("maths").equalsIgnoreCase("on")){	
+					out.println(" <li><b>Maths Flag : </b>: "+ request.getParameter("maths") + "\n");
+				}
+				if(request.getParameter("physics")!=null && request.getParameter("physics").equalsIgnoreCase("on")){
+					out.println("  <li><b>Physics Flag: </b>: "+ request.getParameter("physics") + "\n");
+				}
+				if(request.getParameter("chemistry")!=null && request.getParameter("chemistry").equalsIgnoreCase("on")){
+					out.println("  <li><b>Chemistry Flag: </b>: "+ request.getParameter("chemistry") + "\n" + "</ul>\n");
+				}
+				out.println("</body></html>");
 	}
 
 	// Method to handle POST method request.

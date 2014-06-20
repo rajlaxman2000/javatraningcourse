@@ -34,7 +34,7 @@ public class ReadParamsEnumerationEx extends HttpServlet {
 	        "<table width=\"100%\" border=\"1\" align=\"center\">\n" +
 	        "<tr bgcolor=\"#949494\">\n" +
 	        "<th>Param Name</th><th>Param Value(s)</th>\n"+
-	        "</tr>\n");
+	        "</tr>\n");      
 
 	      Enumeration<String> paramNames = request.getParameterNames();
 	      
