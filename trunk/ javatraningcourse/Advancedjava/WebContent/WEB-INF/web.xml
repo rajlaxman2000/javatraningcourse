@@ -1,33 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee"
-	 xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
-	 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
   <display-name>Advancedjava</display-name>
   <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
+    <welcome-file>/html/Hello.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
     <welcome-file>default.html</welcome-file>
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
   <servlet>
     <description></description>
     <display-name>Sample</display-name>
     <servlet-name>Sample</servlet-name>
     <servlet-class>servlets.Sample</servlet-class>
-    <!--
-    <servlet-class>sasi.servlets.Sample</servlet-class> 
-     -->
   </servlet>
-  
   <servlet-mapping>
     <servlet-name>Sample</servlet-name>
     <url-pattern>/Sample</url-pattern>
   </servlet-mapping>
-  
-   
   <servlet>
     <description> This is used for form data reading</description>
     <display-name>HelloForm</display-name>
@@ -48,5 +39,34 @@
     <servlet-name>HelloFormPost</servlet-name>
     <url-pattern>/HelloFormPost</url-pattern>
   </servlet-mapping>
-   
+  <servlet>
+    <description> his is used for reading the check box data from html</description>
+    <display-name>HelloFormCheckBox</display-name>
+    <servlet-name>HelloFormCheckBox</servlet-name>
+    <servlet-class>servlets.CheckBoxRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloFormCheckBox</servlet-name>
+    <url-pattern>/html/CheckBox</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ReadParamsEnumerationEx</display-name>
+    <servlet-name>ReadParamsEnumerationEx</servlet-name>
+    <servlet-class>servlets.ReadParamsEnumerationEx</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReadParamsEnumerationEx</servlet-name>
+    <url-pattern>/html/ReadParams</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RequestObjDetails</display-name>
+    <servlet-name>RequestObjDetails</servlet-name>
+    <servlet-class>servlets.RequestObjDetails</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RequestObjDetails</servlet-name>
+    <url-pattern>/RequestObjDetails</url-pattern>
+  </servlet-mapping>
 </web-app>
