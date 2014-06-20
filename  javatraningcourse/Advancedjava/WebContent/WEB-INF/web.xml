@@ -99,6 +99,7 @@
     <servlet-name>HttpStatusCode</servlet-name>
     <url-pattern>/httpStatusCodes</url-pattern>
   </servlet-mapping>
+  <!-- 
   <filter>
   	<filter-name>LogFilter</filter-name>
     <filter-class>LogFilter</filter-class>
@@ -111,4 +112,5 @@
   	<filter-name>LogFilter</filter-name>
 	<url-pattern>/*</url-pattern>
   </filter-mapping>
+   -->
 </web-app>
