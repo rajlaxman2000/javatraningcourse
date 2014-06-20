@@ -4,7 +4,7 @@ public class NullPointerExceptionTest {
 
     private static String name;
   
-    public static void main(String args[]) throws NullPointerException{
+    public static void main(String args[]) throws Exception{
       try{
     	  
       
