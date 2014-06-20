@@ -3,9 +3,6 @@
     <wb-module deploy-name="Advancedjava">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Sasi"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Karthik"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Sunny"/>
         <property name="context-root" value="Advancedjava"/>
         <property name="java-output-path" value="/Advancedjava/build/classes"/>
     </wb-module>
