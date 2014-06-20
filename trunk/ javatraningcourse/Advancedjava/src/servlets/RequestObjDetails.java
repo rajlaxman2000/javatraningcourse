@@ -50,10 +50,20 @@ public class RequestObjDetails extends HttpServlet {
 	      }
 		 
 	      out.println("</table>\n");
+	      // One can get any further values from this request object.	      
 	      out.println(request.getRemoteAddr()+"\n");
 	      out.println(request.getLocalAddr()+"\n");
-	      // U can get any further values from this requets object.
+	      out.println(request.getMethod()+"\n");
+	      out.println("\n"+request.getRequestURI()+"\n");
+	      
 	      out.println("</body></html>");
+	      response.setIntHeader("Refresh", 5);
+	      
+	      //String redirectUrl = response.encodeRedirectURL("http://localhost:8080/Advancedjava/");
+	      //String redirectUrl = response.encodeRedirectURL("/Advancedjava");
+	      /*String redirectUrl = response.encodeRedirectURL("/Advancedjava/html/ReadParams");
+	      response.sendRedirect(redirectUrl);*/
+	      //TODO:  In debug mode check the response->response->writer->out->outoutChunk
 		
 		
 	}

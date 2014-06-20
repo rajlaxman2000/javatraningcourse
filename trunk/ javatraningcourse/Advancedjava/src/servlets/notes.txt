@@ -1,0 +1,27 @@
+
+Servlet Filters : :
+	These are Java classes that can be used in Servlet Programming for the following purposes:
+
+    To intercept requests from a client before they access a resource at back end.
+
+    To manipulate responses from server before they are sent back to the client.
+
+There are are various types of filters suggested by the specifications:
+
+    Authentication Filters.
+
+    Data compression Filters.
+
+    Encryption Filters.
+
+    Filters that trigger resource access events.
+
+    Image Conversion Filters.
+
+    Logging and Auditing Filters.
+
+    MIME-TYPE Chain Filters.
+
+    Tokenizing Filters .
+
+    XSL/T Filters That Transform XML Content.
