@@ -57,8 +57,8 @@ public class RequestObjDetails extends HttpServlet {
 	      out.println("\n"+request.getRequestURI()+"\n");
 	      
 	      out.println("</body></html>");
-	      response.setIntHeader("Refresh", 5);
-	      
+	    //  response.setIntHeader("Refresh", 5);
+	      response.sendRedirect("/Advancedjava/html/ReadParams");
 	      //String redirectUrl = response.encodeRedirectURL("http://localhost:8080/Advancedjava/");
 	      //String redirectUrl = response.encodeRedirectURL("/Advancedjava");
 	      /*String redirectUrl = response.encodeRedirectURL("/Advancedjava/html/ReadParams");
