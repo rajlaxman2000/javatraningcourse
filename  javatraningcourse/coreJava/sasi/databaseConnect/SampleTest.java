@@ -1,28 +1,30 @@
 package databaseConnect;
 
+import java.sql.ResultSet;
 import java.sql.Statement;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class DataRead {
+import java.sql.PreparedStatement;
 
+public class SampleTest {
 	public static void main(String[] args) throws SQLException {
-
-		int id = 0;
-		String name = null;
-		String loc = null;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost","dale", "dale420");
+			Connection con = DriverManager.getConnection(
+					"jdbc:mysql://localhost/", "dale", "dale420");
 			Statement st = con.createStatement();
+			//PreparedStatement ps=con.prepareStatement(null);
+			//ps.execute("SELECT * FROM dale_tables.details");
+		
 			ResultSet rs = st.executeQuery("SELECT * FROM dale_tables.details");
 			while (rs.next()) {
-				id = rs.getInt(1);
-				name = rs.getString(2);
-				loc = rs.getString(3);
-				System.out.println("ID: " + id + " Name: " + name + " Location: " + loc);
+				int id = rs.getInt(1);
+				String name = rs.getNString(2);
+				String location = rs.getNString(3);
+				System.out.println("Name: " + name + " ID: " + id
+						+ " Loaction: " + location);
 			}
 			rs.close();
 			st.close();
@@ -31,10 +33,6 @@ public class DataRead {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		System.out.println("Successfully Retrived....!!");
 	}
-
 }
-
-
-
-
