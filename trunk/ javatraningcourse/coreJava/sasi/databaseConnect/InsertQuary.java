@@ -21,12 +21,13 @@ public class InsertQuary {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con = DriverManager.getConnection(
-					"jdbc:mysql://localhost", "dale", "dale420");
+					"jdbc:mysql://localhost/", "dale", "dale420");
 			Statement st = con.createStatement();
 			// st.executeUpdate("insert into dale_tables.details values('4','Phani','PHD')");
 
 			PreparedStatement ps = con
 					.prepareStatement("insert into dale_tables.details values(?,?,?)");
+			
 			ps.setInt(1, id);
 			ps.setString(2, name);
 			ps.setString(3, loc);
