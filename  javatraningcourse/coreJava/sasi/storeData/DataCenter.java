@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class DataCenter {
 	public static void main(String[] args) {
 		int id;
-		int arr[] = new int[10];
 		int i=1;
 		String fname;
 		String lname = null;
@@ -31,13 +30,9 @@ public class DataCenter {
 				lname = sc.next();
 				System.out.println("Enter Location: ");
 				loc = sc.next();
-				while (i != 0) {
 					DataCenterBean stu = new DataCenterBean(id, fname, lname,
 							loc);
 					arrayList.add(stu);
-				arr[i]=stu.hashCode();
-				i++;
-				}
 				break;
 			case 2:
 				System.out.println("Enter Last Name: ");
