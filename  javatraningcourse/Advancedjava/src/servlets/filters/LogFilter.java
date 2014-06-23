@@ -37,6 +37,8 @@ public class LogFilter implements Filter {
 
 	      // Pass request back down the filter chain
 	      chain.doFilter(request,response);		
+	      
+	      
 	}
 	
 	/**
@@ -45,6 +47,7 @@ public class LogFilter implements Filter {
 	public void destroy() {
 		/* Called before the Filter instance is removed 
 	      from service by the web container */
+		System.out.println("Destroy method is called");
 	}
 
 	
