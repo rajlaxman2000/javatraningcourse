@@ -64,12 +64,15 @@ public class ConnectionTest {
 				int salary = rs.getInt("salary");
 				String first = rs.getString("first_name");
 				String last = rs.getString("first_name");
-
+				
+				
 				// Display values
 				System.out.print("ID: " + id);
 				System.out.print(", Salary: " + salary);
 				System.out.print(", First: " + first);
 				System.out.println(", Last: " + last);
+				
+				
 			}
 			// STEP 6: Clean-up environment
 			rs.close();
