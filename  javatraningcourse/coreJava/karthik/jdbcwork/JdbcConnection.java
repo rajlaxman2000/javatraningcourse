@@ -18,13 +18,13 @@ public class JdbcConnection {
 			Class.forName("com.mysql.jdbc.Driver");
 			System.out.println("connecting to database");
 			connection = DriverManager.getConnection(
-					"jdbc:mysql://localhost/test", "root", "Karthik3132");
+					"jdbc:mysql://localhost/", "root", "Karthik3132");
 			System.out.println("statement creation");
 			statement = connection.createStatement();
 
 			DatabaseMetaData metaData = connection.getMetaData();
 
-			String query = "SELECT * FROM database.employee WHERE last_name='karra'";
+			String query = "SELECT * FROM database.employee ";
 
 			ResultSet resultSet = statement.executeQuery(query);
 
