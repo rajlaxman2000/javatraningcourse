@@ -1,4 +1,4 @@
-package jdbcexamples;
+package jdbcexamples.statments;
 
 public class Employee {	
 	
@@ -6,9 +6,6 @@ public class Employee {
 	private String firstName;
 	private String lastName;	
 	private float salary;
-	
-	private EmpAddress address;
-	
 	
 	public String toString(){
 		return "EmpId::"+empId+"; FirstName::"+firstName+"; LastName::"+lastName+"; Salary::"+salary+"\n";
@@ -73,23 +70,5 @@ public class Employee {
 	 */
 	public void setSalary(float salary) {
 		this.salary = salary;
-	}
-
-	/**
-	 * @return the address
-	 */
-	public EmpAddress getAddress() {
-		return address;
-	}
-
-	/**
-	 * @param address the address to set
-	 */
-	public void setAddress(EmpAddress address) {
-		this.address = address;
-	}
-	
-	
-	
-	
+	}	
 }

@@ -1,7 +1,8 @@
-package jdbcexamples;
+package jdbcexamples.statments;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -20,19 +21,10 @@ public abstract class GenericMySQLDAO {
 	private static final String PASS = "";
 	private static final String DB_URL_COMPLETE =  DB_URL+"?user="+USER+"&password="+PASS;
 	
-	public Connection connection = null;
-	static Statement statement = null;
-	private Properties properties=null;
+	public static Connection connection = null;
 	
-	public void init(){
-		
-		properties = new Properties();
-		// you can use put also
-		properties.setProperty("user", USER);
-		properties.setProperty("password", PASS);
-	}
 	
-	public Connection getConnection() throws SQLException{
+	public static Connection getConnection() throws SQLException{
 		
 		connection = DriverManager.getConnection(DB_URL, USER, PASS);
 		
@@ -48,10 +40,15 @@ public abstract class GenericMySQLDAO {
 		
 	}
 	
-	public void closeMethod(ResultSet rs, Statement statement) throws SQLException{
+	public static void closeMethod(ResultSet rs, Statement statement) throws SQLException{
 		rs.close();
 		statement.close();
-		this.connection.close();
+		GenericMySQLDAO.connection.close();
+	}
+	
+	public static void closeMethod(Statement statement) throws SQLException{		
+		statement.close();
+		GenericMySQLDAO.connection.close();
 	}
 
 }
