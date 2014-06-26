@@ -128,6 +128,40 @@
   	<servlet-name>ErrorTest</servlet-name>
     <url-pattern>/error</url-pattern>
   </servlet-mapping>
+  
+  <!-- Cookie servlets -->
+  <servlet>
+  	<description></description>
+    <display-name>CookieServlet</display-name>
+  	<servlet-name>CookieServlet</servlet-name>
+  	<servlet-class>servlets.cookies.HelloForm</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>CookieServlet</servlet-name>
+  	<url-pattern>/html/cookie/cookieSet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<description></description>
+    <display-name>ReadCookieServlet</display-name>
+  	<servlet-name>ReadCookieServlet</servlet-name>
+  	<servlet-class>servlets.cookies.ReadCookie</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ReadCookieServlet</servlet-name>
+  	<url-pattern>/html/cookie/cookieRead</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  	<description></description>
+    <display-name>DeleteCookieServlet</display-name>
+  	<servlet-name>DeleteCookieServlet</servlet-name>
+  	<servlet-class>servlets.cookies.DeletCookie</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DeleteCookieServlet</servlet-name>
+  	<url-pattern>/cookieDelete</url-pattern>
+  </servlet-mapping>
+  
   <!-- **********   Begin:: Error Handler  **********   -->
   
   <!-- servlet definition -->
@@ -169,4 +203,6 @@
 	</error-page> 
 	 -->
 	<!-- **********   End:: Error Handler  **********   -->
+	
+	
 </web-app>
