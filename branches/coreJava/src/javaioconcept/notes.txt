@@ -1,0 +1,23 @@
+java.io: 
+	BufferedReader, BufferedWriter, File, FileReader, FileWriter, PrintWriter,Console.
+	
+File reader : 
+	FileReaders are usually wrapped by higher-level objects such as BufferedReaders, which improve 
+	performance and provide more convenient ways to work with the data.
+	
+
+File writer : 
+	FileWriters are usually wrapped by higher-level Writer objects such as BufferedWriters or
+	PrintWriters, which provide better performance and higher-level, more flexible methods to write data.
+	
+****	
+Stream classes are used to read and write bytes & Readers and Writers are used to read and write characters.
+Since all of the file I/O on the exam is related to characters, if you see API class names containing the
+word "Stream", for instance DataOutputStream, then the question is probably about serialization, 
+or something unrelated to the actual I/O objective.
+****
+Notes: 
+	In practice, you probably won't use the FileWriter and FileReader classes without wrapping them.
+	
+	we'll typically want to use higher-level I/O classes
+	like BufferedWriter or BufferedReader in combination with FileWriter or FileReader.
