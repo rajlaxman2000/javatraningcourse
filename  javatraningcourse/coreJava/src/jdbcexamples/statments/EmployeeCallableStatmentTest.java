@@ -5,7 +5,6 @@ import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 public class EmployeeCallableStatmentTest extends GenericMySQLDAO{
 
@@ -27,14 +26,15 @@ public class EmployeeCallableStatmentTest extends GenericMySQLDAO{
 			
 		   // Let us select all the records and display them.
 		     String sql = "{call getEmpName (?, ?)}";
+		     
 		     stmt = connection.prepareCall(sql);
 		     stmt.setInt(1, 47);
 		     // Because second parameter is OUT so register it
-		     stmt.registerOutParameter(2, java.sql.Types.VARCHAR);
+		     stmt.registerOutParameter(2, java.sql.Types.VARCHAR);    
 		      
 
 		      // Because second parameter is OUT so register it
-		      stmt.registerOutParameter(2, java.sql.Types.VARCHAR);
+		    //  stmt.registerOutParameter(2, java.sql.Types.VARCHAR);
 		      
 		      //Use execute method to run stored procedure.
 		      System.out.println("Executing stored procedure..." );

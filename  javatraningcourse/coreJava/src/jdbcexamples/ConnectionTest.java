@@ -3,6 +3,7 @@ package jdbcexamples;
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -55,6 +56,18 @@ public class ConnectionTest {
 			
 			String sql = "SELECT id, first_name, last_name, salary FROM employee";
 			ResultSet rs = statement.executeQuery(sql);
+			
+		
+			
+			//statement.execu
+			//statement.execute(sql)
+			//
+			//statement.executeUpdate(sql);
+			
+			//statement.executeQuery(sql);
+			
+			
+			
 			
 
 			// STEP 5: Extract data from result set
