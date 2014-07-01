@@ -1,208 +1,216 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
-	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
-  <display-name>Advancedjava</display-name>
-  <description></description>
-  
-  <welcome-file-list>
-    <welcome-file>/html/Hello.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
-  </welcome-file-list>
-  <servlet>
-    <description></description>
-    <display-name>Sample</display-name>
-    <servlet-name>Sample</servlet-name>
-    <servlet-class>servlets.Sample</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Sample</servlet-name>
-    <url-pattern>/Sample</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description> This is used for form data reading</description>
-    <display-name>HelloForm</display-name>
-    <servlet-name>HelloForm</servlet-name>
-    <servlet-class>servlets.HelloForm</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>HelloForm</servlet-name>
-    <url-pattern>/HelloForm</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description> This is used for form data reading using post method</description>
-    <display-name>HelloFormPost</display-name>
-    <servlet-name>HelloFormPost</servlet-name>
-    <servlet-class>servlets.HelloFormPost</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>HelloFormPost</servlet-name>
-    <url-pattern>/HelloFormPost</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description> his is used for reading the check box data from html</description>
-    <display-name>HelloFormCheckBox</display-name>
-    <servlet-name>HelloFormCheckBox</servlet-name>
-    <servlet-class>servlets.CheckBoxRead</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>HelloFormCheckBox</servlet-name>
-    <url-pattern>/html/CheckBox</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>ReadParamsEnumerationEx</display-name>
-    <servlet-name>ReadParamsEnumerationEx</servlet-name>
-    <servlet-class>servlets.ReadParamsEnumerationEx</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>ReadParamsEnumerationEx</servlet-name>
-    <url-pattern>/html/ReadParams</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>RequestObjDetails</display-name>
-    <servlet-name>RequestObjDetails</servlet-name>
-    <servlet-class>servlets.RequestObjDetails</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>RequestObjDetails</servlet-name>
-    <url-pattern>/RequestObjDetails</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>ResponseObjDetails</display-name>
-    <servlet-name>ResponseObjDetails</servlet-name>
-    <servlet-class>servlets.RequestObjDetails</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>ResponseObjDetails</servlet-name>
-    <url-pattern>/responceObj</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>ResponseObjectDetails</display-name>
-    <servlet-name>ResponseObjectDetails</servlet-name>
-    <servlet-class>servlets.ResponseObjectDetails</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>ResponseObjectDetails</servlet-name>
-    <url-pattern>/ResponseObjectDetails</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>HttpStatusCode</display-name>
-    <servlet-name>HttpStatusCode</servlet-name>
-    <servlet-class>servlets.HttpStatusCode</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>HttpStatusCode</servlet-name>
-    <url-pattern>/httpStatusCodes</url-pattern>
-  </servlet-mapping>
-  
-  
-  <filter>
-  	<filter-name>LogFilter</filter-name>
-    <filter-class>servlets.filters.LogFilter</filter-class>
-   	<init-param>
-		<param-name>test-param</param-name>
-	  	<param-value>Initialization Paramter</param-value>
-    </init-param>
-  </filter>
-  <filter-mapping>
-  	<filter-name>LogFilter</filter-name>
-	<url-pattern>/html/*</url-pattern>
-  </filter-mapping>
-  
-  <servlet>
-   	<description></description>
-    <display-name>ErrorTest</display-name>
-  	<servlet-name>ErrorTest</servlet-name>
-  	<servlet-class> servlets.errorhandler.ErrorTest</servlet-class>  	
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>ErrorTest</servlet-name>
-    <url-pattern>/error</url-pattern>
-  </servlet-mapping>
-  
-  <!-- Cookie servlets -->
-  <servlet>
-  	<description></description>
-    <display-name>CookieServlet</display-name>
-  	<servlet-name>CookieServlet</servlet-name>
-  	<servlet-class>servlets.cookies.HelloForm</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>CookieServlet</servlet-name>
-  	<url-pattern>/html/cookie/cookieSet</url-pattern>
-  </servlet-mapping>
-  <servlet>
-  	<description></description>
-    <display-name>ReadCookieServlet</display-name>
-  	<servlet-name>ReadCookieServlet</servlet-name>
-  	<servlet-class>servlets.cookies.ReadCookie</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>ReadCookieServlet</servlet-name>
-  	<url-pattern>/html/cookie/cookieRead</url-pattern>
-  </servlet-mapping>
-  
-   <servlet>
-  	<description></description>
-    <display-name>DeleteCookieServlet</display-name>
-  	<servlet-name>DeleteCookieServlet</servlet-name>
-  	<servlet-class>servlets.cookies.DeletCookie</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>DeleteCookieServlet</servlet-name>
-  	<url-pattern>/cookieDelete</url-pattern>
-  </servlet-mapping>
-  
-  <!-- **********   Begin:: Error Handler  **********   -->
-  
-  <!-- servlet definition -->
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>Advancedjava</display-name>
+	<description></description>
+
+	<welcome-file-list>
+		<welcome-file>/html/Hello.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
 	<servlet>
-	    <servlet-name>ErrorHandler</servlet-name>
-	    <servlet-class>servlets.errorhandler.ErrorHandler</servlet-class>
+		<description></description>
+		<display-name>Sample</display-name>
+		<servlet-name>Sample</servlet-name>
+		<servlet-class>servlets.Sample</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Sample</servlet-name>
+		<url-pattern>/Sample</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description> This is used for form data reading</description>
+		<display-name>HelloForm</display-name>
+		<servlet-name>HelloForm</servlet-name>
+		<servlet-class>servlets.HelloForm</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HelloForm</servlet-name>
+		<url-pattern>/HelloForm</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description> This is used for form data reading using post method</description>
+		<display-name>HelloFormPost</display-name>
+		<servlet-name>HelloFormPost</servlet-name>
+		<servlet-class>servlets.HelloFormPost</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HelloFormPost</servlet-name>
+		<url-pattern>/HelloFormPost</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description> his is used for reading the check box data from html</description>
+		<display-name>HelloFormCheckBox</display-name>
+		<servlet-name>HelloFormCheckBox</servlet-name>
+		<servlet-class>servlets.CheckBoxRead</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HelloFormCheckBox</servlet-name>
+		<url-pattern>/html/CheckBox</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>ReadParamsEnumerationEx</display-name>
+		<servlet-name>ReadParamsEnumerationEx</servlet-name>
+		<servlet-class>servlets.ReadParamsEnumerationEx</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ReadParamsEnumerationEx</servlet-name>
+		<url-pattern>/html/ReadParams</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>RequestObjDetails</display-name>
+		<servlet-name>RequestObjDetails</servlet-name>
+		<servlet-class>servlets.RequestObjDetails</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RequestObjDetails</servlet-name>
+		<url-pattern>/RequestObjDetails</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>ResponseObjDetails</display-name>
+		<servlet-name>ResponseObjDetails</servlet-name>
+		<servlet-class>servlets.RequestObjDetails</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ResponseObjDetails</servlet-name>
+		<url-pattern>/responceObj</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>ResponseObjectDetails</display-name>
+		<servlet-name>ResponseObjectDetails</servlet-name>
+		<servlet-class>servlets.ResponseObjectDetails</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ResponseObjectDetails</servlet-name>
+		<url-pattern>/ResponseObjectDetails</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>HttpStatusCode</display-name>
+		<servlet-name>HttpStatusCode</servlet-name>
+		<servlet-class>servlets.HttpStatusCode</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HttpStatusCode</servlet-name>
+		<url-pattern>/httpStatusCodes</url-pattern>
+	</servlet-mapping>
+
+
+	<filter>
+		<filter-name>LogFilter</filter-name>
+		<filter-class>servlets.filters.LogFilter</filter-class>
+		<init-param>
+			<param-name>test-param</param-name>
+			<param-value>Initialization Paramter</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>LogFilter</filter-name>
+		<url-pattern>/html/*</url-pattern>
+	</filter-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>ErrorTest</display-name>
+		<servlet-name>ErrorTest</servlet-name>
+		<servlet-class>servlets.errorhandler.ErrorTest</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ErrorTest</servlet-name>
+		<url-pattern>/error</url-pattern>
+	</servlet-mapping>
+
+	<!-- Cookie servlets -->
+	<servlet>
+		<description></description>
+		<display-name>CookieServlet</display-name>
+		<servlet-name>CookieServlet</servlet-name>
+		<servlet-class>servlets.cookies.HelloForm</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CookieServlet</servlet-name>
+		<url-pattern>/html/cookie/cookieSet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>ReadCookieServlet</display-name>
+		<servlet-name>ReadCookieServlet</servlet-name>
+		<servlet-class>servlets.cookies.ReadCookie</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ReadCookieServlet</servlet-name>
+		<url-pattern>/html/cookie/cookieRead</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>DeleteCookieServlet</display-name>
+		<servlet-name>DeleteCookieServlet</servlet-name>
+		<servlet-class>servlets.cookies.DeletCookie</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteCookieServlet</servlet-name>
+		<url-pattern>/cookieDelete</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description></description>
+		<display-name>FileUpload Servlet</display-name>
+		<servlet-name>UploadServlet</servlet-name>
+		<servlet-class>servlets.fileupload.UploadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UploadServlet</servlet-name>
+		<url-pattern>/uploadFile</url-pattern>
+	</servlet-mapping>
+
+	<!-- ********** Begin:: Error Handler ********** -->
+
+	<!-- servlet definition -->
+	<servlet>
+		<servlet-name>ErrorHandler</servlet-name>
+		<servlet-class>servlets.errorhandler.ErrorHandler</servlet-class>
 	</servlet>
 	<!-- servlet mappings -->
 	<servlet-mapping>
-	    <servlet-name>ErrorHandler</servlet-name>
-	    <url-pattern>/ErrorHandler</url-pattern>
+		<servlet-name>ErrorHandler</servlet-name>
+		<url-pattern>/ErrorHandler</url-pattern>
 	</servlet-mapping>
-	
+
 	<!-- error-code related error pages -->
 	<error-page>
-	    <error-code>404</error-code>
-	    <location>/ErrorHandler</location>
+		<error-code>404</error-code>
+		<location>/ErrorHandler</location>
 	</error-page>
 	<error-page>
-	    <error-code>403</error-code>
-	    <location>/ErrorHandler</location>
+		<error-code>403</error-code>
+		<location>/ErrorHandler</location>
 	</error-page>
-	
+
 	<!-- exception-type related error pages -->
 	<error-page>
-	    <exception-type>javax.servlet.ServletException</exception-type >
-	    <location>/ErrorHandler</location>
+		<exception-type>javax.servlet.ServletException</exception-type>
+		<location>/ErrorHandler</location>
 	</error-page>
-	
+
 	<error-page>
-	    <exception-type>java.io.IOException</exception-type >
-	    <location>/ErrorHandler</location>
+		<exception-type>java.io.IOException</exception-type>
+		<location>/ErrorHandler</location>
 	</error-page>
-	
-	<!-- This is for all kind of errors 
-	<error-page>
-	    <exception-type>java.lang.Throwable</exception-type >
-	    <location>/ErrorHandler</location>
-	</error-page> 
-	 -->
-	<!-- **********   End:: Error Handler  **********   -->
-	
-	
+
+	<!-- This is for all kind of errors <error-page> <exception-type>java.lang.Throwable</exception-type 
+		> <location>/ErrorHandler</location> </error-page> -->
+	<!-- ********** End:: Error Handler ********** -->
+
+
 </web-app>
