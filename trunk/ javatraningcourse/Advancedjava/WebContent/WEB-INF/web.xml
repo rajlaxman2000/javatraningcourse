@@ -160,7 +160,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>DeleteCookieServlet</servlet-name>
-		<url-pattern>/cookieDelete</url-pattern>
+		<url-pattern>/html/cookie/cookieDelete</url-pattern>
 	</servlet-mapping>
 
 	<servlet>
@@ -171,7 +171,18 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>UploadServlet</servlet-name>
-		<url-pattern>/uploadFile</url-pattern>
+		<url-pattern>/html/uploadFile</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<description></description>
+		<display-name>FileUpload Servlet COS</display-name>
+		<servlet-name>UploadServletCos</servlet-name>
+		<servlet-class>servlets.fileupload.UploadServletCos</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UploadServletCos</servlet-name>
+		<url-pattern>/html/uploadFilecos</url-pattern>
 	</servlet-mapping>
 
 	<!-- ********** Begin:: Error Handler ********** -->

@@ -32,11 +32,12 @@ public class ReadCookie extends HttpServlet {
 			for (int i = 0; i < cookies.length; i++) {
 				cookie = cookies[i];
 				out.print("Name : " + cookie.getName() + ",  ");
-				out.print("Value: " + cookie.getValue() + " <br/>");
+				out.print("Value: " + cookie.getValue() + " <br/>");				
 			}
 		} else {
 			out.println("<h2>No cookies founds</h2>");
 		}
+		out.println("<button type='click' formaction='cookieDelete'>Click for Delete Cookies</button>");
 		out.println("</body>");
 		out.println("</html>");
 	}
