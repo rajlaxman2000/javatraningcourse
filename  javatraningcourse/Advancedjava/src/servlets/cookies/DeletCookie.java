@@ -19,6 +19,8 @@ public class DeletCookie extends HttpServlet {
 		// Get an array of Cookies associated with this domain
 		cookies = request.getCookies();
 		
+		
+		
 
 		// Set response content type
 		response.setContentType("text/html");
