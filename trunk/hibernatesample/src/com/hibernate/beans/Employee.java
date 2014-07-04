@@ -20,6 +20,10 @@ public class Employee {
 		this.lastName = lname;
 		this.salary = salary;
 	}
+	
+	public String toString(){
+		return "EmpId :: "+id+"; firstName:: "+firstName+" lastName:: "+"; salary:: "+salary;
+	}
 
 	/**
 	 * @return the id
