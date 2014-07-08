@@ -1,5 +1,7 @@
 package com.hibernate.beans;
 
+import java.util.Set;
+
 public class Employee {
 	
 	private static final long serialVersionUID = 1L;
@@ -12,17 +14,41 @@ public class Employee {
 	
 	private int salary;
 	
+	private Set<Certificate> certificates;
+	
 	public Employee(){
 	}
-	
-	public Employee(String fname, String lname, int salary){
-		this.firstName = fname;
-		this.lastName = lname;
-		this.salary = salary;
+			
+	/**
+	 * @param firstName
+	 * @param lastName
+	 * @param salary
+	 * @param certificates
+	 */
+	public Employee(String firstName, String lastName, int salary) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.salary = salary;		
 	}
 	
 	public String toString(){
 		return "EmpId :: "+id+"; firstName:: "+firstName+" lastName:: "+"; salary:: "+salary;
+	}
+	
+	
+
+	/**
+	 * @return the certificates
+	 */
+	public Set<Certificate> getCertificates() {
+		return certificates;
+	}
+
+	/**
+	 * @param certificates the certificates to set
+	 */
+	public void setCertificates(Set<Certificate> certificates) {
+		this.certificates = certificates;
 	}
 
 	/**
