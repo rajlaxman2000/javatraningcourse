@@ -71,6 +71,7 @@ public class UploadServlet extends HttpServlet {
 			out.println("<title>Servlet upload</title>");
 			out.println("</head>");
 			out.println("<body>");
+			
 			while (i.hasNext()) {
 				FileItem fi = (FileItem) i.next();
 				if (!fi.isFormField()) {
@@ -101,7 +102,6 @@ public class UploadServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, java.io.IOException {
 
-		throw new ServletException("GET method used with "
-				+ getClass().getName() + ": POST method required.");
+		throw new ServletException("GET method used with "+ getClass().getName() + ": POST method required.");
 	}
 }

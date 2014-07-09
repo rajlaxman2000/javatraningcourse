@@ -2,7 +2,6 @@ package servlets.fileupload;
 
 //Import required java libraries
 import java.io.*;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import com.oreilly.servlet.MultipartRequest;
