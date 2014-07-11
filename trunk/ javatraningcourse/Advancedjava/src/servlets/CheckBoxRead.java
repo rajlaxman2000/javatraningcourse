@@ -16,7 +16,7 @@ public class CheckBoxRead extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// Set response content type
 		response.setContentType("text/html");
-
+		
 		PrintWriter out = response.getWriter();
 		String title = "Reading Checkbox Data";
 		String docType = "<!doctype html public \"-//w3c//dtd html 4.0 transitional//en\">\n";
