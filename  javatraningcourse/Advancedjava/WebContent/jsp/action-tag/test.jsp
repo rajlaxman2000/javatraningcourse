@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<%@ page errorPage="error.jsp"%>
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,14 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%
-		String num1 = request.getParameter("a");
-		String num2 = request.getParameter("b");
-
-		int a = Integer.parseInt(num1);
-		int b = Integer.parseInt(num2);
-		int c = a / b;
-		out.print("division of numbers is: " + c);
-	%>
+<jsp:include page="sample.jsp" />
+<br>  
+I am test jsp but before me some thing is included
 </body>
 </html>

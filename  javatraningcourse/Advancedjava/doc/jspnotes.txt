@@ -1,4 +1,29 @@
 
+JSP with Life cycle
+JSP API
+JSP in Eclipse
+Scripting elements
+scriptlet tag
+	expression tag
+	declaration tag
+	Implicit Objects
+Directive elements
+	page directive
+	include directive
+	taglib directive
+Exception Handling
+Action Elements
+
+Expression Language
+
+MVC in JSP
+
+JSTL
+
+Custom tags
+
+Development in JSP
+=====================================
 
 
 
@@ -14,19 +39,54 @@
 
 
 
-
-
-
+<% %>
+<%= %>
+<%! %>
 
 ================================================================
 
 out				JspWriter
 request			HttpServletRequest
 response		HttpServletResponse
-config			ServletConfig
-application		ServletContext
+---------
+config			ServletConfig  : TODO: this will be seen later with integration of servlet
+application		ServletContext : TODO: this will be seen later with integration of servlet
+---------
 session			HttpSession
 pageContext		PageContext
 page			Object
 exception		Throwable
+================================================================
+Directive elements
+	page directive <%@ page
+	include directive <%@ include
+	taglib directive <@ taglib COmment: This will be discussed during the jstl tags discussion
+	------------------
+	page directive :
+		Attributes of JSP page directive
+			import
+			contentType
+			extends
+			info
+			buffer
+			language
+			isELIgnored
+			isThreadSafe
+			autoFlush
+			session
+			pageEncoding
+			errorPage
+			isErrorPage
+-------------------------------------------------------------------------------------------------
+JSP Action tags
+	jsp:forward
+	jsp:include
+	jsp:useBean
+	jsp:setProperty
+	jsp:getProperty
+	jsp:plugin
+	jsp:param
+	jsp:fallback
+		
+	
 

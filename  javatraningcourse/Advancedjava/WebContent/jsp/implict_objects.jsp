@@ -10,6 +10,7 @@
 	<% out.println("Hi How ru");%> 
 		<br>
 		<%out.println(request.getParameter("first_name"));
+		//response.sendRedirect("/sample.jsp");
 		
 		String name=request.getParameter("first_name");  
 		out.print("Welcome "+name);  

@@ -7,7 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-I am from anothetr jsp
-<% out.println(session.getAttribute("first_name")); %>
+I am from another jsp <br>
+<% out.println(session.getAttribute("first_name")); %> 
+	
+	 <%= page.getClass() %>
 </body>
 </html>
