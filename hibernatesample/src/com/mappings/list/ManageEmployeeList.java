@@ -1,4 +1,4 @@
-package com.mapping.sortedset;
+package com.mappings.list;
 
 import java.util.*;
 import org.hibernate.HibernateException;
@@ -7,7 +7,7 @@ import org.hibernate.Transaction;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class ManageEmployeeSortedSet {
+public class ManageEmployeeList {
 
 	private static SessionFactory factory;
 
@@ -19,51 +19,49 @@ public class ManageEmployeeSortedSet {
 			throw new ExceptionInInitializerError(ex);
 		}
 
-		ManageEmployeeSortedSet ME = new ManageEmployeeSortedSet();
+		ManageEmployeeList ME = new ManageEmployeeList();
 
 		/* Let us have a set of certificates for the first employee */
-		TreeSet<Certificate> certificateSet1 = new TreeSet<Certificate>();
-		certificateSet1.add(new Certificate("MCA"));
-		certificateSet1.add(new Certificate("MBA"));
-		certificateSet1.add(new Certificate("PMP"));		
+		List<Certificate> certificateList1 = new ArrayList<Certificate>();
+		certificateList1.add(new Certificate("MCA"));
+		certificateList1.add(new Certificate("MBA"));
+		certificateList1.add(new Certificate("PMP"));
+		
 		
 
 		/* Another set of certificates for the second employee */
-		TreeSet<Certificate> certificateSet2 = new TreeSet<Certificate>();
-		certificateSet2.add(new Certificate("BCA"));
-		certificateSet2.add(new Certificate("BA"));
-		certificateSet2.add(new Certificate("Inter"));
+		List<Certificate> certificateList2 = new ArrayList<Certificate>();
+		certificateList1.add(new Certificate("BCA"));
+		certificateList1.add(new Certificate("BBA"));
 		
 		/* Add another employee record in the database */
-	//	Integer empId1 = ME.addEmployee("Manoj", "Kumar", 4000, certificateSet1);
-	//	Integer empId2 = ME.addEmployee("Dilip", "Kumar", 3000, certificateSet2);
+		
+		Integer empId1 = ME.addEmployee("Manoj", "Kumar", 4000, certificateList1);
+		Integer empId2 = ME.addEmployee("Dilip", "Kumar", 3000, certificateList2);
 
 		/* List down all the employees */
 		 ME.listEmployees();
 		/* Update employee's salary records */
-		// ME.updateEmployee(79, 5000);
-		/* Delete an employee from the database */
-		//ME.deleteEmployee(empId2);
-		/* List down all the employees */
-		// ME.listEmployees();
+		ME.updateEmployee(empId1, 5000);
+		
+		 /* Delete an employee from the database */
+		 ME.deleteEmployee(empId2);
+		
+		 /* List down all the employees */
+		ME.listEmployees();
 
 	}
 
 	/* Method to add an employee record in the database */
-	public Integer addEmployee(String fname, String lname, int salary,SortedSet<Certificate> cert) {
-		
+	public Integer addEmployee(String fname, String lname, int salary,List<Certificate> cert) {
 		Session session = factory.openSession();
 		Transaction tx = null;
-		
 		Integer employeeID = null;
 		try {
 			tx = session.beginTransaction();
-		
-			Employee employee = new Employee(fname, lname, salary);			
+			Employee employee = new Employee(fname, lname, salary);
 			employee.setCertificates(cert);
-			
 			employeeID = (Integer) session.save(employee);
-			
 			tx.commit();
 		} catch (HibernateException e) {
 			if (tx != null)
@@ -77,24 +75,17 @@ public class ManageEmployeeSortedSet {
 
 	/* Method to list all the employees detail */
 	public void listEmployees() {
-		
 		Session session = factory.openSession();
 		Transaction tx = null;
-		
 		try {
-		
 			tx = session.beginTransaction();
-			
 			List<Employee> employees = session.createQuery("FROM Employee").list();
-			
 			for (Iterator<Employee> iterator1 = employees.iterator(); iterator1.hasNext();) {
-				
 				Employee employee = (Employee) iterator1.next();
 				System.out.print("First Name: " + employee.getFirstName());
 				System.out.print(" Last Name: " + employee.getLastName());
 				System.out.println(" Salary: " + employee.getSalary());
-				SortedSet<Certificate> certificates = employee.getCertificates();
-				
+				List<Certificate> certificates = employee.getCertificates();
 				for (Iterator<Certificate> iterator2 = certificates.iterator(); iterator2.hasNext();) {
 					Certificate certName = (Certificate) iterator2.next();
 					System.out.println("Certificate: " + certName.getName());
@@ -116,19 +107,16 @@ public class ManageEmployeeSortedSet {
 		Transaction tx = null;
 		try {
 			tx = session.beginTransaction();
-			
 			Employee employee = (Employee) session.get(Employee.class,EmployeeID);
-			
 			employee.setSalary(salary);
-			
-			Certificate certificate = (Certificate) session.get(Certificate.class, 37);
-			certificate.setName("AGB");
-			
-			employee.getCertificates().add(certificate);	
-			
+			/*
+			Certificate certificate = (Certificate) session.get(Certificate.class, 26);
+			certificate.setName("OCJP");
+			employee.getCertificates().add(certificate); 
+			*/			
+			 
 			session.update(employee);
 			tx.commit();
-			
 		} catch (HibernateException e) {
 			if (tx != null)
 				tx.rollback();

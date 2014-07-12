@@ -6,7 +6,7 @@ import java.util.Comparator;
  * @author Rajesh_Duvvi
  *
  */
-public class CertificateComparator implements Comparator<Certificate> {
+public class CertificateComparatorDesc implements Comparator<Certificate> {
 
 	/* (non-Javadoc)
 	 * @see java.util.Comparator#compare(java.lang.Object, java.lang.Object)
