@@ -8,8 +8,12 @@
 		<property name="hibernate.connection.url">jdbc:mysql://localhost/test</property>
 		<property name="hibernate.connection.username">root</property>
 		<property name="hibernate.connection.password"></property> 
-		<!-- List of XML mapping files -->
-		<mapping resource="Employee.hbm.xml" /> 
+		<!-- List of XML mapping files 
+		<mapping resource="Employee.hbm.xml" />
+		<mapping resource="EmployeeSet.hbm.xml" />  
+		<mapping resource="EmployeeList.hbm.xml"/> -->
+		<mapping resource="EmployeeMap.hbm.xml"/>
+		
 		
 	</session-factory>
 	
