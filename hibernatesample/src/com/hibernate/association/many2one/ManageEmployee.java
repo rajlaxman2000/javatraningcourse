@@ -118,8 +118,7 @@ public class ManageEmployee {
 		Transaction tx = null;
 		try {
 			tx = session.beginTransaction();
-			Employee employee = (Employee) session.get(Employee.class,
-					EmployeeID);
+			Employee employee = (Employee) session.get(Employee.class,EmployeeID);
 			employee.setSalary(salary);
 			session.update(employee);
 			tx.commit();
@@ -138,8 +137,7 @@ public class ManageEmployee {
 		Transaction tx = null;
 		try {
 			tx = session.beginTransaction();
-			Employee employee = (Employee) session.get(Employee.class,
-					EmployeeID);
+			Employee employee = (Employee) session.get(Employee.class,EmployeeID);
 			session.delete(employee);
 			tx.commit();
 		} catch (HibernateException e) {
