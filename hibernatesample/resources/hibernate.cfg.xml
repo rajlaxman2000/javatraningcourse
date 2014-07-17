@@ -12,8 +12,10 @@
 		<mapping resource="Employee.hbm.xml" />
 		<mapping resource="EmployeeSet.hbm.xml" />  
 		<mapping resource="EmployeeList.hbm.xml"/>
-		<mapping resource="EmployeeMap.hbm.xml"/> -->
-		<mapping resource="EmployeeMany2One.hbm.xml"/>
+		<mapping resource="EmployeeMap.hbm.xml"/> 
+		<mapping resource="EmployeeMany2One.hbm.xml"/> -->
+		<mapping resource="EmployeeMany2Many.hbm.xml"/>
+
 		
 		
 		
