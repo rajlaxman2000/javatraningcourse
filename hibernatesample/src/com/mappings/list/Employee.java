@@ -10,7 +10,7 @@ public class Employee {
 	private int salary;
 	
 	// Adding to check the one-to-many relation
-	private List<Certificate> certificates;;
+	private List<Certificate> certificates;
 
 	public Employee() {
 
@@ -22,6 +22,7 @@ public class Employee {
 		this.salary = salary;
 	}
 
+	
 	/**
 	 * @return the id
 	 */

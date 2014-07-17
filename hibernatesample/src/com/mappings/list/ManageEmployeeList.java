@@ -31,24 +31,25 @@ public class ManageEmployeeList {
 
 		/* Another set of certificates for the second employee */
 		List<Certificate> certificateList2 = new ArrayList<Certificate>();
-		certificateList1.add(new Certificate("BCA"));
-		certificateList1.add(new Certificate("BBA"));
+		certificateList2.add(new Certificate("BCA"));
+		certificateList2.add(new Certificate("BBA"));
 		
 		/* Add another employee record in the database */
 		
-		Integer empId1 = ME.addEmployee("Manoj", "Kumar", 4000, certificateList1);
-		Integer empId2 = ME.addEmployee("Dilip", "Kumar", 3000, certificateList2);
+		Integer empId1 = ME.addEmployee("Manoj", "Kumar", 4000,certificateList1);
+		//Integer empId2 = ME.addEmployee("Dilip", "Kumar", 3000,, certificateList2);
 
 		/* List down all the employees */
-		 ME.listEmployees();
+		ME.listEmployees();
+		 System.out.println("**************List Created****************");
 		/* Update employee's salary records */
-		ME.updateEmployee(empId1, 5000);
+		//ME.updateEmployee(empId1, 5000);
 		
 		 /* Delete an employee from the database */
-		 ME.deleteEmployee(empId2);
+		// ME.deleteEmployee(empId2);
 		
 		 /* List down all the employees */
-		ME.listEmployees();
+		//ME.listEmployees();
 
 	}
 

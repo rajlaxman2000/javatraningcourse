@@ -59,6 +59,7 @@ public class ManageEmployeeSortedMap {
 
 			for (Iterator<Employee> iterator = employees.iterator(); iterator
 					.hasNext();) {
+			
 				Employee employee = (Employee) iterator.next();
 				System.out.print("First Name: " + employee.getFirstName());
 				System.out.print(" Last Name: " + employee.getLastName());
