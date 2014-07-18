@@ -1,0 +1,18 @@
+HSQL :
+From 
+AS 
+SELECT
+WHERE  how to use multiple columns in condition 
+ORDER By 
+GRoup By
+Named Parameters
+
+
+Hibernate Criteria
+Hibernate Cache
+Hibernate Batch Processing
+
+Hibernate Config in a deeper way
+
+
+Hibernate Annotations (tentive)
