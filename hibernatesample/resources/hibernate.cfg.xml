@@ -7,8 +7,15 @@
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property> <!-- Assume test is the database name -->
 		<property name="hibernate.connection.url">jdbc:mysql://localhost/test</property>
 		<property name="hibernate.connection.username">root</property>
-		<property name="hibernate.connection.password"></property>
-		<property name="hibernate.show.sql">true</property>		 
+		<property name="hibernate.connection.password"></property>	
+		
+		<!--  It will show the quaries in console -->	
+		<property name="show_sql">true</property> 
+		
+		<!-- Second level cache -->
+		<property name="hibernate.cache.use_second_level_cache">true</property> 
+		<property name="cache.provider_class">org.hibernate.cache.EhCacheProvider</property>
+		
 		<!-- List of XML mapping files  
 		
 		<mapping resource="Employee.hbm.xml" />
@@ -19,8 +26,9 @@
 		<mapping resource="EmployeeMany2One.hbm.xml"/>
 		<mapping resource="EmployeeMany2Many.hbm.xml"/>
 		<mapping resource="EmployeeComponent.hbm.xml"/>
-		 -->
-		 <mapping resource="Employee-hsql.hbm.xml"/>
+		 
+		 <mapping resource="Employee-hsql.hbm.xml"/>-->
+		 <mapping resource="Employee-criteria.hbm.xml"/>
 		 
 	</session-factory>
 	
