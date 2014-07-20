@@ -96,9 +96,10 @@ public class ManageEmployee {
 			
 			//List<?> employees = session.createQuery("SELECT SUM(E.salary),E.lastName FROM Employee as E GROUP BY E.lastName").list();
 			
-			String qryString = "FROM Employee as E WHERE E.salary=:sal";
+			String qryString = "FROM Employee as E WHERE E.salary=:sal and E.id=:idNO";
 			Query query = session.createQuery(qryString);
-			query.setLong(1, 10000);
+			query.setLong("sal", 10000);
+			query.setInteger("idNO", 96);
 			
 			
 			List<?> employees = query.list();
