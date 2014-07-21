@@ -11,26 +11,13 @@
 		
 		<!--  It will show the quaries in console -->	
 		<property name="show_sql">true</property> 
-		<!-- <property name="hbm2ddl.auto">create</property> -->
-		<!-- Second level cache --> 
+		<property name="hbm2ddl.auto">create</property>
+		<!-- Second level cache
 		<property name="hibernate.cache.use_second_level_cache">true</property> 
 		<property name="cache.provider_class">org.hibernate.cache.EhCacheProvider</property>
 		
-		<!-- List of XML mapping files  
-		
-		<mapping resource="Employee.hbm.xml" />
-		
-		<mapping resource="EmployeeSet.hbm.xml" />  
-		<mapping resource="EmployeeList.hbm.xml"/>
-		<mapping resource="EmployeeMap.hbm.xml"/> 
-		<mapping resource="EmployeeMany2One.hbm.xml"/>
-		<mapping resource="EmployeeMany2Many.hbm.xml"/>
-		<mapping resource="EmployeeComponent.hbm.xml"/>
-		 
-		 <mapping resource="Employee-hsql.hbm.xml"/>
-		 <mapping resource="Employee-criteria.hbm.xml"/> 
-		 -->
-		 <mapping resource="Employee-caching.hbm.xml"/>
+		 --> 
+		  <mapping class="com.hibernate.annotationex.Employee" />
 	</session-factory>
 	
 </hibernate-configuration>
