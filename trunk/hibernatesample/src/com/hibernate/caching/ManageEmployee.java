@@ -81,7 +81,7 @@ public class ManageEmployee {
 			session.close();
 			
 			Session session1 = factory.openSession();
-			Query query2 =  session1.createQuery("From Employee where id=96");
+			Query query2 =  session1.createQuery("From Employee where id=95");
 			query2.setCacheable(true);			
 			List<?> employees3 = query2.list();
 			session1.close();
