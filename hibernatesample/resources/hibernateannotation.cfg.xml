@@ -18,6 +18,7 @@
 		
 		 --> 
 		  <mapping class="com.hibernate.annotationex.Employee" />
+		  
 	</session-factory>
 	
 </hibernate-configuration>
