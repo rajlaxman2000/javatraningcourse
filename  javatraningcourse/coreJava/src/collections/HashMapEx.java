@@ -17,7 +17,7 @@ public class HashMapEx {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		
+		/*
 		StudentBeanForMap std1 = new StudentBeanForMap(1210,"Rajesh",new Integer(30));
 		StudentBeanForMap std2 = new StudentBeanForMap(101,"Sasi",23);
 		StudentBeanForMap std3 = new StudentBeanForMap(1,"Sunny",24);
@@ -57,7 +57,7 @@ public class HashMapEx {
 		treeMap.putAll(linkedHasMap);
 		
 		
-		/*
+	
 		System.out.println("This is Tree Map guys");
 		System.out.println(treeMap);	
 		
@@ -77,6 +77,19 @@ public class HashMapEx {
 			System.out.println(intIterator.next());
 		}
 		*/
+		
+		Map<Student, String> exMap = new HashMap<Student, String>(5);
+		
+		Student student1 = new Student(1, "Rajesh");
+		Student student2 = new Student(2, "Ravi");
+		Student student3 = new Student(3, "Raghu");
+		Student student4 = new Student(4, "Kumar");
+		Student student5 = new Student(5, "HAri");
+		
+		exMap.put(student1, "Hello");
+		exMap.put(student2, "Hai");
+		
+		System.out.println(exMap);
 	}
 
 }

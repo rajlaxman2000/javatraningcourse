@@ -1,0 +1,30 @@
+A HashMap works like this (this is a little bit simplified, but it illustrates the basic mechanism):
+
+It has a number of "buckets" which it uses to store key-value pairs in. Each bucket has a unique number 
+	- that's what identifies the bucket. When you put a key-value pair into the map,the HashMap will look 
+	  at the hash code of the key, and store the pair in the bucket of which the identifier is the hash code 
+	  of the key. For example: The hash code of the key is 235 -> the pair is stored in bucket number 235. 
+	  (Note that one bucket can store more then one key-value pair).
+
+When you lookup a value in the HashMap, by giving it a key, it will first look at the hash code of the key 
+	that you gave. The HashMap will then look into the corresponding bucket, and then it will compare the
+	key that you gave with the keys of all pairs in the bucket, by comparing them with equals().
+
+Now you can see how this is very efficient for looking up key-value pairs in a map: 
+	by the hash code of the key the HashMap immediately knows in which bucket to look, so that it 
+	only has to test against what's in that bucket.
+
+Looking at the above mechanism, you can also see what requirements are necessary on the hashCode() 
+	and equals() methods of keys:
+
+If two keys are the same (equals() returns true when you compare them), their hashCode() method
+	 must return the same number. If keys violate this, then keys that are equal might be stored in different
+	 buckets, and the HashMap would not be able to find key-value pairs (because it's going to look in the same bucket).
+
+If two keys are different, then it doesn't matter if their hash codes are the same or not. 
+	They will be stored in the same bucket if their hash codes are the same, and in this case, 
+	the HashMap will use equals() to tell them apart.
+	
+Ref: 
+	1.	http://stackoverflow.com/questions/6493605/how-does-a-hashmap-work-in-java
+	2.	http://javarevisited.blogspot.in/2011/02/how-hashmap-works-in-java.html (Good one it seems)
