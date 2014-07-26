@@ -4,7 +4,7 @@
        xsi:schemaLocation="
 			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
 			
-			<bean id="vehile.service" class="com.spring.beantest.VehicleService">
+			<bean id="vehile.service" class="com.spring.beantest.VehicleService" scope="">
 				<!-- 
 				<property name="companyName" value="Castro Service Center"/>
 				<property name="value" value="10"/>
