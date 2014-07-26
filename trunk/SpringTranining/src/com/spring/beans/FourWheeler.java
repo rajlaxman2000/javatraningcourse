@@ -1,6 +1,10 @@
 package com.spring.beans;
 
-public class FourWheeler implements Vehicle {
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+import org.springframework.web.bind.annotation.InitBinder;
+
+public class FourWheeler implements Vehicle, InitializingBean, DisposableBean {
 
 	private String type;
 	
@@ -64,6 +68,20 @@ public class FourWheeler implements Vehicle {
 	 */
 	public void setBrand(String brand) {
 		this.brand = brand;
+	}
+
+	@Override
+	
+	public void destroy() throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	
+	public void afterPropertiesSet() throws Exception {
+		// TODO Auto-generated method stub
+		
 	}
 
 
