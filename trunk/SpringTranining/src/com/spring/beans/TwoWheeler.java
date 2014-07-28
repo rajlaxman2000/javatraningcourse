@@ -1,15 +1,30 @@
 package com.spring.beans;
 
-public class TwoWheeler implements Vehicle {
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.BeanFactoryAware;
+import org.springframework.beans.factory.InitializingBean;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+
+public class TwoWheeler implements Vehicle, ApplicationContextAware {
 
 	private String type;
 	
 	private String brand;
 	
+	private ApplicationContext context;
+	
 	public TwoWheeler(){
 		
 	}
 	
+	public void initMethod(){
+		System.out.println("TWO wheeeler init method is begin called");
+	}
+	
+	public void destMethod(){
+		System.out.println("TWO wheeeler destroy method is begin called");
+	}
 	
 	
 	/**
@@ -19,6 +34,7 @@ public class TwoWheeler implements Vehicle {
 	public TwoWheeler(String type, String brand) {
 		this.type = type;
 		this.brand = brand;
+		System.out.println("TWO whleer object is created");
 	}
 
 	@Override
@@ -36,7 +52,10 @@ public class TwoWheeler implements Vehicle {
 	@Override
 	public void serviceVehicle() {
 		System.out.println("Vehicle servicing is completed");
-
+		
+		Vehicle vehicle  = (ThreeWhleer)context.getBean("vehicle3.bean");
+		
+		vehicle.serviceVehicle();
 	}
 	
 	/**
@@ -66,6 +85,17 @@ public class TwoWheeler implements Vehicle {
 	public void setBrand(String brand) {
 		this.brand = brand;
 	}
+
+
+
+	@Override
+	public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+		
+		context = applicationContext;
+	}
+
+
+
 
 
 

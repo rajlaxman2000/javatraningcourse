@@ -4,14 +4,69 @@
        xsi:schemaLocation="
 			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
 			
-			<bean id="vehile.service" class="com.spring.beantest.VehicleService" scope="">
-				<!-- 
+			<bean id="vehile.service" class="com.spring.beantest.VehicleService" scope="prototype">				 
 				<property name="companyName" value="Castro Service Center"/>
 				<property name="value" value="10"/>
-				<property name="valid" value="true"/>
+				<property name="valid" value="true" />
+				<property name="vehicle1" ref="vehicle1.bean"/>
+					
+				<property name="vehicle2" ref="vehicle2.bean"/>				
+				
+				<!-- 
+				<property name="vehicle1">
+					<idref bean="vehicle1.bean"/>					
+				</property>
+				<property name="vehicle2">
+					<bean class="com.spring.beans.TwoWheeler" >
+						<constructor-arg index="0" value="bike"/>
+						<constructor-arg index="1" value="Yamaha"/>
+					</bean>
+				</property>
 				 -->
-				<constructor-arg  type="java.lang.String" value="Castro Service Center" />
-				<constructor-arg index="1" value="10"/>
-				<constructor-arg index="2" value="true"/>
+			</bean>
+			
+			<alias  name="vehile.service" alias ="vehile-PetName1"/>
+			<alias  name="vehile.service" alias ="vehile-PetName2"/>
+ 
+			
+			<bean id="vehicle1.bean" class="com.spring.beans.FourWheeler">
+				<constructor-arg index="0" value="CAR"/>
+				<constructor-arg index="1" value="Maruti"/>
+			</bean>
+		
+			<bean id="vehicle2.bean" class="com.spring.beans.TwoWheeler" init-method="initMethod" destroy-method="destMethod">
+				<constructor-arg index="0" value="bike"/>
+				<constructor-arg index="1" value="Yamaha"/>
+			</bean>
+		
+			<bean id="vehicle3.bean" class="com.spring.beans.ThreeWhleer" scope="singleton" lazy-init="true">
+				<property name="type" value="Auto"/>
+				<property name="brand" value="TATA"/>
+				<property name="owners">
+					<list>
+						<value>TATA</value>
+						<value>BAJAJ</value>
+						<value>MAHINDRA</value>
+					</list>
+				</property>
+				<!--
+				<constructor-arg index="0" value="Auto"/>
+				<constructor-arg index="1" value="TATA"/>
+				-->
+				
+				<!-- 
+				<property name="ownersSet">
+					<set>
+						<value></value>
+					</set>
+				</property>
+				
+				<property name="ownersMap">
+					<map>
+						<entry key="student" value-ref ="student.service"></entry>
+						<entry key="teacher" value-ref ="teacher.service"></entry>
+					</map>
+				</property>
+				-->
 			</bean>
 </beans>			

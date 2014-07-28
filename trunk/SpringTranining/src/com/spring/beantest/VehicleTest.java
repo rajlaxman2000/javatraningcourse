@@ -13,9 +13,11 @@ public class VehicleTest {
 		
 		AbstractApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-beans.xml");
 		
-		VehicleService service = (VehicleService)applicationContext.getBean("vehile.service");
+		VehicleService service = (VehicleService)applicationContext.getBean("vehile-PetName2");
 		
-		service.startProcess();
+		service.startProcess();		
+		
+		applicationContext.destroy();
 		
 		//VehicleService service1 = new VehicleService();
 		

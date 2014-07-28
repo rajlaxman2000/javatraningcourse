@@ -1,39 +1,37 @@
 package com.spring.beantest;
 
 import com.spring.beans.FourWheeler;
+import com.spring.beans.ThreeWhleer;
 import com.spring.beans.Vehicle;
 
 public class VehicleService {
 	
-	//private Vehicle vehicle1;
+	private Vehicle vehicle1;
 	
-	//private Vehicle vehicle2;
+	private Vehicle vehicle2;
 	
 	
 	private String companyName;
 	
 	private Integer value;
 	
+	
+
+	
 	/**
 	 * @param companyName
 	 * @param value
 	 * @param valid
 	 */
+	
 	public VehicleService(String companyName, Integer value, boolean valid) {
 		this.companyName = companyName;
 		this.value = value;
 		this.valid = valid;
 	}
-
+	
 
 	private boolean valid;
-	
-	
-	
-	
-	
-	
-	
 	
 	/**
 	 * @return the valid
@@ -63,11 +61,15 @@ public class VehicleService {
 		System.out.println("Service value  ::  "+getValue());
 		
 		System.out.println("Service isValid  ::  "+isValid());
-		/*
+		
 		vehicle1.vehicleType();
 		vehicle1.vehicleBrand();
 		vehicle1.serviceVehicle();
-		*/
+		
+		
+		vehicle2.vehicleType();
+		vehicle2.vehicleBrand();
+		vehicle2.serviceVehicle();
 		
 	}
 
@@ -107,7 +109,7 @@ public class VehicleService {
 		this.companyName = companyName;
 	}
 	
-	/*
+	
 	public Vehicle getVehicle1() {
 		return vehicle1;
 	}
@@ -126,7 +128,7 @@ public class VehicleService {
 	public void setVehicle2(Vehicle vehicle2) {
 		this.vehicle2 = vehicle2;
 	}
-*/
+
 	
 	
 }

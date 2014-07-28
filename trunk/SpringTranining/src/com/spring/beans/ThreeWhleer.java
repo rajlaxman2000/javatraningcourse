@@ -1,27 +1,50 @@
 package com.spring.beans;
 
+import java.util.List;
+
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.web.bind.annotation.InitBinder;
 
-public class FourWheeler implements Vehicle, InitializingBean, DisposableBean {
-
+public class ThreeWhleer implements Vehicle, InitializingBean, DisposableBean{
+	
 	private String type;
 	
 	private String brand;
 	
-	public FourWheeler(){
+	private List<String> owners; 
+	
+	
+	public ThreeWhleer(){
 		
 	}
 	
+	
+	/**
+	 * @return the owners
+	 */
+	public List<String> getOwners() {
+		return owners;
+	}
+
+
+	/**
+	 * @param owners the owners to set
+	 */
+	public void setOwners(List<String> owners) {
+		this.owners = owners;
+	}
+
+
 	/**
 	 * @param type
 	 * @param brand
 	 */
-	public FourWheeler(String type, String brand) {
-		System.out.println("Four whleer object is created");
+	public ThreeWhleer(String type, String brand) {
 		this.type = type;
 		this.brand = brand;
+		this.owners = getOwners();
+		System.out.println("Three whleer object is created\n");
+		System.out.println("OWNERS LIST"+owners);
 	}
 
 	@Override
@@ -39,6 +62,7 @@ public class FourWheeler implements Vehicle, InitializingBean, DisposableBean {
 	@Override
 	public void serviceVehicle() {
 		System.out.println("Vehicle servicing is completed");
+		System.out.println("OWNERS LIST"+owners);
 
 	}
 	
@@ -71,20 +95,20 @@ public class FourWheeler implements Vehicle, InitializingBean, DisposableBean {
 		this.brand = brand;
 	}
 
-	@Override
-	
-	public void destroy() throws Exception {
-		// TODO Auto-generated method stub
-		
-	}
 
 	@Override
-	
 	public void afterPropertiesSet() throws Exception {
-		// TODO Auto-generated method stub
+		System.out.println("I am getting called after seetin of properties");
 		
 	}
 
 
+	@Override
+	public void destroy() throws Exception {
+		System.out.println("This will be called when this bean is gettign distroyed");
+		
+	}
+	
+	
 
 }
