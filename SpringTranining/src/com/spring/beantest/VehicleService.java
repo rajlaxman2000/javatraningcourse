@@ -15,6 +15,8 @@ public class VehicleService {
 	
 	private Integer value;
 	
+	private String name;
+	
 	
 
 	
@@ -55,6 +57,8 @@ public class VehicleService {
 
 
 	public void startProcess(){
+		
+		//System.out.println(getName());
 		
 		System.out.println("Service Center Name ::  "+getCompanyName());
 		
@@ -127,6 +131,22 @@ public class VehicleService {
 
 	public void setVehicle2(Vehicle vehicle2) {
 		this.vehicle2 = vehicle2;
+	}
+
+
+	/**
+	 * @return the name
+	 */
+	public String getName() {
+		return name;
+	}
+
+
+	/**
+	 * @param name the name to set
+	 */
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	
