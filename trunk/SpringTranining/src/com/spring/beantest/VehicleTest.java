@@ -11,7 +11,7 @@ public class VehicleTest {
 		
 		//ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-beans.xml");
 		
-		AbstractApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-beans.xml");
+		AbstractApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-beans-autowire.xml");
 		
 		VehicleService service = (VehicleService)applicationContext.getBean("vehile-PetName2");
 		
