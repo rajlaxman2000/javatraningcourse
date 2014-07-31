@@ -19,11 +19,11 @@ public class TwoWheeler implements Vehicle, ApplicationContextAware {
 	}
 	
 	public void initMethod(){
-		System.out.println("TWO wheeeler init method is begin called");
+		//System.out.println("TWO wheeeler init method is begin called");
 	}
 	
 	public void destMethod(){
-		System.out.println("TWO wheeeler destroy method is begin called");
+		//System.out.println("TWO wheeeler destroy method is begin called");
 	}
 	
 	
@@ -34,24 +34,24 @@ public class TwoWheeler implements Vehicle, ApplicationContextAware {
 	public TwoWheeler(String type, String brand) {
 		this.type = type;
 		this.brand = brand;
-		System.out.println("TWO whleer object is created");
+		//System.out.println("TWO whleer object is created");
 	}
 
 	@Override
 	public void vehicleType() {
-		System.out.println("Vehicle Type::" + getType());
+		//System.out.println("Vehicle Type::" + getType());
 
 	}
 
 	@Override
 	public void vehicleBrand() {
-		System.out.println("Vehicle Brand::" + getBrand());
+		//System.out.println("Vehicle Brand::" + getBrand());
 
 	}
 
 	@Override
 	public void serviceVehicle() {
-		System.out.println("Vehicle servicing is completed");
+		//System.out.println("Vehicle servicing is completed");
 		
 		Vehicle vehicle  = (ThreeWhleer)context.getBean("vehicle3.bean");
 		

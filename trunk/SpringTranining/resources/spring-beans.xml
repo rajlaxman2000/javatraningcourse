@@ -8,14 +8,14 @@
 				<property name="name" value="JAVA world"/>
 			</bean>
 			
-			<bean id="vehile.service" class="com.spring.beantest.VehicleService"  autowire="byType" scope="prototype" parent="sample.abstart">				 
+			<bean id="vehile.service" class="com.spring.beantest.VehicleService" scope="prototype" parent="sample.abstart">				 
 				<property name="companyName" value="Castro Service Center"/>
 				<property name="value" value="10"/>
 				<property name="valid" value="true" />
-				<!-- <property name="vehicle1" ref="vehicle1.bean"/> -->
+				<property name="vehicle1" ref="vehicle1.bean"/>
 					
 				<!-- <property name="vehicle2" ref="vehicle2.bean"/> -->		
-				<!-- <property name="name" value="JAVA world"/> -->		
+				<property name="name" value="JAVA world"/>		
 				
 				<!-- 
 				<property name="vehicle1">

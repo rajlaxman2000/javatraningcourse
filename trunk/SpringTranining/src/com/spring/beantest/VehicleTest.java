@@ -9,15 +9,16 @@ public class VehicleTest {
 	
 	public static void main(String[] args){		
 		
-		//ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-beans.xml");
+		AbstractApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-beans-postProcessor.xml");
+		//AbstractApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-beans-factoryPostProcessor.xml");
 		
-		AbstractApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-beans-autowire.xml");
+		//AbstractApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-beans-autowire.xml");
 		
-		VehicleService service = (VehicleService)applicationContext.getBean("vehile-PetName2");
+		VehicleService service = (VehicleService)applicationContext.getBean("vehile.service");
 		
 		service.startProcess();		
-		
-		applicationContext.destroy();
+		//applicationContext.destroy();;
+		applicationContext.registerShutdownHook();
 		
 		//VehicleService service1 = new VehicleService();
 		

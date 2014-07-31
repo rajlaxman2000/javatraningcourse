@@ -1,11 +1,17 @@
 package com.spring.beantest;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Required;
+
 import com.spring.beans.FourWheeler;
 import com.spring.beans.ThreeWhleer;
 import com.spring.beans.Vehicle;
 
 public class VehicleService {
 	
+	@Autowired
+	@Qualifier("fourwheelerHeavy")
 	private Vehicle vehicle1;
 	
 	private Vehicle vehicle2;
@@ -70,11 +76,12 @@ public class VehicleService {
 		vehicle1.vehicleBrand();
 		vehicle1.serviceVehicle();
 		
+		/*
 		
 		vehicle2.vehicleType();
 		vehicle2.vehicleBrand();
 		vehicle2.serviceVehicle();
-		
+		*/
 	}
 
 	
@@ -118,7 +125,7 @@ public class VehicleService {
 		return vehicle1;
 	}
 
-
+	//@Required
 	public void setVehicle1(Vehicle vehicle1) {
 		this.vehicle1 = vehicle1;
 	}
