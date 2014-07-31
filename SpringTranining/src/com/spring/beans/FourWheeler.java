@@ -1,14 +1,12 @@
 package com.spring.beans;
 
-import org.springframework.beans.BeansException;
+
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
-import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
-import org.springframework.web.bind.annotation.InitBinder;
 
-public class FourWheeler implements Vehicle, InitializingBean, DisposableBean, BeanFactoryPostProcessor  {
+
+public class FourWheeler implements Vehicle, InitializingBean, DisposableBean {
 
 	private String type;
 	
@@ -88,27 +86,6 @@ public class FourWheeler implements Vehicle, InitializingBean, DisposableBean, B
 		// TODO Auto-generated method stub
 		
 	}
-/*
-	@Override
-	public Object postProcessAfterInitialization(Object arg0, String arg1) throws BeansException {
-		System.out.println("This method is postProcessAfterInitialization");
-		System.out.println("Object details ::"+arg0);
-		System.out.println("String details ::"+arg1);
-		return arg0;
-	}
 
-	@Override
-	public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-		System.out.println("This method is postProcessBeforeInitialization");
-		System.out.println("Object details ::"+bean);
-		System.out.println("String details ::"+beanName);
-		return bean;
-	}
-*/
-	@Override
-	public void postProcessBeanFactory(ConfigurableListableBeanFactory factory) throws BeansException {
-		System.out.println("I amgetting called from postProcessBeanFactory after bean created ");
-	//	factory.getBean(paramClass);
-	}
 	
 }
