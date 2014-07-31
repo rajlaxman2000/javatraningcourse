@@ -43,26 +43,26 @@ public class ThreeWhleer implements Vehicle, InitializingBean, DisposableBean{
 		this.type = type;
 		this.brand = brand;
 		this.owners = getOwners();
-		System.out.println("Three whleer object is created\n");
-		System.out.println("OWNERS LIST"+owners);
+		//System.out.println("Three whleer object is created\n");
+		//System.out.println("OWNERS LIST"+owners);
 	}
 
 	@Override
 	public void vehicleType() {
-		System.out.println("Vehicle Type::" + getType());
+		//System.out.println("Vehicle Type::" + getType());
 
 	}
 
 	@Override
 	public void vehicleBrand() {
-		System.out.println("Vehicle Brand::" + getBrand());
+		//System.out.println("Vehicle Brand::" + getBrand());
 
 	}
 
 	@Override
 	public void serviceVehicle() {
-		System.out.println("Vehicle servicing is completed");
-		System.out.println("OWNERS LIST"+owners);
+		//System.out.println("Vehicle servicing is completed");
+		//System.out.println("OWNERS LIST"+owners);
 
 	}
 	
@@ -98,14 +98,14 @@ public class ThreeWhleer implements Vehicle, InitializingBean, DisposableBean{
 
 	@Override
 	public void afterPropertiesSet() throws Exception {
-		System.out.println("I am getting called after seetin of properties");
+	//	System.out.println("I am getting called after seetin of properties");
 		
 	}
 
 
 	@Override
 	public void destroy() throws Exception {
-		System.out.println("This will be called when this bean is gettign distroyed");
+	//	System.out.println("This will be called when this bean is gettign distroyed");
 		
 	}
 	

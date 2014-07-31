@@ -10,29 +10,36 @@
 				<property name="name" value="JAVA world"/>
 			</bean>
 			
-			<bean id="vehile.service" class="com.spring.beantest.VehicleService"  autowire="byType" scope="prototype" parent="sample.abstart">				 
+			<bean id="vehile.service" class="com.spring.beantest.VehicleService" scope="prototype" parent="sample.abstart">				 
 				<property name="companyName" value="Castro Service Center"/>
 				<property name="value" value="10"/>
 				<property name="valid" value="true" />
-				<qualifier ></qualifier>
 				<!-- <property name="vehicle1" ref="vehicle1.bean"/> -->
-					
-				
 			</bean>
 			
-			<alias  name="vehile.service" alias ="vehile-PetName1"/>
-			<alias  name="vehile.service" alias ="vehile-PetName2"/>
- 
-			<!-- byName, byType, constructor, default
-			<bean id="vehicle1.bean" class="com.spring.beans.FourWheeler" name="vehicle1"> 
+						<!-- byName, byType, constructor, default --> 
+			<bean id="vehicle1.bean" class="com.spring.beans.FourWheeler"> 
 				<constructor-arg index="0" value="CAR"/>
 				<constructor-arg index="1" value="Maruti"/>
+				<qualifier value="fourwheeler"/>
 			</bean>
-	 -->
-			<bean id="vehicle2.bean" class="com.spring.beans.TwoWheeler" init-method="initMethod" destroy-method="destMethod" name="vehicle2">
-				<constructor-arg index="0" value="bike"/>
+			
+			<bean id="vehicle4.bean" class="com.spring.beans.FourWheeler"> 
+				<constructor-arg index="0" value="BUS"/>
+				<constructor-arg index="1" value="VOLVO"/>
+				<qualifier value="fourwheelerHeavy"/>
+			</bean>
+			
+			<bean id="vehicle2.bean" class="com.spring.beans.TwoWheeler" > 
+				<constructor-arg index="0" value="Bike"/>
 				<constructor-arg index="1" value="Yamaha"/>
 			</bean>
+			
+			<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+			<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
+			
+			
+			
 		
 			
 </beans>			
