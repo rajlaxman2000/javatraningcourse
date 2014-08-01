@@ -4,10 +4,10 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
 						http://www.springframework.org/schema/beans/spring-beans.xsd
 						http://www.springframework.org/schema/context 
-						http://www.springframework.org/schema/context/spring-context.xsd"
-	xmlns:context="http://www.springframework.org/schema/context" >
-	<!--  xmlns:context="http://www.springframework.org/schema/context" 
-	default-init-method="customInit" default-destroy-method="customDestroy"> -->
+						http://www.springframework.org/schema/context/spring-context.xsd"	
+	xmlns:context="http://www.springframework.org/schema/context"> 
+	<!-- default-init-method="customInit" default-destroy-method="customDestroy"> 
+	 xmlns:context="http://www.springframework.org/schema/context" > --> 
 	<!-- Here default-init-method at global level will chek the methods with same name in each bean of they are available then execute then as per rules if not nothing will happen -->	
 
 
@@ -15,7 +15,8 @@
 		<property name="studentBean" ref="student.bean"></property>
 	</bean>
 	
-	<bean id="student.bean" class="com.spring.lifecycle.StudentBean" init-method="customInit" destroy-method="customDestroy">
+	<bean id="student.bean" class="com.spring.lifecycle.StudentBean">
+	<!-- <bean id="student.bean" class="com.spring.lifecycle.StudentBean" init-method="customInit" destroy-method="customDestroy"> -->
 		<property name="id" 	value="101"/>
 		<property name="name" 	value="Raghu"/>
 		<property name="age" 	value="15"/>
@@ -25,15 +26,15 @@
 			</bean>
 		</property>
 	</bean>
-	<!--  Date related bean -->
+	<!--  Date related bean --> 
 	<bean id="dateFormat" class="java.text.SimpleDateFormat">
 		<constructor-arg value="yyyy-MM-dd" />
 	</bean>
 	
-	<!-- Bean post processor and bean factory post processor defs  -->
+	<!-- Bean post processor and bean factory post processor defs
 	<bean class="com.spring.lifecycle.SimpleBeanPostProcessor"/>
 	<bean class="com.spring.lifecycle.SimpleBeanFactoryPostProcessor"/>
-	 
+	  -->
 	 
 </beans>	
 

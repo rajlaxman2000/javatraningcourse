@@ -37,7 +37,7 @@ public class SpringLifeCycleService {
 	 * This method will be called based on config of individual bean destroy tag
 	 */
 	public void customDestroy()  {
-		System.out.println("SpringLifeCycleService bean cutom destroy method like afterPropertiesSet method");
+		System.out.println("SpringLifeCycleService bean cutom destroy method");
 	}
 	
 

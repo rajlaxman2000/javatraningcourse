@@ -2,10 +2,10 @@ package com.spring.annotations;
 
 import java.util.Date;
 
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.InitializingBean;
+import org.springframework.stereotype.Component;
 
-public class StudentBean implements InitializingBean, DisposableBean {
+@Component
+public class StudentBean {
 	
 	private int id;
 	
@@ -82,43 +82,4 @@ public class StudentBean implements InitializingBean, DisposableBean {
 	public void setDob(Date dob) {
 		this.dob = dob;
 	}
-
-	@Override
-	/**
-	 * This method will be called after the bean created (i.e after constructor) 
-	 *  
-	 */
-	public void afterPropertiesSet() throws Exception {	
-		System.out.println("Student bean afterPropertiesSet method ");
-	}
-	
-	/**
-	 * This method will be called based on config of individual bean init tag
-	 */
-	public void customInit(){
-		System.out.println("Student bean cutom init method like afterPropertiesSet method");
-	}
-	
-	@Override
-	/**
-	 * This method will be called before bean is about to get destroyed
-	 */
-	public void destroy() throws Exception {
-		System.out.println("Student bean destroy method ");
-		
-	}
-	
-	/**
-	 * This method will be called based on config of individual bean destroy tag
-	 */
-	public void customDestroy()  {
-		System.out.println("Student bean cutom destroy method like afterPropertiesSet method");
-		
-	}
-	
-
-
-	
-	
-
 }

@@ -2,11 +2,18 @@ package com.spring.lifecycle;
 
 import java.util.Date;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
-public class StudentBean implements InitializingBean, DisposableBean {
-	
+/**
+ * @author Rajesh_Duvvi
+ *
+ */
+//public class StudentBean implements InitializingBean, DisposableBean  {
+	public class StudentBean {
 	private int id;
 	
 	private String name;
@@ -83,34 +90,38 @@ public class StudentBean implements InitializingBean, DisposableBean {
 		this.dob = dob;
 	}
 
-	@Override
+	
 	/**
 	 * This method will be called after the bean created (i.e after constructor) 
 	 *  
 	 */
+	/*@Override
 	public void afterPropertiesSet() throws Exception {	
 		System.out.println("Student bean afterPropertiesSet method ");
 	}
+	*/
+	
+	/**
+	 * This method will be called before bean is about to get destroyed
+	 */
+	/*@Override
+	public void destroy() throws Exception {
+		System.out.println("Student bean destroy method ");
+		
+	}*/
 	
 	/**
 	 * This method will be called based on config of individual bean init tag
 	 */
+	
 	public void customInit(){
 		System.out.println("Student bean cutom init method like afterPropertiesSet method");
-	}
-	
-	@Override
-	/**
-	 * This method will be called before bean is about to get destroyed
-	 */
-	public void destroy() throws Exception {
-		System.out.println("Student bean destroy method ");
-		
 	}
 	
 	/**
 	 * This method will be called based on config of individual bean destroy tag
 	 */
+	
 	public void customDestroy()  {
 		System.out.println("Student bean cutom destroy method like afterPropertiesSet method");
 		

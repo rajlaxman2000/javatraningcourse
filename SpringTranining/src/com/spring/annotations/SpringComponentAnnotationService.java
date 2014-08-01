@@ -5,24 +5,30 @@ import javax.annotation.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
-
-public class SpringAnnotationService {	
+//@Component(value="annotation.component.service")
+//@Controller
+//@Repository
+@Service(value="annotation.component.service")
+public class SpringComponentAnnotationService {
 	
 	/*
-	*@Autowired
-	*@Qualifier("sasibean")
+	@Autowired
+	@Qualifier("sasibean")
 	*
 	*Resource(name="student2.bean")
 	*/	
-	
+	@Resource(name="student2.bean")
 	private StudentBean studentBean;
 	
-	public SpringAnnotationService(){
+	public SpringComponentAnnotationService(){
 		
 	}
 	
-	public SpringAnnotationService( StudentBean studentBean){
+	public SpringComponentAnnotationService( StudentBean studentBean){
 		this.studentBean = studentBean;
 	}
 	
