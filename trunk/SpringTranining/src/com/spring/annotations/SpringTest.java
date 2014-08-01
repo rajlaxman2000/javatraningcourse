@@ -13,7 +13,8 @@ public class SpringTest {
 		
 		
 		SpringAnnotationService service = (SpringAnnotationService)applicationContext.getBean("annotation.service");
-		
+		// This needs to be used for component based annotation testing`
+		//SpringComponentAnnotationService service = (SpringComponentAnnotationService)applicationContext.getBean("annotation.component.service");
 		service.startProcess();		
 		//applicationContext.destroy();;
 		applicationContext.registerShutdownHook();
