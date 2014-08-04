@@ -1,12 +1,14 @@
 package com.spring.messagesrc;
 
-
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 
 public class SpringMsgSrcService {
 	
 	private StudentBean studentBean;
 	
-	
+	@Autowired
+	private MessageSource messageSource;
 	
 	public SpringMsgSrcService(){
 		
@@ -17,9 +19,11 @@ public class SpringMsgSrcService {
 	}
 	
 	public void startProcess(){
-		System.out.println("Student details below ::");
-		System.out.println("ID ::" + studentBean.getId() +"\n Name ::"+ studentBean.getName() + "\n Age ::" + 
+		System.out.println(this.messageSource.getMessage("student.display.msg", null, null));
+		/*System.out.println("ID ::" + studentBean.getId() +"\n Name ::"+ studentBean.getName() + "\n Age ::" + 
 				studentBean.getAge() + "\n DOB ::"+ studentBean.getDob());
+		*/
+		System.out.println(this.messageSource.getMessage("student.details.msg", new Object[]{studentBean.getId(),studentBean.getName(),studentBean.getAge(),studentBean.getDob()}, "default student details msg", null));
 		
 	}
 
@@ -43,6 +47,22 @@ public class SpringMsgSrcService {
 	public void customDestroy()  {
 		System.out.println("SpringLifeCycleService bean cutom destroy method like afterPropertiesSet method");
 	}
+
+	/**
+	 * @return the messageSource
+	 */
+	public MessageSource getMessageSource() {
+		return messageSource;
+	}
+
+	/**
+	 * @param messageSource the messageSource to set
+	 */
+	public void setMessageSource(MessageSource messageSource) {
+		this.messageSource = messageSource;
+	}
+	
+	
 	
 
 }
