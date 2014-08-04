@@ -12,7 +12,7 @@ public class SpringTest {
 		AbstractApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-beans-msgsrc.xml");
 		
 		
-		SpringMsgSrcService service = (SpringMsgSrcService)applicationContext.getBean("lifecycle.service");
+		SpringMsgSrcService service = (SpringMsgSrcService)applicationContext.getBean("propertyfiles.service");
 		
 		service.startProcess();		
 		//applicationContext.destroy();;

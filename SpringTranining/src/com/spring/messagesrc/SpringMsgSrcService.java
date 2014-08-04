@@ -1,8 +1,12 @@
 package com.spring.messagesrc;
 
+
+
 public class SpringMsgSrcService {
 	
 	private StudentBean studentBean;
+	
+	
 	
 	public SpringMsgSrcService(){
 		
