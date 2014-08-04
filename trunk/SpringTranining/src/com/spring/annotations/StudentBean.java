@@ -2,6 +2,7 @@ package com.spring.annotations;
 
 import java.util.Date;
 
+import org.springframework.beans.factory.annotation.Required;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -37,6 +38,7 @@ public class StudentBean {
 	/**
 	 * @param id the id to set
 	 */
+	@Required
 	public void setId(int id) {
 		this.id = id;
 	}
