@@ -14,8 +14,10 @@ public class SpringTest {
 		
 		SpringMsgSrcService service = (SpringMsgSrcService)applicationContext.getBean("propertyfiles.service");
 		
+		
 		service.startProcess();		
 		//applicationContext.destroy();;
+		System.out.println(applicationContext.getMessage("testmsg", null, "This is default test message", null));
 		applicationContext.registerShutdownHook();
 	}
 	
