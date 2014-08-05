@@ -17,6 +17,7 @@ public class SpringTest {
 		
 		service.startProcess();		
 		//applicationContext.destroy();;
+		
 		System.out.println(applicationContext.getMessage("testmsg", null, "This is default test message", null));
 		applicationContext.registerShutdownHook();
 	}
