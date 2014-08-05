@@ -1,0 +1,2 @@
+http://www.mkyong.com/spring/spring-aop-examples-advice/
+http://www.mkyong.com/spring3/spring-aop-aspectj-annotation-example/

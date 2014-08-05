@@ -7,6 +7,8 @@ public class SpringMsgSrcService {
 	
 	private StudentBean studentBean;
 	
+	
+	
 	@Autowired
 	private MessageSource messageSource;
 	
@@ -19,12 +21,17 @@ public class SpringMsgSrcService {
 	}
 	
 	public void startProcess(){
-		System.out.println(this.messageSource.getMessage("student.display.msg", null, null));
-		/*System.out.println("ID ::" + studentBean.getId() +"\n Name ::"+ studentBean.getName() + "\n Age ::" + 
-				studentBean.getAge() + "\n DOB ::"+ studentBean.getDob());
-		*/
-		System.out.println(this.messageSource.getMessage("student.details.msg", new Object[]{studentBean.getId(),studentBean.getName(),studentBean.getAge(),studentBean.getDob()}, "default student details msg", null));
 		
+		/*	System.out.println("Student details below ::");		
+		
+			System.out.println("ID ::" + studentBean.getId() +"\n Name ::"+ studentBean.getName() + "\n Age ::" + 
+				studentBean.getAge() + "\n DOB ::"+ studentBean.getDob());		
+		*/
+		System.out.println(this.messageSource.getMessage("student.display.msg", null,"This is default message", null));
+		System.out.println(this.messageSource.getMessage("student.details.msg", 
+				new Object[]{	studentBean.getId(),studentBean.getName(),studentBean.getAge(),studentBean.getDob()},
+				"default student details msg",
+				null));		
 	}
 
 	/**
@@ -33,7 +40,7 @@ public class SpringMsgSrcService {
 	public StudentBean getStudentBean() {
 		return studentBean;
 	}
-
+	
 	/**
 	 * @param studentBean the studentBean to set
 	 */

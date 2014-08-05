@@ -38,12 +38,5 @@
 			<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
 			<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
 			<bean class="com.spring.beantest.SimpleBeanPostProcessor"/>
-			<bean class="com.spring.beantest.SimpleBeanFactoryPostProcessor"/>
-			
-			
-			
-			
-			
-		
-			
+			<bean class="com.spring.beantest.SimpleBeanFactoryPostProcessor"/>			
 </beans>			
