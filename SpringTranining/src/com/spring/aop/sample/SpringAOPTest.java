@@ -12,7 +12,12 @@ public class SpringAOPTest {
 
 		SpringAOPService service = (SpringAOPService) applicationContext.getBean("aoptest.service");
 
-		service.startProcess();
+		try {
+			service.startProcess();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	
 		applicationContext.registerShutdownHook();
 	}
