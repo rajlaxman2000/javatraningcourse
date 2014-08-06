@@ -22,15 +22,13 @@
 	<aop:config>
 		<aop:aspect id="log" ref="logging">
 			<!-- <aop:pointcut id="serviceCall" expression="execution(* com.spring.aop.sample.*.*(..))"/> -->
-			<aop:pointcut id="serviceCall"
-				expression="execution(* com.spring.aop.sample.SpringAOPService.*(..))" />
-			<aop:before pointcut-ref="serviceCall" method="beforeAdvice" />
+			<aop:pointcut id="serviceCall" expression="execution(* com.spring.aop.sample.SpringAOPService.*(..))" />
+			<aop:after-throwing pointcut-ref="serviceCall" throwing="ex" method="AfterThrowingAdvice"/> 
+			<!-- 
+			<aop:before pointcut-ref="serviceCall" method="beforeAdvice"/>
 			<aop:after pointcut-ref="serviceCall" method="afterAdvice" />
-			 
 			<aop:around pointcut-ref="serviceCall" method="aroundMethod" />
-			<!--
-			<aop:before pointcut-ref="selectAll" method="beforeAdvice"/> 
-			<aop:after	pointcut-ref="selectAll" method="afterAdvice"/> 
+			 
 			<aop:after-returning pointcut-ref="selectAll" returning="retVal" method="afterReturningAdvice"/> 
 			<aop:after-throwing pointcut-ref="selectAll" throwing="ex" method="AfterThrowingAdvice"/> 
 			-->

@@ -9,7 +9,7 @@ public class Logging {
 	 * method execution.
 	 */
 	public void beforeAdvice() {
-		System.out.println("Going to setup student profile.");
+		System.out.println(" ** I am logging aspect and I am getting called before method execution. **");
 	}
 
 	/**
@@ -17,7 +17,7 @@ public class Logging {
 	 * method execution.
 	 */
 	public void afterAdvice() {
-		System.out.println("Student profile has been setup.");
+		System.out.println(" ** I am logging aspect and I am getting called after the method execution. **");
 	}
 	
 	/**
