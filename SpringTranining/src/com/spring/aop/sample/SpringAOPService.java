@@ -12,11 +12,13 @@ public class SpringAOPService {
 		this.studentBean = studentBean;
 	}
 	
-	public void startProcess() throws Exception{		
+	//public void startProcess() throws Exception{		
+	public Object startProcess(){	
 		System.out.println("Student details below ::");
 		System.out.println("ID ::" + studentBean.getId() +"\n Name ::"+ studentBean.getName() + "\n Age ::" + 
 				studentBean.getAge() + "\n DOB ::"+ studentBean.getDob());
-		throw (new Exception("This is done intentionally"));
+	//	throw (new Exception("This is done intentionally"));
+	return "Return test msg";
 	}
 
 	/**
