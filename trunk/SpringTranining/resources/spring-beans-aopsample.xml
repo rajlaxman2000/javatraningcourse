@@ -11,29 +11,40 @@
 	xmlns:context="http://www.springframework.org/schema/context">
 
 	<context:annotation-config />
+		
+	<aop:aspectj-autoproxy/>
 
-	<bean id="aoptest.service" class="com.spring.aop.sample.SpringAOPService">
+	<bean id="aoptest.service" class="com.spring.aop.sample.SpringAOPService" >
 		<property name="studentBean" ref="student.bean"></property>
 	</bean>
 
 	<!-- Definition for logging aspect -->
 	<bean id="logging" class="com.spring.aop.sample.Logging" />
+	
+	<!-- Definition for Annotation based logging aspect  -->
+	<bean id="logging.annotation" class="com.spring.aop.sample.LoggingAnnotationBased" />
+	
+	
 
 	<aop:config>
 		<aop:aspect id="log" ref="logging">
-			<!-- <aop:pointcut id="serviceCall" expression="execution(* com.spring.aop.sample.*.*(..))"/> -->
+			<!-- 
+			<aop:pointcut id="serviceCall" expression="execution(* com.spring.aop.sample.*.*(..))"/> 
 			<aop:pointcut id="serviceCall" expression="execution(* com.spring.aop.sample.SpringAOPService.*(..))" />
-			<aop:after-throwing pointcut-ref="serviceCall" throwing="ex" method="AfterThrowingAdvice"/> 
+			<aop:pointcut id="serviceCall" expression="execution(* com.spring.aop.sample.SpringAOPService.startProcess(..))" /> 
+			-->
+			<aop:pointcut id="serviceCall" expression="execution(* com.spring.aop.sample.SpringAOPService.*(..))" />
 			<!-- 
 			<aop:before pointcut-ref="serviceCall" method="beforeAdvice"/>
 			<aop:after pointcut-ref="serviceCall" method="afterAdvice" />
-			<aop:around pointcut-ref="serviceCall" method="aroundMethod" />
-			 
-			<aop:after-returning pointcut-ref="selectAll" returning="retVal" method="afterReturningAdvice"/> 
-			<aop:after-throwing pointcut-ref="selectAll" throwing="ex" method="AfterThrowingAdvice"/> 
+			<aop:around pointcut-ref="serviceCall" method="aroundMethod" />			 
+			<aop:after-returning pointcut-ref="serviceCall" returning="retVal" method="afterReturningAdvice"/> 
+			<aop:after-throwing pointcut-ref="serviceCall" throwing="ex" method="AfterThrowingAdvice"/> 
 			-->
 		</aop:aspect>
 	</aop:config>
+	
+
 
 	<bean id="student.bean" class="com.spring.aop.sample.StudentBean">
 		<property name="id" value="101" />
