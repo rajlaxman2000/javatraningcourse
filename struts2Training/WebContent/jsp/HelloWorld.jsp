@@ -6,6 +6,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	Hello world : <s:property value="name1"/>
+	Hello world : <s:property value="name"/>
 </body>
 </html>

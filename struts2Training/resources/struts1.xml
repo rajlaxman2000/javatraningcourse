@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" 
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+	
+<struts>
+	<package name="helloworld" extends="struts-default">	
+		
+		<interceptors>
+			<interceptor-stack name="defaultInterStack">
+				<interceptor-ref name="customInterceptor"></interceptor-ref>
+				<interceptor-ref name="customInterceptor1"></interceptor-ref>	
+				<interceptor-ref name="params"></interceptor-ref>	
+				<interceptor-ref name="timer" />		
+			</interceptor-stack>
+			
+			<interceptor name="customInterceptor" class="com.struts2.interceptors.CutsomInterceptor"/>
+			<interceptor name="customInterceptor1" class="com.struts2.interceptors.CutsomInterceptorSecond"/>
+		</interceptors>
+		
+		
+		
+		<action name="index">
+			<result>../jsp/index.jsp</result>
+		</action>
+		
+		<action name="helloGeneral" class="com.struts2.sample.action.HelloWorld">
+			<!-- Begin:: Built in interceptors  -->			
+			<interceptor-ref name="defaultInterStack"></interceptor-ref>			
+			<!-- End:: Built in interceptors  -->
+			<result name="success">../jsp/HelloWorld.jsp</result>
+			<result name="error">">../jsp/error.jsp</result>
+		</action>
+		
+		<action name="hello" class="com.struts2.sample.action.HelloWorld" method="executeTest">			
+			<interceptor-ref name="defaultInterStack"></interceptor-ref>
+			<result name="success">../jsp/HelloWorld.jsp</result>
+			<result name="customstring" type="redirect">/jsp/redirectTest.jsp</result>
+			<result name="error">../jsp/error.jsp</result>
+		</action>
+		
+		
+	</package>	
+</struts>

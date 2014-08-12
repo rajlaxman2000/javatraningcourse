@@ -1,0 +1,14 @@
+1 alias 	
+	Allows parameters to have different name aliases across requests. 
+2 check box 
+	Assists in managing check boxes by adding a parameter value of false for check boxes that are not checked. 
+3 conversionError 
+	Places error information from converting strings to parameter types into the action's field errors. 
+4 createSession 
+	Automatically creates an HTTP session if one does not already exist. 
+5 debugging 
+	Provides several different debugging screens to the developer. 
+6 execAndWait 
+	Sends the user to an intermediary waiting page while the action executes in the background. 
+7 exception 
+	Maps exceptions that are thrown from an action to a result, allowing automatic exception handling via redirection.
