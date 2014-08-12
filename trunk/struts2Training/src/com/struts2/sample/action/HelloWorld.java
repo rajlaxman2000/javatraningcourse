@@ -11,12 +11,21 @@ public class HelloWorld extends ActionSupport {
 	
 	public String execute() throws Exception{
 		
+		
 		System.out.println("I am in default execute method of HelloWorld Action class");
+		
 		return Action.SUCCESS;
+	}
+	
+	public static void main(String[] args){
+		System.out.println("Hello world");
 	}
 	
 	public String executeTest() throws Exception{
 		System.out.println("I am in cutome executeTest method of HelloWorld Action class");
+		if(name.equalsIgnoreCase("redirect")){
+			return "customstring"; 
+		}
 		return Action.SUCCESS;
 	}
 

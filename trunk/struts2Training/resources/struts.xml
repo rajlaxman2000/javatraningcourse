@@ -5,19 +5,6 @@
 <struts>
 	<constant name="struts.devMode" value="true" />
 	
-	<package name="helloworld" extends="struts-default">	
-	
-		<action name="index">
-			<result>../jsp/index.jsp</result>
-		</action>
-		
-		<action name="helloGeneral" class="com.struts2.sample.action.HelloWorld">
-			<result name="success">../jsp/HelloWorld.jsp</result>
-		</action>
-		
-		<action name="hello" class="com.struts2.sample.action.HelloWorld" method="executeTest">
-			<result name="success">../jsp/HelloWorld.jsp</result>
-		</action>
-	</package>	
-		
+
+	<include file="struts1.xml"/>
 </struts>
