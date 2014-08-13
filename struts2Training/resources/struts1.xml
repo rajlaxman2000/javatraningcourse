@@ -3,8 +3,10 @@
 	"http://struts.apache.org/dtds/struts-2.0.dtd">
 	
 <struts>
-	<package name="helloworld" extends="struts-default">	
+	<package name="general" extends="struts-default">
 		
+	</package>
+	<package name="helloworld" extends="general">			
 		<interceptors>
 			<interceptor-stack name="defaultInterStack">
 				<interceptor-ref name="customInterceptor"></interceptor-ref>
