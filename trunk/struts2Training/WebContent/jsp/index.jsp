@@ -12,6 +12,13 @@
 	<form action="hello">
 		<label for="name">Please enter your name</label><br /> 
 		<input type="text" name="name" />
+		<br/>
+		Enter Student Name :: <input type="text" name="student.name" />
+		<br/>
+		Enter Student Sno :: <input type="text" name="student.sno" />
+		<br/>
+		Enter Student age :: <input type="text" name="student.age" />
+		<br/>
 		<input type="submit" value="Say Hello" />
 	</form>
 </body>
