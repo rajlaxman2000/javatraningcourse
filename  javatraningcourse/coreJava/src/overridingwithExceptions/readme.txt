@@ -1,6 +1,6 @@
 Case1:
 	If a super class method doesn't declare any exception, then subclass over-riden method cannot declare
-checked exception but declare unchecked(runtime exception)
+checked exception but can declare unchecked(runtime exception)
 
 Case2:
 	If a super class method throws an exception, then subclass method can throw the same exception or no exception, 
