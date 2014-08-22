@@ -1,12 +1,36 @@
 package com.exceptions;
 
-import java.io.FileNotFoundException;
-
 public class Student {
 	
 	private int no;
 	
+	private int age;
 	
+	public String toString(){
+		return "No::"+no+"; Age ::"+age;
+	}
+
+
+	/**
+	 * @param age the age to set
+	 */
+	public void setAge(int age) throws AgeNotPermittedException {
+		if(age<0 || age>100){
+			throw new AgeNotPermittedException("Age seems to be out of bound, please chekc the value"+age);
+		}else{
+			this.age = age;
+		}
+	}
+
+	/**
+	 * @return the age
+	 */
+	public int getAge() {
+		return age;
+	}
+
+
+
 	
 	/**
 	 * @return the no
