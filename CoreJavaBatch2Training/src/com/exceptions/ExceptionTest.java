@@ -22,6 +22,7 @@ public class ExceptionTest {
 		
 		Student student = new Student();
 		
+		
 		try {
 			student.printDetails();
 		} catch (ArithmeticException e1) {
