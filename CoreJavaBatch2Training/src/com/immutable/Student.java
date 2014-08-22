@@ -25,6 +25,14 @@ public final class Student {
 		
 	}
 	
+	/**
+	 * @return the dob
+	 */
+	public Date getDob() {
+		//return new Date(dob.getTime());
+		return dob;
+	}
+
 	public String toString(){
 		return "Name:: "+name+"; No::"+no+"; Age::"+age+"; DOB"+dob;
 	}
