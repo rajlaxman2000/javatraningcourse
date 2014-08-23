@@ -1,12 +1,14 @@
 package collections;
 
-public class Employee {
+public class Employee implements Comparable<Employee>{
 	
-	private int empId;
+	
 	
 	private String name;
 	
 	private int age;
+
+	private int empId;
 	
 	
 	public Employee(){
@@ -70,7 +72,19 @@ public class Employee {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	
+
+
+
+	@Override
+	public int compareTo(Employee emp) {
+		if(this.empId < emp.getEmpId()){
+			return -1;
+		}else if(this.empId > emp.getEmpId()){
+			return 1;
+		}
+		return 0;
+	}
+
 	
 
 }
