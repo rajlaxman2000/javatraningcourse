@@ -20,8 +20,8 @@ public final class Student {
 		this.name = name;
 		this.no = no;
 		this.age = age;		
+		//this.dob = dob;		
 		this.dob = new Date(dob.getTime());
-		//this.dob = dob;
 		
 	}
 	
@@ -29,8 +29,8 @@ public final class Student {
 	 * @return the dob
 	 */
 	public Date getDob() {
-		//return new Date(dob.getTime());
-		return dob;
+		return new Date(dob.getTime());
+		//return dob;
 	}
 
 	public String toString(){
