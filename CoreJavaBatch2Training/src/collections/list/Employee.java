@@ -1,4 +1,4 @@
-package collections;
+package collections.list;
 
 public class Employee implements Comparable<Employee>{
 	
@@ -25,6 +25,15 @@ public class Employee implements Comparable<Employee>{
 		this.empId = empId;
 		this.name = name;
 		this.age = age;
+	}
+	
+	
+	public boolean equals(Object object){
+		Employee emp = (Employee) object;
+		if(this.getEmpId() == emp.getEmpId() && this.getName().equals(emp.getName()) && this.age == emp.getAge()){
+			return true;
+		}
+		return false;
 	}
 
 	public String toString(){
