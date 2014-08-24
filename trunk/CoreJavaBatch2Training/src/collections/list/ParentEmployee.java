@@ -1,4 +1,4 @@
-package collections;
+package collections.list;
 
 public class ParentEmployee implements Comparable<Employee> {
 

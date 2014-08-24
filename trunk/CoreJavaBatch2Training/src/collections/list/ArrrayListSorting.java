@@ -1,4 +1,4 @@
-package collections;
+package collections.list;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -21,6 +21,8 @@ public class ArrrayListSorting {
 		Employee employee4 = new Employee(55, "Adithya", 12);
 		Employee employee5 = new Employee(3, "Bhuvan", 80);
 		
+		System.out.println("Employee5 object hascode :: "+employee5.hashCode());
+		
 		employeeList.add(employee1);
 		employeeList.add(employee2);
 		employeeList.add(employee3);
@@ -30,11 +32,20 @@ public class ArrrayListSorting {
 		
 		System.out.println(employeeList);
 		
+		// this below will check with object equals method. so we need to over ride the equals method
+		Employee temp = new Employee(3, "Bhuvan", 80);
+		System.out.println("temp Employee object hascode :: "+temp.hashCode());
+		boolean searchRes =   employeeList.contains(temp);
+		
+		System.out.println("Serahc result ::"+searchRes);
+		
+		
+		
 		/*
 		
 		Collections.sort(employeeList);
 		
-		System.out.println("Printng the collection after sorting");
+		System.out.println("Printing the collection after sorting");
 		
 		System.out.println(employeeList);
 		*/
