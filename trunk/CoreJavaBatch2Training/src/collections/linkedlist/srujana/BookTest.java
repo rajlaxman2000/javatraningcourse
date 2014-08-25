@@ -37,6 +37,10 @@ public class BookTest {
 		Set<Book> bookset = new HashSet<Book>();
 		bookset.addAll(bookArrayList);
 		
+		//System.out.println("Result :: "+bookset.contains(new Book(2,"Bloodline","Sidney Sheldon",1977)));
+		
+		
+		
 		System.out.println("\nSet: "+bookset);
 		System.out.println("\nsize of set: "+bookset.size());
 		System.out.println("Set contains book 4: "+bookset.contains(book4));

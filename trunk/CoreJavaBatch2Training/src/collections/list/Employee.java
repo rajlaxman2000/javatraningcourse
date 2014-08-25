@@ -35,6 +35,10 @@ public class Employee implements Comparable<Employee>{
 		}
 		return false;
 	}
+	
+	public int hashCode(){
+		return this.getEmpId()+this.getName().hashCode()+this.getAge();
+	}
 
 	public String toString(){
 		return "\nEmpId::"+empId+"; EmpName::"+name+";Emp Age:: "+age;

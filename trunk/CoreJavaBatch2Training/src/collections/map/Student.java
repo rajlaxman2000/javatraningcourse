@@ -1,6 +1,6 @@
-package collections.set;
+package collections.map;
 
-public class Student {
+public class Student implements Comparable<Student>{
 	
 	private int sNO;
 	
@@ -29,7 +29,7 @@ public class Student {
 	}
 	
 	public String toString(){
-		return "\n Student No::"+sNO+"; Student Name::"+sName+"; Student Age::"+age +"\n";
+		return "\nStudent No::"+sNO+"; Student Name::"+sName+"; Student Age::"+age;
 	}
 
 	/**
@@ -86,7 +86,7 @@ public class Student {
 	}
 
 
-/*
+
 	@Override
 	public int compareTo(Student student) {
 		
@@ -97,6 +97,6 @@ public class Student {
 		return 0;
 	}
 	
-*/
+	
 
 }
