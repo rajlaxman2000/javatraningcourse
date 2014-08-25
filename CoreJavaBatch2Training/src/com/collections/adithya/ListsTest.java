@@ -73,7 +73,8 @@ public class ListsTest {
 		System.out.println();
 		System.out.println("linkedHashSet elements:"+linkedHash);
 		
-		linkedHash.removeAll(cricketList2);System.out.println();
+		linkedHash.removeAll(cricketList2);
+		System.out.println();
 		System.out.println("LinkedHashSet after removing LinkedList::"+linkedHash);
 		
 		
