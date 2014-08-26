@@ -1,0 +1,7 @@
+Nested classes
+	static nested classes
+	non static nested classes (Inner class)
+		Member class
+		local class
+		annonymous class
+		
