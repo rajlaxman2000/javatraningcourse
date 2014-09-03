@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Properties;
 
 public class TestConnection {
 
@@ -14,6 +15,11 @@ public class TestConnection {
 	 */
 	public static void main(String[] args) {
 		/// user name = root, psd = ""
+		
+		
+		Connection connection	= null;
+		Statement statement 	= null;
+		ResultSet rs			= null;;
 		
 		try {
 		
@@ -27,16 +33,35 @@ public class TestConnection {
 		
 		String PASS= "";
 		
+		String DB_Complete_URL =  DB_URL+"?user="+USER+"&password="+PASS;
+		
+		//jdbc:mysql://localhost/test?user=root&password=
+		System.out.println(DB_Complete_URL);
+		
 		//Step3 :  Create connection from DriverManegr with connnection url and username and pass word
-		Connection connection = DriverManager.getConnection(DB_URL, USER, PASS);
+		connection = DriverManager.getConnection(DB_URL, USER, PASS);
+		
+		// way-2 : Another way of creating the connection by using driver manager
+		//Connection connection = DriverManager.getConnection(DB_Complete_URL);
+		
+		//Way-3: Creating connection using properties object.
+		Properties properties = new Properties();
+		// you can use put also
+		properties.setProperty("user", USER);
+		properties.setProperty("password", PASS);
+		
+		//connection = DriverManager.getConnection(DB_URL,properties);
+		
 		
 		//Step4: Create statement from connection object to play with quaries
-		Statement statement = connection.createStatement();
+		statement = connection.createStatement();
 		
 		// Data base query
 		String sql = "SELECT id, name, age FROM employee";
 		
-		ResultSet rs = statement.executeQuery(sql);
+		rs = statement.executeQuery(sql);
+		
+
 		
 		while (rs.next()) {
 			// Retrieve by column name
@@ -52,12 +77,9 @@ public class TestConnection {
 			System.out.print(", Age: " + age);
 			
 			System.out.println("\n");
-			
+					
 		}
-		// STEP 6: Clean-up environment
-		rs.close();
-		statement.close();
-		connection.close();
+		
 		
 		}catch(ClassNotFoundException notFoundException){
 			
@@ -66,6 +88,21 @@ public class TestConnection {
 		}catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally{
+			
+				try {
+					// STEP 6: Clean-up environment
+					rs.close();
+					statement.close();
+					connection.close();
+					
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+			
+			
 		}
 		
 		
