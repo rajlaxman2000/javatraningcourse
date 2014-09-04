@@ -38,6 +38,9 @@ public class PreparedStatmentDAOImplTest extends GenericDAO {
 		try{
 		
 			preparedStatement =  getConnection().prepareStatement(sql);
+				preparedStatement.setString(1, "Raghu");
+				preparedStatement.setInt(2, 30);
+				
 			rs = preparedStatement.executeQuery();
 				
 			while (rs.next()) {
