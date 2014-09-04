@@ -1,28 +1,29 @@
-package com.jdbc.test;
+package com.jdbc.statments;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
 
-import com.mysql.jdbc.PreparedStatement;
 
-public class TestConnection {
 
+public class PreparedStatmentTest {
+
+	
 	/**
 	 * @param args
-	 * @throws ClassNotFoundException 
 	 */
 	public static void main(String[] args) {
-		/// user name = root, psd = ""
+	/// user name = root, psd = ""
 		
 		
 		Connection connection	= null;
-		Statement statement 	= null;
+	
 		PreparedStatement preparedStatement = null;
-		ResultSet rs			= null;;
+		ResultSet rs		= null;
 		
 		try {
 		
@@ -55,15 +56,18 @@ public class TestConnection {
 		
 		//connection = DriverManager.getConnection(DB_URL,properties);
 		
+		String sql = "SELECT id, name, age FROM employee where name=? and age=?";
 		
 		//Step4: Create statement from connection object to play with quaries
-		statement = connection.createStatement();
+		/*
+		preparedStatement =  connection.prepareStatement(sql);
 		
+			preparedStatement.setString(1, "raghu");
+			preparedStatement.setInt(2, 30);		
+		*/
 		
-		// Data base query
-		String sql = "SELECT id, name, age FROM employee";
-		
-		rs = statement.executeQuery(sql);
+		preparedStatement =  connection.prepareStatement(sql);
+		rs = preparedStatement.executeQuery();
 		
 
 		
@@ -97,7 +101,7 @@ public class TestConnection {
 				try {
 					// STEP 6: Clean-up environment
 					rs.close();
-					statement.close();
+					preparedStatement.close();
 					connection.close();
 					
 				} catch (SQLException e) {
