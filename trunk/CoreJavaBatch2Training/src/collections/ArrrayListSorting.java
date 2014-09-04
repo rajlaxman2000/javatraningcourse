@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import collections.list.EmpAgeComparator;
+
 import com.exceptions.AgeNotPermittedException;
 
 public class ArrrayListSorting {
@@ -52,7 +54,7 @@ public class ArrrayListSorting {
 		
 		// Sorting by using age comparator
 		EmpAgeComparator ageComparator = new EmpAgeComparator();
-		Collections.sort(employeeList, ageComparator);
+		//Collections.sort(employeeList, ageComparator);
 		
 		System.out.println("Printng the collection after sorting by age");
 		
