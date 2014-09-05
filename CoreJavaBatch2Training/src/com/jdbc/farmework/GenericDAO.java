@@ -38,6 +38,18 @@ public abstract class GenericDAO {
 		
 	}
 	
+	public void closeThings(Statement statement){
+		try{
+			statement.close();
+			
+			connection.close();
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+	}
+	
 	/*
 	public void closeThings(PreparedStatement preparedStatement, ResultSet resultSet){
 		try{
