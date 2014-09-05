@@ -1,0 +1,18 @@
+CREATE OR REPLACE PROCEDURE getEmpName 
+   (EMP_ID IN NUMBER, empName OUT VARCHAR) AS
+BEGIN
+   SELECT first INTO empName
+   FROM Employee
+   WHERE empID = EMP_ID;
+END;
+
+
+
+DELIMITER $$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `getEmpName`(IN EMP_ID INT, OUT EMP_NAME VARCHAR(255))
+BEGIN
+  SELECT empName INTO EMP_NAME
+   FROM Employee
+   WHERE empID = EMP_ID;
+END
