@@ -10,6 +10,26 @@ public class Student {
 	
 	private String dob;
 	
+	public Student(){
+		
+	}
+	
+	public Student(int id){
+		this.id=id;
+	}
+		
+	/**
+	 * @param id
+	 * @param name
+	 * @param age
+	 * @param dob
+	 */
+	public Student(int id, String name, int age, String dob) {
+		this.id = id;
+		this.name = name;
+		this.age = age;
+		this.dob = dob;
+	}
 	
 	public String toString(){
 		return "Student Id:"+id+"; Name:"+name+"; Age:"+age+"; DOB :"+dob;

@@ -5,6 +5,28 @@ public class SchoolStudent extends Student {
 	private String schoolName;
 	
 	private String className;
+	
+	public SchoolStudent(){
+		
+	}
+	
+	public SchoolStudent(String schoolName){
+		this.schoolName = schoolName;		
+	}
+	
+	public SchoolStudent(String schoolName, String className){
+		this.schoolName =  schoolName;
+		this.className = className;
+	}
+	
+	public SchoolStudent(int id, String name, int age, String dob, String schoolName, String className){
+		
+		super(id,name,age,dob);
+		
+		this.schoolName =  schoolName;
+		this.className = className;
+
+	}
 
 	/**
 	 * @return the schoolName
