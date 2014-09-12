@@ -8,9 +8,8 @@
     <welcome-file>default.html</welcome-file>
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
-  </welcome-file-list>
-  
-  <servlet>
+    </welcome-file-list>
+   <servlet>
   	<description> This is sample servlet to test</description>
   	<display-name>Sample</display-name>
   	<servlet-name>SampleTest</servlet-name>
@@ -22,4 +21,20 @@
   	<url-pattern>/sample</url-pattern>
   </servlet-mapping>
   
+  
+   <servlet>
+  	<description> This is sample servlet to test</description>
+  	<display-name>form</display-name>
+  	<servlet-name>FormServlet</servlet-name>
+  	<servlet-class>servlets.sample.FormServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>FormServlet</servlet-name>
+  	<url-pattern>/html/formAction</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+
 </web-app>
