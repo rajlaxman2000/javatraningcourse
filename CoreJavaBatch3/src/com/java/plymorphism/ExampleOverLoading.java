@@ -6,6 +6,12 @@ public class ExampleOverLoading {
 		return a+b;
 	}
 	
+	/**
+	 * 
+	 * @param a
+	 * @param b
+	 * @return
+	 */
 	public float add(int a, float b){
 		
 		return a+b;
