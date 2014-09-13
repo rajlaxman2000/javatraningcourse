@@ -4,9 +4,13 @@ import java.util.List;
 import java.util.Scanner;
 
 import miniProject.display.BranchDisplay;
+import miniProject.display.ParentDisplay;
+import miniProject.dto.Parent;
 import miniProject.dto.SchoolBranch;
 import miniProject.service.BranchService;
+import miniProject.service.ParentService;
 import miniProject.service.impl.BranchServiceImpl;
+import miniProject.service.impl.ParentServiceImpl;
 
 
 public class Menu {
@@ -36,6 +40,8 @@ public class Menu {
 		break;
 		//case 2: studentMenu();
 			//	break;
+		case 3: parentMenu();
+				break;
 		default:
 			break;
 		
@@ -135,6 +141,39 @@ public class Menu {
 			test.homescreen();
 			break;
 		}
+	}
+	
+	
+	public void parentMenu(){
+		do{
+		System.out.println();
+		System.out.println("1.Display the Parents list");
+		System.out.println("2.Retreive a Parent details by entering student ID");
+		System.out.println("3.Insert Parent Details by ID ");
+		System.out.println("0:Exit to homescreen");
+		ParentService parentService = new ParentServiceImpl();
+		ParentDisplay display = new ParentDisplay();
+		int id;
+		i = sc.nextInt();
+				switch (i) {
+		case 1:
+			List<Parent> parentList = parentService.getParentDetails();
+			display.retreiveAll(parentList);
+			break;
+		case 2:
+			System.out.println("Enter branch ID:");
+			id = sc.nextInt();
+			Parent parent = parentService.getParentById(id);
+			display.showParent(parent);
+			break;
+		case 3:
+			int insParent = parentService.insertParent();
+			display.insert(insParent);
+			break;
+		}
+		}while(i!=0);
+		Menu menu = new Menu();
+		menu.mainMenu();
 	}
 	
 	
