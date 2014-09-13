@@ -2,6 +2,7 @@ package miniProject.framework;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -26,25 +27,38 @@ public abstract class Dbconnection {
 		return  connection;
 	}
 	
-	public void closeThingsResultset(ResultSet resultSet){
+	
+	public void closeConn(Connection conn){
 		try{
-			resultSet.close();
-			connection.close();
-		}catch (Exception e) {
+			conn.close();
+		}catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
-		
 	}
 	
-	public void closeThingsStatement(Statement statement){
+	public void closeThings(Statement statement,ResultSet rs){
 		try{
 			statement.close();
-			connection.close();
-		}catch (Exception e) {
+			rs.close();
+		}catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
-		
+	}
+	
+	public void closeThings(PreparedStatement ps,ResultSet rs){
+		try{
+			ps.close();
+			rs.close();
+		}catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void closePrepared(PreparedStatement ps){
+		try{
+			ps.close();
+		}catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 }
