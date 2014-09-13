@@ -12,7 +12,7 @@ public class Sample extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 	
-private String message;
+	private String message;
 	
 	public void init()throws ServletException {
 		// Do required initialization 
