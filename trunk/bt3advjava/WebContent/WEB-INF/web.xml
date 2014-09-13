@@ -8,8 +8,9 @@
     <welcome-file>default.html</welcome-file>
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
-    </welcome-file-list>
-   <servlet>
+  </welcome-file-list>
+  
+  <servlet>
   	<description> This is sample servlet to test</description>
   	<display-name>Sample</display-name>
   	<servlet-name>SampleTest</servlet-name>
@@ -34,7 +35,17 @@
   	<url-pattern>/html/formAction</url-pattern>
   </servlet-mapping>
   
+   <servlet>
+  	<description> This is to get Header values test</description>
+  	<display-name>header</display-name>
+  	<servlet-name>HeaderServlet</servlet-name>
+  	<servlet-class>servlets.sample.HeaderValuesServlet</servlet-class>
+  </servlet>
   
   
+    <servlet-mapping>
+  	<servlet-name>HeaderServlet</servlet-name>
+  	<url-pattern>/html/header</url-pattern>
+  </servlet-mapping>
 
 </web-app>
