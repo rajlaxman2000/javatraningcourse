@@ -1,16 +1,24 @@
 package miniProject.frontlayer;
 
+import java.util.List;
 import java.util.Scanner;
 
-import miniProject.service.StudentService;
-import miniProject.service.impl.StudentServiceImpl;
+import miniProject.display.BranchDisplay;
+import miniProject.dto.SchoolBranch;
+import miniProject.service.BranchService;
+import miniProject.service.impl.BranchServiceImpl;
+
 
 public class Menu {
 
-	
 	int i=0;
-	
 	Scanner sc = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		System.out.println("Welcome");
+		Menu menu = new Menu();
+		menu.mainMenu();
+	}
 	
 	public void mainMenu(){
 		System.out.println("Welcome to the School website");
@@ -24,13 +32,64 @@ public class Menu {
 		
 		int i = sc.nextInt();
 		switch(i){
-		case 2: studentMenu();
-				break;
+		case 1: branchMenu();
+		break;
+		//case 2: studentMenu();
+			//	break;
 		default:
 			break;
 		
 		}
 	}
+	
+	
+	public void branchMenu(){
+		do{
+		System.out.println();
+		System.out.println("1.Display all the Branches list");
+		System.out.println("2.Retreive a Branch details by entering branch ID");
+		System.out.println("3.Update Branch Details");//only phone number changes
+		System.out.println("4.Insert Branch Details by ID ");
+		System.out.println("5.Delete Branch Details by ID");
+		System.out.println("0:Exit to homescreen");
+		BranchService branchService = new BranchServiceImpl();
+		BranchDisplay display = new BranchDisplay();
+		int id;
+		i = sc.nextInt();
+				switch (i) {
+		case 1:
+			List<SchoolBranch> branchList = branchService.getBranchDetails();
+			display.retreiveAll(branchList);
+			break;
+		case 2:
+			System.out.println("Enter branch ID:");
+			id = sc.nextInt();
+			SchoolBranch branch = branchService.getBranchById(id);
+			display.showBranch(branch);
+			break;
+		case 3:
+			System.out.println("Enter branch ID:");
+			id = sc.nextInt();
+			int updBranch = branchService.updateBranchById(id);
+			display.insert(updBranch);
+			break;
+		case 4:
+			int insBranch = branchService.insertBranch();
+			display.insert(insBranch);
+			break;
+		case 5:
+			System.out.println("Enter branch ID:");
+			id = sc.nextInt();
+			int delBranch = branchService.deleteBranch(id);
+			display.insert(delBranch);
+			break;
+		}
+		}while(i!=0);
+		Menu menu = new Menu();
+		menu.mainMenu();
+	}
+	
+	
 	
 	public void studentMenu(){
 		System.out.println();
