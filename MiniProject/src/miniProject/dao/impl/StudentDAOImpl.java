@@ -21,7 +21,9 @@ public class StudentDAOImpl extends Dbconnection implements StudentDAO {
 	private String studentName=null;
 	private int  branchLoc=0;
 
-		
+	/**
+	 * student	
+	 */
 	public Student getStudentByName(String name) {
 		
 		Student student=null;
