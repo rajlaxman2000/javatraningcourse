@@ -47,5 +47,18 @@
   	<servlet-name>HeaderServlet</servlet-name>
   	<url-pattern>/html/header</url-pattern>
   </servlet-mapping>
+  
+   <servlet>
+  	<description> This is to get Radio button values</description>
+  	<display-name>radio</display-name>
+  	<servlet-name>RadioButtonServlet</servlet-name>
+  	<servlet-class>servlets.sample.RadioButtonServlet</servlet-class>
+  </servlet>
+  
+  
+    <servlet-mapping>
+  	<servlet-name>RadioButtonServlet</servlet-name>
+  	<url-pattern>/html/RadioAction</url-pattern>
+  </servlet-mapping>
 
 </web-app>
