@@ -60,5 +60,43 @@
   	<servlet-name>RadioButtonServlet</servlet-name>
   	<url-pattern>/html/RadioAction</url-pattern>
   </servlet-mapping>
+  <!--  -->
+  <servlet>
+  	<description> Login Action Servlet</description>
+  	<display-name>login</display-name>
+  	<servlet-name>LoginActionServlet</servlet-name>
+  	<servlet-class>servlets.requestDispatcher.ReqDispatcherLogiEx</servlet-class>
+  </servlet>
+  
+  
+    <servlet-mapping>
+  	<servlet-name>LoginActionServlet</servlet-name>
+  	<url-pattern>/html/login</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<description> Welcome Action Servlet</description>
+  	<display-name>welcome</display-name>
+  	<servlet-name>WelComeActionServlet</servlet-name>
+  	<servlet-class>servlets.requestDispatcher.WelComeServlet</servlet-class>
+  </servlet>
+  
+  
+    <servlet-mapping>
+  	<servlet-name>WelComeActionServlet</servlet-name>
+  	<url-pattern>/html/welcome</url-pattern>
+  </servlet-mapping>
 
+ <servlet>
+  	<description> This servlet is to check the option of redirecting</description>
+  	<display-name>redirecting</display-name>
+  	<servlet-name>RedirectServlet</servlet-name>
+  	<servlet-class>servlets.requestDispatcher.ServletRedirect</servlet-class>
+  </servlet>
+  
+  
+    <servlet-mapping>
+  	<servlet-name>RedirectServlet</servlet-name>
+  	<url-pattern>/html/redirect</url-pattern>
+  </servlet-mapping>
 </web-app>
