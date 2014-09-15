@@ -1,0 +1,1 @@
+Never ever check 2 objects equality with == symbol, it is crime
