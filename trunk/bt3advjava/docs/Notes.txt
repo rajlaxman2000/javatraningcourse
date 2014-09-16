@@ -1,0 +1,14 @@
+Server Set up to see tomcat index page through Eclipse
+
+
+http://stackoverflow.com/questions/10086242/cannot-open-http-localhost8080-when-tomcat-is-running-in-eclipse
+
+Looks like eclipse uses by default 'Use workspace metadata' and deploy path to 'wtpwebapps' in server settings. Follow the below steps to change these and you will be able access localhost:8080 when you start server in eclipse.
+
+In eclipse servers tab at bottom, right click, where you can see start, stop etc, and select properties.
+In properties window, select general, then select Switch Location.
+Now you can see Tomcat v7.0 Server at localhost in the servers tab, double click on it.
+a. If there are any modules deployed, temporarily remove them and close out tab to save this change, otherwise go directly to step 4c below.
+b. If you removed any modules, restart server after step 4a and proceed to step 4c.
+c. In server location, select radio button 'Use tomcat installation', and select 'webapps' in deploy path.
+Save and start server in eclipse. Now you will be able to access the server.
