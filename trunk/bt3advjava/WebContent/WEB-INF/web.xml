@@ -92,6 +92,10 @@
   	<display-name>redirecting</display-name>
   	<servlet-name>RedirectServlet</servlet-name>
   	<servlet-class>servlets.requestDispatcher.ServletRedirect</servlet-class>
+  	<init-param>
+  		<param-name>ImagePath</param-name>
+  		<param-value>/usr/local/images/temp.png</param-value>
+  	</init-param>
   </servlet>
   
   
@@ -111,4 +115,67 @@
   	<servlet-name>RadioTest</servlet-name>
   	<url-pattern>/html/radioRead</url-pattern>
   </servlet-mapping>
+  
+  <!-- Servlet Config example -->
+   <servlet>
+  	<description> This servlet is to check servlet Config Example</description>
+  	<display-name>servletConfig</display-name>
+  	<servlet-name>ServletConfigExample</servlet-name>
+  	<servlet-class>servlets.configContext.ServletConfigExample</servlet-class>
+  	<init-param>
+  		<param-name>ImagePath</param-name>
+  		<param-value>/usr/local/images/temp.png</param-value>
+  	</init-param>
+  </servlet>
+  
+   <servlet-mapping>
+  	<servlet-name>ServletConfigExample</servlet-name>
+  	<url-pattern>/servletConfig</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<description> This servlet is to check servlet Context Example</description>
+  	<display-name>servletContext</display-name>
+  	<servlet-name>servletContextExample</servlet-name>
+  	<servlet-class>servlets.configContext.ServletContextExample</servlet-class>
+  </servlet>
+  
+
+  <servlet-mapping>
+  	<servlet-name>servletContextExample</servlet-name>
+  	<url-pattern>/servletContext</url-pattern>
+  </servlet-mapping>
+  
+  
+    <!--  Attribute usage and its example -->
+    <servlet>
+  	<description> This servlet is to check Attribute usage</description>
+  	<display-name>servletAttribute</display-name>
+  	<servlet-name>ServletAttributeEx</servlet-name>
+  	<servlet-class>servlet.attributes.AttributesExample</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>ServletAttributeEx</servlet-name>
+  	<url-pattern>/html/loginAttr</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<description> This servlet is to check Attribute usage in Dash Board</description>
+  	<display-name>servletDashBoard</display-name>
+  	<servlet-name>ServletDashBoardEx</servlet-name>
+  	<servlet-class>servlet.attributes.DashBoard</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>ServletDashBoardEx</servlet-name>
+  	<url-pattern>/html/dashboard</url-pattern>
+  </servlet-mapping>
+  
+  
+  <context-param>
+  	<description>Data base credentials</description>
+  	<param-name>username</param-name>
+	<param-value>admin</param-value>  
+  </context-param>
 </web-app>
