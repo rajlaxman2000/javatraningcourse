@@ -99,4 +99,16 @@
   	<servlet-name>RedirectServlet</servlet-name>
   	<url-pattern>/html/redirect</url-pattern>
   </servlet-mapping>
+  
+    <servlet>
+  	<description> This is to read all form values, especially radio.</description>
+  	<display-name>radio</display-name>
+  	<servlet-name>RadioTest</servlet-name>
+  	<servlet-class>servlets.sample.RadioButtonEx</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>RadioTest</servlet-name>
+  	<url-pattern>/html/radioRead</url-pattern>
+  </servlet-mapping>
 </web-app>
