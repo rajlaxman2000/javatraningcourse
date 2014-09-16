@@ -1,24 +1,23 @@
-package servlets.requestDispatcher;
+package servlet.attributes;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
+
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSessionEvent;
 
-public class ReqDispatcherLogiEx extends HttpServlet {
-
+public class AttributesExample extends HttpServlet {
+	
 	private static final long serialVersionUID = 1L;
 
-	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException,ServletException{
+				
 		
-		
-		//HttpSessionEvent 
-		//HttpSessionListener
 		String loginId = request.getParameter("username");
 		String psd = request.getParameter("password");
 		
@@ -31,8 +30,10 @@ public class ReqDispatcherLogiEx extends HttpServlet {
 		 
 		if(loginId.equalsIgnoreCase("adithya") && psd.equalsIgnoreCase("1234")){
 			
-			reqDis = request.getRequestDispatcher("/html/welcome");
-			reqDis.forward(request, response);
+				
+			ServletContext context=getServletContext();  
+			context.setAttribute("logedInUser", "adithya");
+			response.sendRedirect("http://localhost:8080/bt3advjava/html/dashboard");
 			
 		}else{
 			
@@ -43,4 +44,5 @@ public class ReqDispatcherLogiEx extends HttpServlet {
 		}
 		
 	}
+
 }
