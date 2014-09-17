@@ -11,7 +11,19 @@ public class ArtheExceptionExample {
 		
 		int y = 0 ;
 		
-		int div = x/y;
+		int div=0;
+		
+		try{
+			div = x/y;
+			
+		}catch(ArithmeticException arithmeticException){
+			System.err.println("I am gettgin some problem");
+		}finally{
+			System.out.println("Result :: "+div);
+		}
+		
+		
+		System.out.println("All my operations are done");
 		
 
 	}
