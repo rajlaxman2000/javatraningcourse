@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import miniProject.dao.StudentDAO;
 import miniProject.dto.Student;
@@ -39,7 +40,7 @@ public class StudentDAOImpl extends Dbconnection implements StudentDAO {
 			while (rs.next()) {
 				id = rs.getInt("studentID");
 				studentName = rs.getString("studentName");
-				branchLoc = rs.getInt("branchLocation");
+				branchLoc = rs.getInt("branchLoc");
 			}
 			student = new Student(id,studentName,branchLoc);
 			
@@ -68,7 +69,7 @@ public class StudentDAOImpl extends Dbconnection implements StudentDAO {
 			while (rs.next()) {
 				id = rs.getInt("studentID");
 				studentName = rs.getString("studentName");
-				branchLoc = rs.getInt("branchLocation");
+				branchLoc = rs.getInt("branchLoc");
 			}
 			student = new Student(id,studentName,branchLoc);
 			
@@ -90,12 +91,12 @@ public class StudentDAOImpl extends Dbconnection implements StudentDAO {
 		List<Student> students = new ArrayList<Student>();
 		try{
 			
-			preparedStatement =  getConnection().prepareStatement(sql);
-			rs = preparedStatement.executeQuery(sql);
+			statement =  getConnection().createStatement();
+			rs = statement.executeQuery(sql);
 			while (rs.next()) {
 				id = rs.getInt("studentID");
 				studentName = rs.getString("studentName");
-				branchLoc = rs.getInt("branchLocation");
+				branchLoc = rs.getInt("branchLoc");
 				student = new Student(id,studentName,branchLoc);
 				students.add(student);
 			}
@@ -105,17 +106,17 @@ public class StudentDAOImpl extends Dbconnection implements StudentDAO {
 		}catch (SQLException se) {
 			// TODO: handle exception
 		}finally{
-			closeThings(preparedStatement,rs);
+			closeThings(statement,rs);
 		}	
 		return students;
 	}
 
 	public int insertStudent(Student student) {
 		int studentID = student.getStudentID();
-		String name = student.getName();
-		int branchLoc = student.getBranchLocation();
-		String sql = "insert into student values(?,?,?)";
-		int newRowIndex =0;
+		String name = student.getStudentName();
+		int branchLoc = student.getBranchLoc();
+		String sql = "insert into student(studentID,studentName,branchLoc) values(?,?,?)";
+		int newRowIndex = 0;
 		try{
 		
 			preparedStatement =  getConnection().prepareStatement(sql);
@@ -137,19 +138,22 @@ public class StudentDAOImpl extends Dbconnection implements StudentDAO {
 		
 	}
 
+	
+	
+	
 	public boolean updateStudent(Student student) {
 		int stuID = student.getStudentID();
-		String stuname = student.getName();
-		int branchloc = student.getBranchLocation();
+		String stuname = student.getStudentName();
+		int branchloc = student.getBranchLoc();
 		boolean result = false;
-		String sql = "update student set ?,?,? where studentID=?";
+		String sql = "update student set studentName=?,branchLoc=? where studentID=?";
 		try{
 			
 			preparedStatement =  getConnection().prepareStatement(sql);
-			preparedStatement.setInt(1, stuID);
-			preparedStatement.setString(2,stuname);
-			preparedStatement.setInt(3, branchloc);
-			preparedStatement.setInt(4, stuID);
+			//preparedStatement.setInt(1, stuID);
+			preparedStatement.setString(1,stuname);
+			preparedStatement.setInt(2, branchloc);
+			preparedStatement.setInt(3, stuID);
 			result = preparedStatement.execute();
 			
 		}
@@ -165,7 +169,7 @@ public class StudentDAOImpl extends Dbconnection implements StudentDAO {
 
 	public boolean deleteStudentByName(String name) {
 		String stuname = name;
-		String sql = "delete from student where name=?";
+		String sql = "delete from student where studentName=?";
 		boolean result = false;
 		try{
 			

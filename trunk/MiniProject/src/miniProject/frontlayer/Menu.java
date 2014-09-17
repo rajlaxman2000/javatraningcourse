@@ -104,7 +104,7 @@ public class Menu {
 	public void studentMenu(){
 		do{
 		System.out.println();
-		System.out.println("1.Displya all the students list");
+		System.out.println("1.Display all the students list");
 		System.out.println("2.Retreive a Student details by entering student name");
 		System.out.println("3.Retreive a Student details by entering student ID");
 		System.out.println("4.Update Student Details");

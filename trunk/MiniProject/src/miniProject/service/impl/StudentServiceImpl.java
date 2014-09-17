@@ -34,7 +34,7 @@ public class StudentServiceImpl implements StudentService {
 		int index = studentDAO.insertStudent(student);
 		return index;
 	}
-
+	
 	@Override
 	public boolean updateStudent(Student student) {
 		boolean result = studentDAO.updateStudent(student);
