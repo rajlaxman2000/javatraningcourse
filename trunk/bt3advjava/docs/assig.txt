@@ -1,0 +1,15 @@
+1 . provide 5 urls (should be logically connected)
+2.  1 screen should be logic screen and should set 1 cookie in the browser 
+3.  2nd scrren should set one more cookie to the browser (now we have 2 cookies alltogther)
+4.  3rd screen should set one more cookie  (now we have 3 cookies)
+	so on till 5 th screen
+	
+Expectation :
+	from 2nd url onwards before processing it in servlet check whether there is a cookie available or not which is set by 1st screen
+	so on.... 
+	
+	from 2nd screen onwards I should be able to see log out button 
+	
+	if user click s log out all the cookies should be deleted from browser
+
+
