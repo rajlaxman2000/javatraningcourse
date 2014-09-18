@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import sun.net.www.http.HttpClient;
+
 public class FormServlet extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
@@ -47,6 +49,7 @@ public class FormServlet extends HttpServlet {
 		
 		System.out.println("Male value ::"+ male);
 		System.out.println("Female value ::"+ female);
+		
 		
 	} 
 
