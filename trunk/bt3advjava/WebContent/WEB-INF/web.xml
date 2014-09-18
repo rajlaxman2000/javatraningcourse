@@ -172,6 +172,44 @@
   	<url-pattern>/html/dashboard</url-pattern>
   </servlet-mapping>
   
+  <!-- Cookies testing example -->
+  
+  <servlet>
+  	<description>This servlet is defined to create cookies and handle them</description>
+  	<display-name>Cookie Servlet Display Name</display-name>
+  	<servlet-name>CookieExampleServlet</servlet-name>
+  	<servlet-class>servlet.sessiontracking.CookieMaintain</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>CookieExampleServlet</servlet-name>
+  	<url-pattern>/html/loginCookie</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<description>This servlet is for dash Board cookie details</description>
+  	<display-name>Dashboard Display Name</display-name>
+  	<servlet-name>DashBoardCookieServlet</servlet-name>
+  	<servlet-class>servlet.sessiontracking.DashBoard</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DashBoardCookieServlet</servlet-name>
+  	<url-pattern>/html/cookieDashboard</url-pattern>
+  </servlet-mapping>
+  <!-- Filters -->
+  
+  <filter>
+  	<description>THIS IS Autherization filter</description>
+  	<display-name>AuthFilter</display-name>
+  	<filter-name>AuthenticationFilter</filter-name>
+  	<filter-class>servlets.filters.AuthenticationFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>AuthenticationFilter</filter-name>
+  	<url-pattern>/html/cookieDashboard</url-pattern>  
+  </filter-mapping>
+  
+  
+  
   
   <context-param>
   	<description>Data base credentials</description>
