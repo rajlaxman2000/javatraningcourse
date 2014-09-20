@@ -22,7 +22,7 @@ public class ServletConfigExample extends HttpServlet{
 		String initVal = servletConfig.getInitParameter("ImagePath");
 		
 		
-		ServletContext servletContext = servletConfig.getServletContext();
+		ServletContext servletContext = getServletContext();
 		
 		PrintWriter out = response.getWriter();
 		

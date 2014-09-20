@@ -20,7 +20,7 @@ public class ServletContextExample extends HttpServlet{
 		
 		ServletConfig servletConfig = getServletConfig();
 		
-		ServletContext servletContext = servletConfig.getServletContext();
+		ServletContext servletContext = getServletContext();
 		
 		PrintWriter out = response.getWriter();
 		

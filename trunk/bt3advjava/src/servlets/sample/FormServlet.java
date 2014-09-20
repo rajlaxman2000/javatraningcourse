@@ -14,7 +14,13 @@ import sun.net.www.http.HttpClient;
 public class FormServlet extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
-
+	
+	public void init()throws ServletException {
+		// Do required initialization 
+		
+		System.out.println("I am in init method of sampel servlet ::");
+	}	
+	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException,IOException {
 		/*
 		System.out.println("I am in doget method of Sample servlet");
@@ -49,8 +55,13 @@ public class FormServlet extends HttpServlet {
 		
 		System.out.println("Male value ::"+ male);
 		System.out.println("Female value ::"+ female);
-		
+		request.getMethod()
 		
 	} 
+	
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException,IOException {
+	
+		doGet(request, response);
+	}
 
 }
