@@ -10,9 +10,9 @@ public interface BranchService {
 
 	public SchoolBranch getBranchById(int id);
 
-	public int updateBranchById(int id,String ph);
+	public int updateBranchById(SchoolBranch  branch);
 
-	public int insertBranch(int id,String ph);
+	public int insertBranch(SchoolBranch  branch);
 
 	public int deleteBranch(int id);
 

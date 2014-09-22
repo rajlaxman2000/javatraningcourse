@@ -68,37 +68,44 @@ public class Menu {
 		String ph;
 		i = sc.nextInt();
 				switch (i) {
+		//Retrieve ALL
 		case 1:
 			List<SchoolBranch> branchList = branchService.getBranchDetails();
 			display.retreiveAll(branchList);
 			break;
+		//Retrieve by ID	
 		case 2:
 			System.out.println("Enter branch ID:");
 			id = sc.nextInt();
 			SchoolBranch branch = branchService.getBranchById(id);
 			display.showBranch(branch);
 			break;
+		//UPDATE	
 		case 3:
 			System.out.println("Enter branch ID:");
 			id = sc.nextInt();
 			System.out.print("Enter new phone number:");
 			ph = sc.next();
-			int updBranch = branchService.updateBranchById(id,ph);
-			display.insert(updBranch);
+			branch = new SchoolBranch(id, ph);
+			int updBranch = branchService.updateBranchById(branch);
+			display.rowsEffected(updBranch);
 			break;
+		//INSERT	
 		case 4:
 			System.out.print("Enter branch ID: ");
 			id = sc.nextInt();
 			System.out.println("Enter branch Phone: ");
 			ph = sc.next();
-			int insBranch = branchService.insertBranch(id,ph);
-			display.insert(insBranch);
+			branch = new SchoolBranch(id, ph);
+			int insBranch = branchService.insertBranch(branch);
+			display.rowsEffected(insBranch);
 			break;
+		//DELETE	
 		case 5:
 			System.out.println("Enter branch ID:");
 			id = sc.nextInt();
 			int delBranch = branchService.deleteBranch(id);
-			display.insert(delBranch);
+			display.rowsEffected(delBranch);
 			break;
 		}
 		}while(i!=0);
@@ -193,6 +200,7 @@ public class Menu {
 		System.out.println("1.Display the Parents list");
 		System.out.println("2.Retreive a Parent details by entering student ID");
 		System.out.println("3.Insert Parent Details by ID ");
+		System.out.println("4.Delete Parent Details by StudentID ");
 		System.out.println("0:Exit to homescreen");
 		ParentService parentService = new ParentServiceImpl();
 		ParentDisplay display = new ParentDisplay();
@@ -200,26 +208,33 @@ public class Menu {
 		String name;
 		i = sc.nextInt();
 				switch (i) {
+		//RETRIEVE AL;		
 		case 1:
 			List<Parent> parentList = parentService.getParentDetails();
 			display.retreiveAll(parentList);
 			break;
+		//RETRIEVE BY STUDENT ID	
 		case 2:
 			System.out.println("Enter student ID:");
 			id = sc.nextInt();
 			Parent parent = parentService.getParentById(id);
 			display.showParent(parent);
 			break;
+		//INSERT PARENT DETAILS	
 		case 3:
-			System.out.print("Enter Parent ID: ");
-			id = sc.nextInt();
 			System.out.println("Enter Parent Name: ");
 			name = sc.next();
 			System.out.print("Enter Student ID:");
 			sid = sc.nextInt();
-			parent = new Parent(id, name, sid);
+			parent = new Parent(name, sid);
 			int insParent = parentService.insertParent(parent);
 			display.insert(insParent);
+			break;
+		case 4:
+			System.out.print("Enter Student ID:");
+			id = sc.nextInt();
+			int delParent = parentService.delParentByStudID(id);
+			display.insert(delParent);
 			break;
 		}
 		}while(i!=0);

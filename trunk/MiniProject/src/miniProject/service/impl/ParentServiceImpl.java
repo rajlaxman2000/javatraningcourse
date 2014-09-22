@@ -29,5 +29,10 @@ public class ParentServiceImpl implements ParentService{
 		int insParent = parentDAO.insertParent(parent);
 		return insParent;
 	}
+	
+	public int delParentByStudID(int id){
+		int delParent = parentDAO.delParentByStudID(id);
+		return delParent;
+	}
 
 }
