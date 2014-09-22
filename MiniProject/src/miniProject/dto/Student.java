@@ -19,7 +19,7 @@ public class Student
 		
 		@Override
 		public String toString() {
-			return "studentID = " + studentID + ", student name = " + studentName
+			return "\nstudentID = " + studentID + ", student name = " + studentName
 					+ ", branch Location ID = " + branchLoc;
 		}
 		

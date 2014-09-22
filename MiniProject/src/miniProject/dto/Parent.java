@@ -8,7 +8,10 @@ public class Parent {
 	public Parent(){
 		
 	}
-
+	public Parent(String parentName, int stud_ID) {
+		this.parentName = parentName;
+		this.stud_ID = stud_ID;
+	}
 	public Parent(int parentID, String parentName, int stud_ID) {
 		this.parentID = parentID;
 		this.parentName = parentName;

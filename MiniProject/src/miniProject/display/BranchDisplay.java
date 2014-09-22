@@ -14,7 +14,7 @@ public class BranchDisplay {
 		System.out.println("Branch Details: "+branch);
 	}
 	
-	public void insert(int num){
+	public void rowsEffected(int num){
 		System.out.println("Number of effected rows: "+num);
 	}
 }

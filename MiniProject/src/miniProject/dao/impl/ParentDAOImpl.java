@@ -88,20 +88,17 @@ public class ParentDAOImpl extends Dbconnection implements ParentDAO{
 	@Override
 	public int insertParent(Parent parent) {
 		//Scanner s = new Scanner(System.in);
-		int id = parent.getParentID();
 		String name = parent.getParentName();
 		int sid = parent.getStud_ID();
-		String sql = "INSERT INTO parent(parentID,parentName,stud_ID) VALUES (?,?,?)";
+		String sql = "INSERT INTO parent(parentName,stud_ID) VALUES (?,?)";
 		int numOfRowsChanged = 0;
 		try{		
 			conn = getConnection();
 			ps =  conn.prepareStatement(sql);
-			//System.out.print("Enter Parent ID: ");
-			ps.setInt(1,id);
 			//System.out.println("Enter Parent Name: ");
-			ps.setString(2,name);
+			ps.setString(1,name);
 			//System.out.print("Enter Student ID:");
-			ps.setInt(3,sid);
+			ps.setInt(2,sid);
 			
 			numOfRowsChanged = ps.executeUpdate();
 			
@@ -116,5 +113,31 @@ public class ParentDAOImpl extends Dbconnection implements ParentDAO{
 
 		return numOfRowsChanged;
 	}
+	
+	
+	
+	public int delParentByStudID(int id) {
+		String sql = "DELETE FROM parent WHERE stud_ID = ?";
+		int numOfRowsChanged = 0;
+		try{		
+			conn = getConnection();
+			ps =  conn.prepareStatement(sql);
+			//System.out.print("Enter Parent ID: ");
+			ps.setInt(1,id);
+			
+			numOfRowsChanged = ps.executeUpdate();
+			
+		}catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}catch (SQLException se) {
+			se.printStackTrace();
+		}finally{
+			closeConn(conn);
+			closePrepared(ps);
+		}
+
+		return numOfRowsChanged;
+	}
+
 
 }

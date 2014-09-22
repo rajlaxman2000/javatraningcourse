@@ -7,7 +7,6 @@ public class SchoolBranch {
 	public SchoolBranch(){
 		
 	}
-
 	public SchoolBranch(int branchLocation, String branchPhone) {
 		this.branchLocation = branchLocation;
 		this.branchPhone = branchPhone;
