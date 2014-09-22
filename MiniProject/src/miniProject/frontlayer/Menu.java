@@ -62,6 +62,7 @@ public class Menu {
 		System.out.println("4.Insert Branch Details by ID ");
 		System.out.println("5.Delete Branch Details by ID");
 		System.out.println("0:Exit to homescreen");
+		System.out.print("\nPlease enter your Choice: ");
 		BranchService branchService = new BranchServiceImpl();
 		BranchDisplay display = new BranchDisplay();
 		int id;
@@ -125,8 +126,8 @@ public class Menu {
 		System.out.println("5.Insert Student Details");
 		System.out.println("6.Delete existing Student Details by entering student name");
 		System.out.println("7.Delete existing Student Details by entering student ID");
-		System.out.println("8:Exit to previous Menu");
 		System.out.println("0:Exit to homescreen");
+		System.out.print("\nPlease enter your Choice: ");
 		StudentService studentService = new StudentServiceImpl();
 		
 		i = sc.nextInt();
@@ -161,13 +162,11 @@ public class Menu {
 			break;
 		case 5:
 			System.out.println("Enter the student values that you want to insert");
-			System.out.println("Enter student ID: ");
-			id = sc.nextInt();
 			System.out.println("Enter student name: ");
 			name = sc.next();
 			System.out.println("Enter student branch ID: ");
 			branchid = sc.nextInt();
-			student = new Student(id,name,branchid);
+			student = new Student(name,branchid);
 			int index = studentService.insertStudent(student);
 			System.out.println("student inserted at: "+index+" row");
 			break;
@@ -183,12 +182,11 @@ public class Menu {
 			result = studentService.deleteStudentById(id);
 			System.out.println("student row deleted: "+result);
 			break;
-		case 8:
-			studentMenu();
-			break;
 		case 0:
 			mainMenu();
 			break;
+		default:
+			System.out.println("Invalid entry");
 		}
 		}while(i!=0);
 	}
@@ -202,6 +200,7 @@ public class Menu {
 		System.out.println("3.Insert Parent Details by ID ");
 		System.out.println("4.Delete Parent Details by StudentID ");
 		System.out.println("0:Exit to homescreen");
+		System.out.print("\nPlease enter your Choice: ");
 		ParentService parentService = new ParentServiceImpl();
 		ParentDisplay display = new ParentDisplay();
 		int id,sid;
