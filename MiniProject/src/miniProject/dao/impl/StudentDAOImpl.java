@@ -112,17 +112,15 @@ public class StudentDAOImpl extends Dbconnection implements StudentDAO {
 	}
 
 	public int insertStudent(Student student) {
-		int studentID = student.getStudentID();
 		String name = student.getStudentName();
 		int branchLoc = student.getBranchLoc();
-		String sql = "insert into student(studentID,studentName,branchLoc) values(?,?,?)";
+		String sql = "insert into student(studentName,branchLoc) values(?,?)";
 		int newRowIndex = 0;
 		try{
 		
 			preparedStatement =  getConnection().prepareStatement(sql);
-			preparedStatement.setInt(1, studentID);
-			preparedStatement.setString(2,name);
-			preparedStatement.setInt(3, branchLoc);
+			preparedStatement.setString(1,name);
+			preparedStatement.setInt(2, branchLoc);
 		
 			newRowIndex = preparedStatement.executeUpdate();
 			
