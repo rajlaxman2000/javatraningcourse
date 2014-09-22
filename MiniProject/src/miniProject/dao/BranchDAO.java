@@ -9,9 +9,9 @@ public interface BranchDAO {
 
 	public SchoolBranch getBranchById(int id);
 
-	public int updateBranchById(int id);
+	public int updateBranchById(int id,String ph);
 
-	public int insertBranch();
+	public int insertBranch(int id,String ph);
 
 	public int deleteBranch(int id);
 

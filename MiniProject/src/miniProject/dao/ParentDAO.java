@@ -9,9 +9,6 @@ public interface ParentDAO {
 
 	public Parent getParentById(int id);
 
-	//public int updateBranchById(int id);
+	public int insertParent(Parent parent);
 
-	public int insertParent();
-
-	//public int deleteBranch(int id);
 }

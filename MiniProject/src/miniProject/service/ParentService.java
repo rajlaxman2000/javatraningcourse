@@ -9,9 +9,5 @@ public interface ParentService {
 
 	public Parent getParentById(int id);
 
-	//public int updateBranchById(int id);
-
-	public int insertParent();
-
-	//public int deleteBranch(int id);
+	public int insertParent(Parent parent);
 }

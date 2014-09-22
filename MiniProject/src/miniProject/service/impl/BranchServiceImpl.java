@@ -24,14 +24,14 @@ public class BranchServiceImpl implements BranchService{
 	}
 
 	@Override
-	public int updateBranchById(int id) {
-		int updBranch = branchDAO.updateBranchById(id);
+	public int updateBranchById(int id,String ph) {
+		int updBranch = branchDAO.updateBranchById(id,ph);
 		return updBranch;
 	}
 
 	@Override
-	public int insertBranch() {
-		int insBranch = branchDAO.insertBranch();
+	public int insertBranch(int id,String ph) {
+		int insBranch = branchDAO.insertBranch(id,ph);
 		return insBranch;
 	}
 
