@@ -1,0 +1,8 @@
+
+
+JSP scripting elements : 
+	scriptlet tag
+	expression tag
+	declaration tag
+	
+

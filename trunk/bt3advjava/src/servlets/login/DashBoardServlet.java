@@ -10,13 +10,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import sun.reflect.ReflectionFactory.GetReflectionFactoryAction;
+
 public class DashBoardServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
 		
-	
+		/*
 		PrintWriter out = response.getWriter();		 
 		response.setContentType("text/html");
 		 
@@ -26,6 +28,9 @@ public class DashBoardServlet extends HttpServlet {
 		out.println("Logged in User name is ::"+user.getUserName());
 		
 		out.println("</body></html>");
+		*/
+		RequestDispatcher reqDis = request.getRequestDispatcher("/login_html/dashboard.jsp");
+		reqDis.forward(request, response);
 		
 	}
 

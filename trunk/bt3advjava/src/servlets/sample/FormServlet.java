@@ -54,8 +54,7 @@ public class FormServlet extends HttpServlet {
 		String female = (String)request.getAttribute("female");
 		
 		System.out.println("Male value ::"+ male);
-		System.out.println("Female value ::"+ female);
-		request.getMethod()
+		System.out.println("Female value ::"+ female);		
 		
 	} 
 	
