@@ -84,8 +84,10 @@ public class BranchDAOImpl extends Dbconnection implements BranchDAO{
 	}
 
 	@Override
-	public int updateBranchById(int id,String ph) {
+	public int updateBranchById(SchoolBranch branch) {
 		//Scanner s = new Scanner(System.in);
+		String ph = branch.getBranchPhone();
+		int id = branch.getBranchLocation();
 		String sql = "UPDATE schoolbranch SET branchPhone = ? WHERE branchLocation = ?";
 		int numOfRowsChanged = 0;
 		try{		
@@ -110,9 +112,9 @@ public class BranchDAOImpl extends Dbconnection implements BranchDAO{
 	}
 
 	@Override
-	public int insertBranch(int id,String ph) {
-		
-		//Scanner s = new Scanner(System.in);
+	public int insertBranch(SchoolBranch  branch) {
+		int id = branch.getBranchLocation();
+		String ph = branch.getBranchPhone();
 		String sql = "INSERT INTO schoolbranch(branchLocation,branchPhone) VALUES (?,?)";
 		int numOfRowsChanged = 0;
 		try{		
