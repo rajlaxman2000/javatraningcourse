@@ -86,16 +86,22 @@ public class ParentDAOImpl extends Dbconnection implements ParentDAO{
 	}
 
 	@Override
-	public int insertParent() {
-		Scanner s = new Scanner(System.in);
+	public int insertParent(Parent parent) {
+		//Scanner s = new Scanner(System.in);
+		int id = parent.getParentID();
+		String name = parent.getParentName();
+		int sid = parent.getStud_ID();
 		String sql = "INSERT INTO parent(parentID,parentName,stud_ID) VALUES (?,?,?)";
 		int numOfRowsChanged = 0;
 		try{		
 			conn = getConnection();
 			ps =  conn.prepareStatement(sql);
-			System.out.print("Enter Parent ID: ");ps.setInt(1, Integer.parseInt(s.next()));
-			System.out.println("Enter Parent Name: ");ps.setString(2, s.next());
-			System.out.print("Enter Student ID:");ps.setInt(3, Integer.parseInt(s.next()));
+			//System.out.print("Enter Parent ID: ");
+			ps.setInt(1,id);
+			//System.out.println("Enter Parent Name: ");
+			ps.setString(2,name);
+			//System.out.print("Enter Student ID:");
+			ps.setInt(3,sid);
 			
 			numOfRowsChanged = ps.executeUpdate();
 			

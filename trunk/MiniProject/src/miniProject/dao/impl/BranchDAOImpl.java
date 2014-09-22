@@ -84,14 +84,15 @@ public class BranchDAOImpl extends Dbconnection implements BranchDAO{
 	}
 
 	@Override
-	public int updateBranchById(int id) {
-		Scanner s = new Scanner(System.in);
+	public int updateBranchById(int id,String ph) {
+		//Scanner s = new Scanner(System.in);
 		String sql = "UPDATE schoolbranch SET branchPhone = ? WHERE branchLocation = ?";
 		int numOfRowsChanged = 0;
 		try{		
 			conn = getConnection();
 			ps =  conn.prepareStatement(sql);
-			System.out.print("Enter new phone number:");ps.setString(1, s.next());
+			//System.out.print("Enter new phone number:");
+			ps.setString(1, ph);
 			ps.setInt(2, id);
 			
 			numOfRowsChanged = ps.executeUpdate();
@@ -109,16 +110,18 @@ public class BranchDAOImpl extends Dbconnection implements BranchDAO{
 	}
 
 	@Override
-	public int insertBranch() {
+	public int insertBranch(int id,String ph) {
 		
-		Scanner s = new Scanner(System.in);
+		//Scanner s = new Scanner(System.in);
 		String sql = "INSERT INTO schoolbranch(branchLocation,branchPhone) VALUES (?,?)";
 		int numOfRowsChanged = 0;
 		try{		
 			conn = getConnection();
 			ps =  conn.prepareStatement(sql);
-			System.out.print("Enter branch ID: ");ps.setInt(1, Integer.parseInt(s.next()));
-			System.out.println("Enter branch Phone: ");ps.setString(2, s.next());
+			//System.out.print("Enter branch ID: ");
+			ps.setInt(1, id);
+			//System.out.println("Enter branch Phone: ");
+			ps.setString(2, ph);
 			
 			numOfRowsChanged = ps.executeUpdate();
 			

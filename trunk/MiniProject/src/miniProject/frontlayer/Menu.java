@@ -65,6 +65,7 @@ public class Menu {
 		BranchService branchService = new BranchServiceImpl();
 		BranchDisplay display = new BranchDisplay();
 		int id;
+		String ph;
 		i = sc.nextInt();
 				switch (i) {
 		case 1:
@@ -80,11 +81,17 @@ public class Menu {
 		case 3:
 			System.out.println("Enter branch ID:");
 			id = sc.nextInt();
-			int updBranch = branchService.updateBranchById(id);
+			System.out.print("Enter new phone number:");
+			ph = sc.next();
+			int updBranch = branchService.updateBranchById(id,ph);
 			display.insert(updBranch);
 			break;
 		case 4:
-			int insBranch = branchService.insertBranch();
+			System.out.print("Enter branch ID: ");
+			id = sc.nextInt();
+			System.out.println("Enter branch Phone: ");
+			ph = sc.next();
+			int insBranch = branchService.insertBranch(id,ph);
 			display.insert(insBranch);
 			break;
 		case 5:
@@ -189,7 +196,8 @@ public class Menu {
 		System.out.println("0:Exit to homescreen");
 		ParentService parentService = new ParentServiceImpl();
 		ParentDisplay display = new ParentDisplay();
-		int id;
+		int id,sid;
+		String name;
 		i = sc.nextInt();
 				switch (i) {
 		case 1:
@@ -197,13 +205,20 @@ public class Menu {
 			display.retreiveAll(parentList);
 			break;
 		case 2:
-			System.out.println("Enter branch ID:");
+			System.out.println("Enter student ID:");
 			id = sc.nextInt();
 			Parent parent = parentService.getParentById(id);
 			display.showParent(parent);
 			break;
 		case 3:
-			int insParent = parentService.insertParent();
+			System.out.print("Enter Parent ID: ");
+			id = sc.nextInt();
+			System.out.println("Enter Parent Name: ");
+			name = sc.next();
+			System.out.print("Enter Student ID:");
+			sid = sc.nextInt();
+			parent = new Parent(id, name, sid);
+			int insParent = parentService.insertParent(parent);
 			display.insert(insParent);
 			break;
 		}

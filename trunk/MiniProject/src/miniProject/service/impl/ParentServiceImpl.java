@@ -25,8 +25,8 @@ public class ParentServiceImpl implements ParentService{
 	}
 
 	@Override
-	public int insertParent() {
-		int insParent = parentDAO.insertParent();
+	public int insertParent(Parent parent) {
+		int insParent = parentDAO.insertParent(parent);
 		return insParent;
 	}
 
