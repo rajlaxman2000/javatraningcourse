@@ -10,7 +10,11 @@ public class Student
 		
 		public Student(){
 		}
-		
+		public Student(String studentName, int branchLoc){
+			
+			this.studentName = studentName;
+			this.branchLoc = branchLoc;
+		}
 		public Student(int studentID, String studentName, int branchLoc){
 			this.studentID = studentID;
 			this.studentName = studentName;
