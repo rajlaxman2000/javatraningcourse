@@ -30,6 +30,12 @@ public class ParentServiceImpl implements ParentService{
 		return insParent;
 	}
 	
+	@Override
+	public int updateParent(Parent parent) {
+		int updParent = parentDAO.updateParent(parent);
+		return updParent;
+	}
+	
 	public int delParentByStudID(int id){
 		int delParent = parentDAO.delParentByStudID(id);
 		return delParent;

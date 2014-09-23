@@ -36,20 +36,20 @@ public class StudentServiceImpl implements StudentService {
 	}
 	
 	@Override
-	public boolean updateStudent(Student student) {
-		boolean result = studentDAO.updateStudent(student);
+	public int updateStudent(Student student) {
+		int result = studentDAO.updateStudent(student);
 		return result;
 	}
 
 	@Override
-	public boolean deleteStudentByName(String name) {
-		boolean result = studentDAO.deleteStudentByName(name);
+	public int deleteStudentByName(String name) {
+		int result = studentDAO.deleteStudentByName(name);
 		return result;
 	}
 
 	@Override
-	public boolean deleteStudentById(int id) {
-		boolean result = studentDAO.deleteStudentById(id);
+	public int deleteStudentById(int id) {
+		int result = studentDAO.deleteStudentById(id);
 		return result;
 	}
 
