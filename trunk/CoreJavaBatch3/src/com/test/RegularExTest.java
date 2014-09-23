@@ -9,9 +9,12 @@ public class RegularExTest {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		
 		String fieldValue = "w!ert1234";
+		
 		//Pattern regex = Pattern.compile("[$&+,:;=?@#|]");
 		//[$&+,:;=?@#|'<>.^*()%!-]
+		
 		Pattern regex = Pattern.compile("[$&+,:;=?@#|'<>.^*()%!-]");
 		Matcher matcher = regex.matcher(fieldValue.subSequence(0,1));
 		if (matcher.find()){
