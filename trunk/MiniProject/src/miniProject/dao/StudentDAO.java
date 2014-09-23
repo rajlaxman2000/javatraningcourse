@@ -15,11 +15,11 @@ public interface StudentDAO {
 	public int insertStudent(Student student);
 	
 	
-	public boolean updateStudent(Student student);
+	public int updateStudent(Student student);
 	
-	public boolean deleteStudentByName(String name);
+	public int deleteStudentByName(String name);
 	
-	public boolean deleteStudentById(int id);
+	public int deleteStudentById(int id);
 	
 	
 

@@ -139,11 +139,11 @@ public class StudentDAOImpl extends Dbconnection implements StudentDAO {
 	
 	
 	
-	public boolean updateStudent(Student student) {
+	public int updateStudent(Student student) {
 		int stuID = student.getStudentID();
 		String stuname = student.getStudentName();
 		int branchloc = student.getBranchLoc();
-		boolean result = false;
+		int result = 0;
 		String sql = "update student set studentName=?,branchLoc=? where studentID=?";
 		try{
 			
@@ -152,7 +152,7 @@ public class StudentDAOImpl extends Dbconnection implements StudentDAO {
 			preparedStatement.setString(1,stuname);
 			preparedStatement.setInt(2, branchloc);
 			preparedStatement.setInt(3, stuID);
-			result = preparedStatement.execute();
+			result = preparedStatement.executeUpdate();
 			
 		}
 		catch (ClassNotFoundException e) {
@@ -165,15 +165,15 @@ public class StudentDAOImpl extends Dbconnection implements StudentDAO {
 		return result;
 	}
 
-	public boolean deleteStudentByName(String name) {
+	public int deleteStudentByName(String name) {
 		String stuname = name;
 		String sql = "delete from student where studentName=?";
-		boolean result = false;
+		int result = 0;
 		try{
 			
 			preparedStatement =  getConnection().prepareStatement(sql);
 			preparedStatement.setString(1,stuname);
-			result = preparedStatement.execute();
+			result = preparedStatement.executeUpdate();
 			
 		}
 		catch (ClassNotFoundException e) {
@@ -186,15 +186,15 @@ public class StudentDAOImpl extends Dbconnection implements StudentDAO {
 		return result;
 	}
 
-	public boolean deleteStudentById(int id) {
+	public int deleteStudentById(int id) {
 		int stuid = id;
 		String sql = "delete from student where studentID=?";
-		boolean result = false;
+		int result = 0;
 		try{
 			
 			preparedStatement =  getConnection().prepareStatement(sql);
 			preparedStatement.setInt(1, stuid);
-			result = preparedStatement.execute();
+			result = preparedStatement.executeUpdate();
 			
 		}
 		catch (ClassNotFoundException e) {

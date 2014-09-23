@@ -37,8 +37,9 @@ public class ParentDAOImpl extends Dbconnection implements ParentDAO{
 				int parentID = rs.getInt("parentID");
 				String parentName = rs.getString("parentName");
 				int studentID = rs.getInt("stud_ID");
+				String parentPhone = rs.getString("parentPhone");
 				
-				parent = new Parent(parentID,parentName,studentID); 
+				parent = new Parent(parentID, parentName, studentID, parentPhone);
 				parentList.add(parent);
 			}
 		}catch (ClassNotFoundException e) {
@@ -69,8 +70,9 @@ public class ParentDAOImpl extends Dbconnection implements ParentDAO{
 				int parentID = rs.getInt("parentID");
 				String parentName = rs.getString("parentName");
 				int studentID = rs.getInt("stud_ID");
+				String parentPhone = rs.getString("parentPhone");
 				
-				parent = new Parent(parentID,parentName,studentID); 
+				parent = new Parent(parentID, parentName, studentID, parentPhone); 
 			}
 		}catch (ClassNotFoundException e) {
 			e.printStackTrace();
@@ -90,7 +92,9 @@ public class ParentDAOImpl extends Dbconnection implements ParentDAO{
 		//Scanner s = new Scanner(System.in);
 		String name = parent.getParentName();
 		int sid = parent.getStud_ID();
-		String sql = "INSERT INTO parent(parentName,stud_ID) VALUES (?,?)";
+		String phone = parent.getParentPhone();
+		
+		String sql = "INSERT INTO parent(parentName,stud_ID,parentPhone) VALUES (?,?,?)";
 		int numOfRowsChanged = 0;
 		try{		
 			conn = getConnection();
@@ -99,6 +103,7 @@ public class ParentDAOImpl extends Dbconnection implements ParentDAO{
 			ps.setString(1,name);
 			//System.out.print("Enter Student ID:");
 			ps.setInt(2,sid);
+			ps.setString(3, phone);
 			
 			numOfRowsChanged = ps.executeUpdate();
 			
@@ -115,6 +120,37 @@ public class ParentDAOImpl extends Dbconnection implements ParentDAO{
 	}
 	
 	
+	
+	@Override
+	public int updateParent(Parent parent) {
+		//Scanner s = new Scanner(System.in);
+		//String name = parent.getParentName();
+		int sid = parent.getStud_ID();
+		String phone = parent.getParentPhone();
+		
+		String sql = "UPDATE parent SET parentPhone = ? WHERE stud_ID = ?";
+		int numOfRowsChanged = 0;
+		try{		
+			conn = getConnection();
+			ps =  conn.prepareStatement(sql);
+			//System.out.println("Enter Parent Name: ");
+			ps.setString(1,phone);
+			//System.out.print("Enter Student ID:");
+			ps.setInt(2,sid);
+			
+			numOfRowsChanged = ps.executeUpdate();
+			
+		}catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}catch (SQLException se) {
+			se.printStackTrace();
+		}finally{
+			closeConn(conn);
+			closePrepared(ps);
+		}
+
+		return numOfRowsChanged;
+	}
 	
 	public int delParentByStudID(int id) {
 		String sql = "DELETE FROM parent WHERE stud_ID = ?";
