@@ -157,7 +157,7 @@ public class Menu {
 			System.out.println("Enter student branch ID: ");
 			int branchid = sc.nextInt();
 			student = new Student(id,name,branchid);
-			boolean result = studentService.updateStudent(student);
+			int result = studentService.updateStudent(student);
 			System.out.println("student row updated: "+result);
 			break;
 		case 5:
@@ -198,13 +198,14 @@ public class Menu {
 		System.out.println("1.Display the Parents list");
 		System.out.println("2.Retreive a Parent details by entering student ID");
 		System.out.println("3.Insert Parent Details by ID ");
-		System.out.println("4.Delete Parent Details by StudentID ");
+		System.out.println("4.Update Parent Details by ID ");
+		System.out.println("5.Delete Parent Details by StudentID ");
 		System.out.println("0:Exit to homescreen");
 		System.out.print("\nPlease enter your Choice: ");
 		ParentService parentService = new ParentServiceImpl();
 		ParentDisplay display = new ParentDisplay();
 		int id,sid;
-		String name;
+		String name,num;
 		i = sc.nextInt();
 				switch (i) {
 		//RETRIEVE AL;		
@@ -225,16 +226,31 @@ public class Menu {
 			name = sc.next();
 			System.out.print("Enter Student ID:");
 			sid = sc.nextInt();
-			parent = new Parent(name, sid);
+			System.out.print("Enter Phone number:");
+			num = sc.next();
+			parent = new Parent(name, sid, num);
 			int insParent = parentService.insertParent(parent);
 			display.insert(insParent);
 			break;
+		//UPDATE
 		case 4:
+			System.out.print("Enter Student ID:");
+			sid = sc.nextInt();
+			System.out.print("Enter phone number:");
+			num = sc.next();
+			System.out.println("Enter Parent Name: ");
+			name = sc.next();
+			parent = new Parent(name, sid, num);
+			int updParent = parentService.updateParent(parent);
+			display.insert(updParent);
+			break;
+		//DELETE	
+		case 5:
 			System.out.print("Enter Student ID:");
 			id = sc.nextInt();
 			int delParent = parentService.delParentByStudID(id);
 			display.insert(delParent);
-			break;
+			break;	
 		}
 		}while(i!=0);
 		Menu menu = new Menu();
