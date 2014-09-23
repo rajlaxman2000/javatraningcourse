@@ -6,3 +6,16 @@ JSP scripting elements :
 	declaration tag
 	
 
+Implicit object sin JSP
+	out
+	request
+	responce
+	config - Servlet Config which can be used to get the init param from servlet definition 
+	application - This is some thing like servlet context
+	session
+	page context
+	page 
+	exception
+	
+
+
