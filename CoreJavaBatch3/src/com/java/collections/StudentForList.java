@@ -1,6 +1,6 @@
 package com.java.collections;
 
-public class StudentForList {
+public class StudentForList implements Comparable<StudentForList>{
 	
 	private int id;
 	
@@ -10,11 +10,38 @@ public class StudentForList {
 	
 	private String classDes;
 	
-	public boolean equals(Object obj){
+
+	@Override
+	public int compareTo(StudentForList student) {
+	
+		// This logic will be to sort on id basis
+		if(this.id > student.getId()){
+			return 1;
+		}else if(this.id < student.getId()){
+			return -1;
+		}
+			
+		return 0;
+	
 		
+		/*
+		String str1 = this.name;
+		String str2 = student.getName();
+		
+		int x = str2.compareTo(str1);
+			
+		return x;
+		*/
+	}
+	
+	
+	
+	
+	public boolean equals(Object obj){
+
 		StudentForList student = (StudentForList)obj;
 		
-		if(this.id == student.id && this.age == student.age && (this.name).equalsIgnoreCase(student.name)){
+		if( this.id == student.id && this.age == student.age && (this.name).equalsIgnoreCase(student.name)){
 			return true;
 		}
 		
@@ -94,7 +121,7 @@ public class StudentForList {
 	public void setClassDes(String classDes) {
 		this.classDes = classDes;
 	}
-	
+
 	
 	
 	
