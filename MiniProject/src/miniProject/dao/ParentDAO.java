@@ -11,6 +11,8 @@ public interface ParentDAO {
 
 	public int insertParent(Parent parent);
 	
+	public int updateParent(Parent parent);
+	
 	public int delParentByStudID(int id);
 
 }
