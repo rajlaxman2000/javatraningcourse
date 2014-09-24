@@ -17,5 +17,11 @@ Implicit object sin JSP
 	page 
 	exception
 	
+JSp actions : 
 
+	<jsp:include
+	<jsp:forward
+	<jsp:useBean
+	<jsp:setProperty
+	<jsp:getProperty
 
