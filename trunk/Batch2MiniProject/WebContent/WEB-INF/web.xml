@@ -9,4 +9,24 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description>This servlet is for student sub menu</description>
+    <display-name>studentSubMenu</display-name>
+    <servlet-name>studentSubMenu</servlet-name>
+    <servlet-class>com.subMenu.studentSubMenu</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>studentSubMenu</servlet-name>
+    <url-pattern>/html/student_submenu</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>MainMenu</display-name>
+    <servlet-name>MainMenu</servlet-name>
+    <servlet-class>com.subMenu.MainMenu</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MainMenu</servlet-name>
+    <url-pattern>/html/main_menu.html</url-pattern>
+  </servlet-mapping>
 </web-app>
