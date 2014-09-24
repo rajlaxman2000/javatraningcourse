@@ -29,4 +29,33 @@
     <servlet-name>MainMenu</servlet-name>
     <url-pattern>/html/main_menu.html</url-pattern>
   </servlet-mapping>
+  
+  <!-- THIS IS ALL ABOUT THE MINI PROJECT NAVIGATION ONLYYYYYYYYYYYYYY -->
+  <servlet>
+  <servlet-name>StudentMenuServlet</servlet-name>
+  <servlet-class>com.miniproject.navigation.StudentMenuServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>StudentMenuServlet</servlet-name>
+  <url-pattern>/html_project/studentMenu</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>ParentMenuServlet</servlet-name>
+  <servlet-class>com.miniproject.navigation.ParentMenuServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ParentMenuServlet</servlet-name>
+  <url-pattern>/html_project/parentMenu</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>BranchMenuServlet</servlet-name>
+  <servlet-class>com.miniproject.navigation.BranchMenuServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>BranchMenuServlet</servlet-name>
+  <url-pattern>/html_project/branchMenu</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
