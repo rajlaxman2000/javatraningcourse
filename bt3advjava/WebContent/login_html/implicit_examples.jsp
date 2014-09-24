@@ -8,7 +8,6 @@
 </head>
 <body>
 	<% out.println("I am testing out implicit object"); 
-		config.getInitParameter("ImagePath");
-		application.%>
+		config.getInitParameter("ImagePath");%>
 </body>
 </html>
