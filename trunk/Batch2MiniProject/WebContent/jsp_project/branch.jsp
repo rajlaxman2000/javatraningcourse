@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -9,20 +11,17 @@
 </style>
 </head>
 <body>
-Welcome to student menu
 <div id="pos">
 <a href="studentMenu" >Student</a>
 <a href="parentMenu" id="one">Parent</a>
 <a href="branchMenu" id="two">Branch</a>
 </div>
 <br/>
-<a href="getAllStudentDetails">Get All Student Details</a><br><br>
-<a href="getStuByName">Get Student by Name</a><br><br>
-<a href="getStuById">Get Student by ID</a><br><br>
-<a href="updateStudent">Update Student</a><br><br>
-<a href="insertStudent">Insert Student</a><br><br>
-<a href="deleteStudentByName">Delete Student By Name</a><br><br>
-<a href="deleteStudentById">Delete Student By ID</a><br><br>
+<a href="getAllBranches">Get All Branch Details</a>This is Retreive All branch JSP file.<br><br>
+<a href="getBranchById">Get Branch by ID</a>	<br><br>
+<a href="updateBranch">UpdateBranch</a>			<br><br>
+<a href="insertBranch">InsertBranch</a>			<br><br>
+<a href="deleteBranch">DeleteBranch</a>			<br><br>
 
 </body>
 </html>

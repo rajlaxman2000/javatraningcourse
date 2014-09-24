@@ -58,4 +58,30 @@
   <url-pattern>/html_project/branchMenu</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+  <servlet-name>BranchJSP</servlet-name>
+  <jsp-file>/jsp_project/branch.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>BranchJSP</servlet-name>
+  <url-pattern>/html_project/getAllBranches</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  <servlet-name>StudentJSP</servlet-name>
+  <jsp-file>/jsp_project/student.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>StudentJSP</servlet-name>
+  <url-pattern>/html_project/getAllStudentDetails</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  <servlet-name>ParentJSP</servlet-name>
+  <jsp-file>/jsp_project/parent.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ParentJSP</servlet-name>
+  <url-pattern>/html_project/getAllParentDetails</url-pattern>
+  </servlet-mapping>
+  
+  <!-- THIS IS ALL ABOUT THE MINI PROJECT NAVIGATION ONLYYYYYYYYYYYYYY -->
 </web-app>
