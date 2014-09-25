@@ -59,21 +59,23 @@
   </servlet-mapping>
   
   <servlet>
-  <servlet-name>BranchJSP</servlet-name>
-  <jsp-file>/jsp_project/branch.jsp</jsp-file>
+  <servlet-name>BranchListServlet</servlet-name>
+  <servlet-class>com.navigation.branch.AllBranchesServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-  <servlet-name>BranchJSP</servlet-name>
+  <servlet-name>BranchListServlet</servlet-name>
   <url-pattern>/html_project/getAllBranches</url-pattern>
   </servlet-mapping>
+  
   <servlet>
-  <servlet-name>StudentJSP</servlet-name>
-  <jsp-file>/jsp_project/student.jsp</jsp-file>
+  <servlet-name>BranchListJSP</servlet-name>
+  <jsp-file>/jsp_project/getAllBranches.jsp</jsp-file>
   </servlet>
   <servlet-mapping>
-  <servlet-name>StudentJSP</servlet-name>
-  <url-pattern>/html_project/getAllStudentDetails</url-pattern>
+  <servlet-name>BranchListJSP</servlet-name>
+  <url-pattern>/jsp_project/getAllBranches.jsp</url-pattern>
   </servlet-mapping>
+  
   <servlet>
   <servlet-name>ParentJSP</servlet-name>
   <jsp-file>/jsp_project/parent.jsp</jsp-file>

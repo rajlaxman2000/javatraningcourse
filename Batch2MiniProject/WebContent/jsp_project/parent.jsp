@@ -18,8 +18,12 @@
 </div>
 <br/>
 <a href="getAllParentDetails">Get All Parent Details</a>retrieving all parents<br><br>
+
 <a href="getParByStuId">Get Parent by Student ID</a><br><br>
+
 <a href="insertParent">InsertParent</a><br><br>
+
 <a href="deleteParent">DeleteParent</a><br><br>
+
 </body>
 </html>
