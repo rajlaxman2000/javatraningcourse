@@ -18,12 +18,19 @@
 </div>
 <br/>
 <a href="getAllStudentDetails">Get All Student Details</a>retreiving all students<br><br>
+
 <a href="getStuByName">Get Student by Name</a><br><br>
+
 <a href="getStuById">Get Student by ID</a><br><br>
+
 <a href="updateStudent">Update Student</a><br><br>
+
 <a href="insertStudent">Insert Student</a><br><br>
+
 <a href="deleteStudentByName">Delete Student By Name</a><br><br>
+
 <a href="deleteStudentById">Delete Student By ID</a><br><br>
+
 
 </body>
 </html>

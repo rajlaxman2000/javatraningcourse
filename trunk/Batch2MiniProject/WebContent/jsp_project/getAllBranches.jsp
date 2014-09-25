@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1" %>
+<%@ page import="com.student.dto.SchoolBranch" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -17,10 +19,20 @@
 <a href="branchMenu" id="two">Branch</a>
 </div>
 <br/>
-<a href="getAllBranches">Get All Branch Details</a>This is Retreive All branch JSP file.<br><br>
+<a href="getAllBranches">Get All Branch Details</a>This is Retreive All branch JSP file.
+
+<jsp:useBean id="branchList" scope="session" class="com.student.dto.SchoolBranch">
+</jsp:useBean>
+<jsp:getProperty property="*" name="branchList"/>
+
+<br><br>
+
 <a href="getBranchById">Get Branch by ID</a>	<br><br>
+
 <a href="updateBranch">UpdateBranch</a>			<br><br>
+
 <a href="insertBranch">InsertBranch</a>			<br><br>
+
 <a href="deleteBranch">DeleteBranch</a>			<br><br>
 
 </body>
