@@ -64,7 +64,7 @@ public class Menu {
 		System.out.println("0:Exit to homescreen");
 		System.out.print("\nPlease enter your Choice: ");
 		BranchService branchService = new BranchServiceImpl();
-		BranchDisplay display = new BranchDisplay();
+		BranchDisplay branchDisplay = new BranchDisplay();
 		int id;
 		String ph;
 		i = sc.nextInt();
@@ -72,14 +72,14 @@ public class Menu {
 		//Retrieve ALL
 		case 1:
 			List<SchoolBranch> branchList = branchService.getBranchDetails();
-			display.retreiveAll(branchList);
+			branchDisplay.retreiveAll(branchList);
 			break;
 		//Retrieve by ID	
 		case 2:
 			System.out.println("Enter branch ID:");
 			id = sc.nextInt();
 			SchoolBranch branch = branchService.getBranchById(id);
-			display.showBranch(branch);
+			branchDisplay.showBranch(branch);
 			break;
 		//UPDATE	
 		case 3:
@@ -89,7 +89,7 @@ public class Menu {
 			ph = sc.next();
 			branch = new SchoolBranch(id, ph);
 			int updBranch = branchService.updateBranchById(branch);
-			display.rowsEffected(updBranch);
+			branchDisplay.rowsEffected(updBranch);
 			break;
 		//INSERT	
 		case 4:
@@ -99,14 +99,14 @@ public class Menu {
 			ph = sc.next();
 			branch = new SchoolBranch(id, ph);
 			int insBranch = branchService.insertBranch(branch);
-			display.rowsEffected(insBranch);
+			branchDisplay.rowsEffected(insBranch);
 			break;
 		//DELETE	
 		case 5:
 			System.out.println("Enter branch ID:");
 			id = sc.nextInt();
 			int delBranch = branchService.deleteBranch(id);
-			display.rowsEffected(delBranch);
+			branchDisplay.rowsEffected(delBranch);
 			break;
 		}
 		}while(i!=0);
