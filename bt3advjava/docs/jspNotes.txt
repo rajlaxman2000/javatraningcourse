@@ -25,3 +25,17 @@ JSp actions :
 	<jsp:setProperty
 	<jsp:getProperty
 
+	JSP standard tag library :
+		core tags 
+		Formatting tags
+		xml tags
+		Db/SQL tags
+		JSTL functions
+		
+	JSP custom tags 
+		how to write our own custom tags
+	
+	JSP expression language 
+	
+	Erros/ exception handling in JSP
+		how to manage or show the common error jsp 
