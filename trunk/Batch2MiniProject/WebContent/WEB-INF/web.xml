@@ -77,6 +77,24 @@
   </servlet-mapping>
   
   <servlet>
+  <servlet-name>getBranchById</servlet-name>
+  <jsp-file>/jsp_project/getBranchById.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>getBranchById</servlet-name>
+  <url-pattern>/html_project/getBranchById</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>BranchById</servlet-name>
+  <jsp-file>com.navigation.branch.GetBranchById</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>BranchById</servlet-name>
+  <url-pattern>/jsp_project/BranchById</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
   <servlet-name>ParentJSP</servlet-name>
   <jsp-file>/jsp_project/parent.jsp</jsp-file>
   </servlet>
