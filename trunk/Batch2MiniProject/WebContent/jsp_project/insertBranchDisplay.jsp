@@ -1,8 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1" %>
-<%@ page import="com.student.dto.SchoolBranch" %>
-<%@ page import="java.util.List" %>
-
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -20,21 +17,18 @@
 <a href="branchMenu" id="two">Branch</a>
 </div>
 <br/>
-<a href="getAllBranches">Get All Branch Details</a>This is Retreive All branch JSP file.
-<%SchoolBranch sol = (SchoolBranch)session.getAttribute("branchList"); %>
-<%=sol.toString() %>
+<a href="getAllBranches">Get All Branch Details</a>		<br><br>
 
+<a href="getBranchById">Get Branch by ID</a>			<br><br>
 
+<a href="updateBranch">UpdateBranch</a>					<br><br>
+
+<a href="insertBranch">InsertBranch</a>		This is Insert branch JSP file.
+Number of rows Inserted:<%=session.getAttribute("rowsInserted") %>
 
 <br><br>
 
-<a href="getBranchById">Get Branch by ID</a>	<br><br>
-
-<a href="updateBranch">UpdateBranch</a>			<br><br>
-
-<a href="insertBranch">InsertBranch</a>			<br><br>
-
-<a href="deleteBranch">DeleteBranch</a>			<br><br>
+<a href="deleteBranch">DeleteBranch</a>					<br><br>
 
 </body>
 </html>
