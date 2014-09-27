@@ -1,7 +1,6 @@
 package com.navigation.branch;
 
 import java.io.IOException;
-import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -14,17 +13,22 @@ import com.student.dto.SchoolBranch;
 import com.student.service.BranchService;
 import com.student.service.impl.BranchServiceImpl;
 
-public class AllBranchesServlet extends HttpServlet {
-	
+public class InsertBranchServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request,HttpServletResponse response) throws ServletException,IOException{
-
+		int id = Integer.parseInt(request.getParameter("id"));
+		String phoneNum = request.getParameter("phoneNumber");
+		
+		SchoolBranch branch = new SchoolBranch(id, phoneNum);
+		
 		BranchService branchService = new BranchServiceImpl();
 		
-		List<SchoolBranch> branchList = branchService.getBranchDetails();
-		
+		int insBranch = branchService.updateBranchById(branch);
+				
 		HttpSession session = request.getSession();
-		session.setAttribute("branchList", branchList);
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp_project/getAllBranchesDisplay.jsp");
-		dispatcher.forward(request, response);
+		session.setAttribute("rowsInserted", insBranch);
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp_project/insertBranchDisplay.jsp");
+		dispatcher.forward(request, response);	
+		
 	}
+	
 }
