@@ -9,7 +9,7 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  <servlet>
+ <!--   <servlet>
     <description>This servlet is for student sub menu</description>
     <display-name>studentSubMenu</display-name>
     <servlet-name>studentSubMenu</servlet-name>
@@ -29,7 +29,7 @@
     <servlet-name>MainMenu</servlet-name>
     <url-pattern>/html/main_menu.html</url-pattern>
   </servlet-mapping>
-  
+  -->
   <!-- THIS IS ALL ABOUT THE MINI PROJECT NAVIGATION ONLYYYYYYYYYYYYYY -->
   <servlet>
   <servlet-name>StudentMenuServlet</servlet-name>
@@ -57,7 +57,7 @@
   <servlet-name>BranchMenuServlet</servlet-name>
   <url-pattern>/html_project/branchMenu</url-pattern>
   </servlet-mapping>
-  
+  <!--GET ALL BRANCHES  -->
   <servlet>
   <servlet-name>BranchListServlet</servlet-name>
   <servlet-class>com.navigation.branch.AllBranchesServlet</servlet-class>
@@ -75,33 +75,120 @@
   <servlet-name>BranchListJSP</servlet-name>
   <url-pattern>/jsp_project/getAllBranches.jsp</url-pattern>
   </servlet-mapping>
+  <!--GET BRANCH BY ID  -->
   
   <servlet>
-  <servlet-name>getBranchById</servlet-name>
+  <servlet-name>getBranchByIdOne</servlet-name>
   <jsp-file>/jsp_project/getBranchById.jsp</jsp-file>
   </servlet>
   <servlet-mapping>
-  <servlet-name>getBranchById</servlet-name>
+  <servlet-name>getBranchByIdOne</servlet-name>
   <url-pattern>/html_project/getBranchById</url-pattern>
   </servlet-mapping>
-  
+      
   <servlet>
-  <servlet-name>BranchById</servlet-name>
-  <jsp-file>com.navigation.branch.GetBranchById</jsp-file>
+  <servlet-name>getBranchByIdServlet</servlet-name>
+  <servlet-class>com.navigation.branch.GetBranchById</servlet-class>
   </servlet>
   <servlet-mapping>
-  <servlet-name>BranchById</servlet-name>
-  <url-pattern>/jsp_project/BranchById</url-pattern>
+  <servlet-name>getBranchByIdServlet</servlet-name>
+  <url-pattern>/html_project/BranchById</url-pattern>
   </servlet-mapping>
   
   <servlet>
-  <servlet-name>ParentJSP</servlet-name>
-  <jsp-file>/jsp_project/parent.jsp</jsp-file>
+  <servlet-name>getBranchByIdDisp</servlet-name>
+  <jsp-file>/jsp_project/getBranchByIdDisplay.jsp</jsp-file>
   </servlet>
   <servlet-mapping>
-  <servlet-name>ParentJSP</servlet-name>
-  <url-pattern>/html_project/getAllParentDetails</url-pattern>
+  <servlet-name>getBranchByIdDisp</servlet-name>
+  <url-pattern>/jsp_project/getBranchByIdDisplay.jsp</url-pattern>
   </servlet-mapping>
   
+  <!--UPDATE BRANCH  -->
+  
+  <servlet>
+  <servlet-name>updateBranchJSP</servlet-name>
+  <jsp-file>/jsp_project/updateBranch.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>updateBranchJSP</servlet-name>
+  <url-pattern>/html_project/updateBranch</url-pattern>
+  </servlet-mapping>
+      
+  <servlet>
+  <servlet-name>UpdBranchServlet</servlet-name>
+  <servlet-class>com.navigation.branch.UpdateBranchServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>UpdBranchServlet</servlet-name>
+  <url-pattern>/html_project/branchUpdate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>UpdBranchDisp</servlet-name>
+  <jsp-file>/jsp_project/updateBranchDisplay.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>UpdBranchDisp</servlet-name>
+  <url-pattern>/jsp_project/updateBranchDisplay.jsp</url-pattern>
+  </servlet-mapping>
+  
+  <!--INSERT BRANCH  -->
+  
+   <servlet>
+  <servlet-name>insertBranchJSP</servlet-name>
+  <jsp-file>/jsp_project/insertBranch.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>insertBranchJSP</servlet-name>
+  <url-pattern>/html_project/insertBranch</url-pattern>
+  </servlet-mapping>
+      
+  <servlet>
+  <servlet-name>InsBranchServlet</servlet-name>
+  <servlet-class>com.navigation.branch.InsertBranchServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>InsBranchServlet</servlet-name>
+  <url-pattern>/html_project/branchInsert</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>InsBranchDisp</servlet-name>
+  <jsp-file>/jsp_project/insertBranchDisplay.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>InsBranchDisp</servlet-name>
+  <url-pattern>/jsp_project/insertBranchDisplay.jsp</url-pattern>
+  </servlet-mapping>
+  
+  <!--DELETE BRANCH  -->
+  
+   <servlet>
+  <servlet-name>delBranchJSP</servlet-name>
+  <jsp-file>/jsp_project/deleteBranch.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>delBranchJSP</servlet-name>
+  <url-pattern>/html_project/deleteBranch</url-pattern>
+  </servlet-mapping>
+      
+  <servlet>
+  <servlet-name>delBranchServlet</servlet-name>
+  <servlet-class>com.navigation.branch.DeleteBranchServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>delBranchServlet</servlet-name>
+  <url-pattern>/html_project/BranchDelete</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>DelBranchDisp</servlet-name>
+  <jsp-file>/jsp_project/deleteBranchDisplay.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>DelBranchDisp</servlet-name>
+  <url-pattern>/jsp_project/deleteBranchDisplay.jsp</url-pattern>
+  </servlet-mapping>
   <!-- THIS IS ALL ABOUT THE MINI PROJECT NAVIGATION ONLYYYYYYYYYYYYYY -->
 </web-app>
