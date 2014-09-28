@@ -31,6 +31,7 @@
   </servlet-mapping>
   -->
   <!-- THIS IS ALL ABOUT THE MINI PROJECT NAVIGATION ONLYYYYYYYYYYYYYY -->
+  <!-- Student Navigation -->
   <servlet>
   <servlet-name>StudentMenuServlet</servlet-name>
   <servlet-class>com.miniproject.navigation.StudentMenuServlet</servlet-class>
@@ -39,7 +40,17 @@
   <servlet-name>StudentMenuServlet</servlet-name>
   <url-pattern>/html_project/studentMenu</url-pattern>
   </servlet-mapping>
-  
+  <servlet>
+  <description>This servlet retrieves the list of all the students in the database </description>
+  <display-name>GetAllStudents</display-name>
+  <servlet-name>GetAllStudents</servlet-name>
+  <servlet-class>com.student.submenu.GetAllStudents</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>GetAllStudents</servlet-name>
+  <url-pattern>/html_project/getAllStudentDetails</url-pattern>
+  </servlet-mapping>
+  <!-- ***************************************************************** -->
   <servlet>
   <servlet-name>ParentMenuServlet</servlet-name>
   <servlet-class>com.miniproject.navigation.ParentMenuServlet</servlet-class>

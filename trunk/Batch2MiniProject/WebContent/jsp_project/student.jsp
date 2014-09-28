@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ page import="java.util.List" %>
+    <%@ page import="java.util.ArrayList" %>
+    <%@ page import="com.student.dto.Student" %>
+    <%@ page import="com.student.service.StudentService"%>
+    <%@ page import="com.student.service.impl.StudentServiceImpl"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -17,7 +22,7 @@
 <a href="branchMenu" id="two">Branch</a>
 </div>
 <br/>
-<a href="getAllStudentDetails">Get All Student Details</a>retreiving all students<br><br>
+<a href="getAllStudentDetails">Get All Student Details</a>retrieving all students<br><br>
 
 <a href="getStuByName">Get Student by Name</a><br><br>
 
@@ -31,6 +36,12 @@
 
 <a href="deleteStudentById">Delete Student By ID</a><br><br>
 
-
+<%! 
+		StudentService studentService = new StudentServiceImpl();
+		List<Student> students = new ArrayList<Student>();
+		students = application.getAttribute("studentlist");
+		
+		
+%>
 </body>
 </html>
