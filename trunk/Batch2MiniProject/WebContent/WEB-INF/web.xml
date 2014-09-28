@@ -31,6 +31,8 @@
   </servlet-mapping>
   -->
   <!-- THIS IS ALL ABOUT THE MINI PROJECT NAVIGATION ONLYYYYYYYYYYYYYY -->
+  
+  <!-- ***************************************************************** -->
   <!-- Student Navigation -->
   <servlet>
   <servlet-name>StudentMenuServlet</servlet-name>

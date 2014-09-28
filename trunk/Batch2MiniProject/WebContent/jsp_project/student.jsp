@@ -1,3 +1,4 @@
+<%@page import="org.apache.jasper.tagplugins.jstl.core.ForEach"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     <%@ page import="java.util.List" %>
@@ -40,7 +41,9 @@
 		StudentService studentService = new StudentServiceImpl();
 		List<Student> students = new ArrayList<Student>();
 		students = application.getAttribute("studentlist");
-		
+		for(Student stu : students){
+			stu.toString();
+		}
 		
 %>
 </body>
