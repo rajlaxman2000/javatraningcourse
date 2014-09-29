@@ -1,6 +1,8 @@
-package com.java.collections.set;
+package com.java.collections.map;
 
-public class StudentForSet implements Comparable<StudentForSet>{
+
+public class StudentForMap implements Comparable<StudentForMap>{
+	
 	
 	private int id;
 	
@@ -13,7 +15,7 @@ public class StudentForSet implements Comparable<StudentForSet>{
 
 	
 	@Override
-	public int compareTo(StudentForSet student) {
+	public int compareTo(StudentForMap student) {
 	
 		// This logic will be to sort on id basis
 		if(this.id > student.getId()){
@@ -31,7 +33,7 @@ public class StudentForSet implements Comparable<StudentForSet>{
 
 	public boolean equals(Object obj){
 
-		StudentForSet student = (StudentForSet)obj;
+		StudentForMap student = (StudentForMap)obj;
 		
 		if( this.id == student.id && this.age == student.age && (this.name).equalsIgnoreCase(student.name)){
 			return true;
@@ -48,15 +50,15 @@ public class StudentForSet implements Comparable<StudentForSet>{
 		return "Student Id::"+id+"; Student Name::"+name+"; Student Age::"+age+"; Student Education ::"+classDes+"\n";
 	}
 
-	public StudentForSet() {		
+	public StudentForMap() {		
 	
 	}
-	public StudentForSet(int id, String name) {		
+	public StudentForMap(int id, String name) {		
 		this.id = id;
 		this.name = name;		
 	}
 	
-	public StudentForSet(int id, String name, int age, String classDes) {
+	public StudentForMap(int id, String name, int age, String classDes) {
 		
 		this.id = id;
 		this.name = name;
@@ -116,7 +118,4 @@ public class StudentForSet implements Comparable<StudentForSet>{
 
 	
 	
-	
-	
-
 }

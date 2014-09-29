@@ -2,6 +2,7 @@ package com.java.collections.set;
 
 import java.util.HashSet;
 import java.util.LinkedHashSet;
+import java.util.TreeSet;
 
 public class HastSetExample {
 
@@ -30,9 +31,9 @@ public class HastSetExample {
 			
 			//System.out.println(studentsSet);
 			
-			studentsSet.remove(student6);
+			//studentsSet.remove(student6);
 			
-			//System.out.println(studentsSet);
+			System.out.println("Students saved in normal Hash set ::\n"+studentsSet);
 			
 			
 			boolean res = studentsSet.contains(student6);
@@ -47,7 +48,21 @@ public class HastSetExample {
 			 studentsLinkedHashset.add(student4);
 			 studentsLinkedHashset.add(student5);
 			 
-			 System.out.println(studentsLinkedHashset);
+			 System.out.println("Students saved in Linked hash set::\n"+studentsLinkedHashset);
+			 
+			 
+			 TreeSet<StudentForSet> studentTreeSet = new TreeSet<StudentForSet>();		 	
+			 	studentTreeSet.add(student1);
+			 	studentTreeSet.add(student2);
+			 	studentTreeSet.add(student3);
+			 	studentTreeSet.add(student4);
+			 	studentTreeSet.add(student5);
+			 	
+			 	System.out.println("Students saved in Tree set will be in Sorted Order::\n"+studentTreeSet);
+				 
+			 	
+			 	
+			 	
 			 
 	}
 
