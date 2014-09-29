@@ -11,6 +11,8 @@ public class FormAction extends ActionSupport {
 
 	private Student student;
 	
+	private Student student1;
+	
 
 	/**
 	 * @return the student
@@ -38,7 +40,26 @@ public class FormAction extends ActionSupport {
 		if(student.getAge()<0){
 			return "faliure";
 		}
+		
+		student1 = new Student("Raghu Kumar",200,31);
+		
 		return "success";
+	}
+
+
+	/**
+	 * @return the student1
+	 */
+	public Student getStudent1() {
+		return student1;
+	}
+
+
+	/**
+	 * @param student1 the student1 to set
+	 */
+	public void setStudent1(Student student1) {
+		this.student1 = student1;
 	}
 
 
