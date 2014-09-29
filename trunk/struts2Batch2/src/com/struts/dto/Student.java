@@ -9,6 +9,17 @@ public class Student {
 	
 	private int age;
 
+	public Student(){
+		
+	}
+
+	public Student(String name, int sno, int age) {
+	
+		this.name = name;
+		this.sno = sno;
+		this.age = age;
+	}
+
 	/**
 	 * @return the name
 	 */

@@ -9,7 +9,20 @@
 </head>
 <body>
 	<h1>It is a Huge success</h1>
+	<br/>
+	Student Name : <s:property value="student.name"/>
+	<br/>
+	Student Sno : <s:property value="student.sno"/>
+	<br/>
+	Student Age : <s:property value="student.age"/>
 	
+	<br/>
+	<h2>Student 2 details</h2>
+	Student Name : <s:property value="student1.name"/>
+	<br/>
+	Student Sno : <s:property value="student1.sno"/>
+	<br/>
+	Student Age : <s:property value="student1.age"/>
 	
 </body>
 </html>
