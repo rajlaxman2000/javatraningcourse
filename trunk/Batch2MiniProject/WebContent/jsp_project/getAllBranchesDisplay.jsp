@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1" %>
 <%@ page import="com.student.dto.SchoolBranch" %>
-<%@ page import="java.util.List" %>
+<%@ page import="java.util.List" %><%@ page import="java.util.ArrayList" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -21,10 +21,14 @@
 </div>
 <br/>
 <a href="getAllBranches">Get All Branch Details</a>This is Retreive All branch JSP file.
-<%SchoolBranch sol = (SchoolBranch)session.getAttribute("branchList"); %>
-<%=sol.toString() %>
+<%
+List<SchoolBranch> branches =new ArrayList<SchoolBranch>();
+branches = (List<SchoolBranch>)session.getAttribute("branchList");
 
-
+for(SchoolBranch branch:branches){
+%>
+<%=branch.toString() %>
+<%} %>
 
 <br><br>
 

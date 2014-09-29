@@ -8,8 +8,8 @@
 </head>
 <body>
 <form action="branchUpdate">
-<input type="text" name="id" />
-<input type="text" name="phoneNumber" />
+Enter ID:<input type="text" name="id" />
+Enter Phone Number:<input type="text" name="phoneNumber" />
 <input type="submit" name="submit" />
 </form>
 </body>
