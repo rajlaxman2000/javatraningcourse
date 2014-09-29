@@ -10,6 +10,6 @@
 <form action="BranchDelete">
 Enter branch ID to delete:<input type="text" name="branchId" />
 <input type="submit" name="submit" />
-
+</form>
 </body>
 </html>

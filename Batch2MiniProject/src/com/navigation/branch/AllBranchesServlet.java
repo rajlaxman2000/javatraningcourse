@@ -1,6 +1,7 @@
 package com.navigation.branch;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -24,6 +25,8 @@ public class AllBranchesServlet extends HttpServlet {
 		
 		HttpSession session = request.getSession();
 		session.setAttribute("branchList", branchList);
+		/*PrintWriter out=response.getWriter();
+		out.println(branchList);*/
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp_project/getAllBranchesDisplay.jsp");
 		dispatcher.forward(request, response);
 	}

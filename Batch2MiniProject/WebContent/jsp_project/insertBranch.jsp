@@ -12,5 +12,6 @@ Insert Branch Details
 Branch ID:<input type="text" name="id" />
 Branch PhoneNumber:<input type="text" name="phoneNumber" />
 <input type="submit" name="submit" />
+</form>
 </body>
 </html>
