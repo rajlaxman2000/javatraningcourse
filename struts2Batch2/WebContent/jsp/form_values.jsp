@@ -11,6 +11,7 @@
 	<h1>It is a Huge success</h1>
 	<br/>
 	Student Name : <s:property value="student.name"/>
+	
 	<br/>
 	Student Sno : <s:property value="student.sno"/>
 	<br/>
