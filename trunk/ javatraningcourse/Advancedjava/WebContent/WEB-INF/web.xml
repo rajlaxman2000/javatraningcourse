@@ -54,7 +54,8 @@
 		<servlet-name>HelloFormCheckBox</servlet-name>
 		<url-pattern>/html/CheckBox</url-pattern>
 	</servlet-mapping>
-	<servlet>
+	<!-- 
+	 <servlet>
 		<description></description>
 		<display-name>ReadParamsEnumerationEx</display-name>
 		<servlet-name>ReadParamsEnumerationEx</servlet-name>
@@ -64,6 +65,7 @@
 		<servlet-name>ReadParamsEnumerationEx</servlet-name>
 		<url-pattern>/html/ReadParams</url-pattern>
 	</servlet-mapping>
+	 -->
 	<servlet>
 		<description></description>
 		<display-name>RequestObjDetails</display-name>
