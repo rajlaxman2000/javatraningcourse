@@ -15,14 +15,15 @@ import com.student.service.impl.BranchServiceImpl;
 
 public class InsertBranchServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request,HttpServletResponse response) throws ServletException,IOException{
-		int id = Integer.parseInt(request.getParameter("id"));
+		int id = Integer.parseInt(request.getParameter("branchId"));
 		String phoneNum = request.getParameter("phoneNumber");
 		
 		SchoolBranch branch = new SchoolBranch(id, phoneNum);
 		
 		BranchService branchService = new BranchServiceImpl();
 		
-		int insBranch = branchService.updateBranchById(branch);
+		int insBranch = branchService.insertBranch(branch);	
+		//updateBranchById(branch);
 				
 		HttpSession session = request.getSession();
 		session.setAttribute("rowsInserted", insBranch);

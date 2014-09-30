@@ -5,11 +5,38 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+<style>
+#pos{margin-left:200px;}
+#one{padding-left:50px;}#two{padding-left:50px;}
+</style>
 </head>
+
+
 <body>
+<div id="pos">
+<a href="studentMenu" >Student</a>
+<a href="parentMenu" id="one">Parent</a>
+<a href="branchMenu" id="two">Branch</a>
+</div>
+<br/>
+
+<a href="getAllBranches">Get All Branch Details</a>	<br><br>
+
+<a href="getBranchById">Get Branch by ID</a>
+
 <form action="BranchById">
 Enter branch ID:<input type="text" name="branchId" />
 <input type="submit" name="submit" />
+
+<br><br>
+
+<a href="updateBranch">UpdateBranch</a>			<br><br>
+
+<a href="insertBranch">InsertBranch</a>			<br><br>
+
+<a href="deleteBranch">DeleteBranch</a>			<br><br>
+
+
 
 
 </form>
