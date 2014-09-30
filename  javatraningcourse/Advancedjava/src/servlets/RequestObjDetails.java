@@ -57,8 +57,13 @@ public class RequestObjDetails extends HttpServlet {
 	      out.println("\n"+request.getRequestURI()+"\n");
 	      
 	      out.println("</body></html>");
+	      //System.out.println(request.getHeader("host"));
+	      out.println(request.getHeader("host"));
+	      if(request.getHeader("host").equalsIgnoreCase("localhost:8095")){
+	    	  response.sendRedirect("http://www.google.com");
+	    	  
+	      }
 	    //  response.setIntHeader("Refresh", 5);
-	      response.sendRedirect("/Advancedjava/html/ReadParams");
 	      //String redirectUrl = response.encodeRedirectURL("http://localhost:8080/Advancedjava/");
 	      //String redirectUrl = response.encodeRedirectURL("/Advancedjava");
 	      /*String redirectUrl = response.encodeRedirectURL("/Advancedjava/html/ReadParams");
