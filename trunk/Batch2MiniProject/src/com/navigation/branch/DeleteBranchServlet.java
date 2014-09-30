@@ -16,11 +16,12 @@ import com.student.service.impl.BranchServiceImpl;
 public class DeleteBranchServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request,HttpServletResponse response) throws ServletException,IOException{
 		
-		int id = Integer.parseInt(request.getParameter("id"));
+		int id = Integer.parseInt(request.getParameter("branchId"));
 		
 		BranchService branchService = new BranchServiceImpl();
 		
 		int delBranch = branchService.deleteBranch(id);
+		//deleteBranch(id);
 				
 		HttpSession session = request.getSession();
 		session.setAttribute("rowsDeleted", delBranch);

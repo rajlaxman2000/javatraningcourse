@@ -27,7 +27,7 @@ branches = (List<SchoolBranch>)session.getAttribute("branchList");
 
 for(SchoolBranch branch:branches){
 %>
-<%=branch.toString() %>
+<%=branch.toString() %><br/>
 <%} %>
 
 <br><br>
