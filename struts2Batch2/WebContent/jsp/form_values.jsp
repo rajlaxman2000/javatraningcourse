@@ -25,5 +25,8 @@
 	<br/>
 	Student Age : <s:property value="student1.age"/>
 	
+	<s:hidden id="uniqueKey" name="uniqueKey" value="123456"/>
+
+
 </body>
 </html>

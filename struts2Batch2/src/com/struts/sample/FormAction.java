@@ -6,30 +6,27 @@ import com.struts.dto.Student;
 
 public class FormAction extends ActionSupport {
 
-	private static final long serialVersionUID = 1L;
-	
+	private static final long serialVersionUID = 1L;	
 
+	private int number;
+	
 	private Student student;
 	
 	private Student student1;
 	
-
-	/**
-	 * @return the student
+	/* (non-Javadoc)
+	 * @see com.opensymphony.xwork2.ActionSupport#validate()
 	 */
-	public Student getStudent() {
-		return student;
+	//Shift+alt+j
+	public void validate(){
+		
+		if(number<0){
+			addFieldError("number", "can't be negative");
+		}
+		
+		
 	}
-
-
-	/**
-	 * @param student the student to set
-	 */
-	public void setStudent(Student student) {
-		this.student = student;
-	}
-
-
+	
 	public String execute(){
 		
 		System.out.println("I am in sample action class");
@@ -37,15 +34,33 @@ public class FormAction extends ActionSupport {
 		System.out.println("Student Name::"+student.getName());
 		System.out.println("Student Sno ::"+student.getSno());
 		System.out.println("Student Age::"+student.getAge());
+		/*
 		if(student.getAge()<0){
 			return "faliure";
 		}
-		
+		*/
 		student1 = new Student("Raghu Kumar",200,31);
 		
 		return "success";
 	}
+	
 
+
+	
+
+	/**
+	 * @return the number
+	 */
+	public int getNumber() {
+		return number;
+	}
+
+	/**
+	 * @param number the number to set
+	 */
+	public void setNumber(int number) {
+		this.number = number;
+	}
 
 	/**
 	 * @return the student1
@@ -62,6 +77,21 @@ public class FormAction extends ActionSupport {
 		this.student1 = student1;
 	}
 
+
+	/**
+	 * @return the student
+	 */
+	public Student getStudent() {
+		return student;
+	}
+
+
+	/**
+	 * @param student the student to set
+	 */
+	public void setStudent(Student student) {
+		this.student = student;
+	}
 
 
 	
