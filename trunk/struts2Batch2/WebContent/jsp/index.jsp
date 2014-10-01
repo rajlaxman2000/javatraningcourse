@@ -10,9 +10,9 @@
 <body>
 	<h1>Hello World From Struts2</h1>
 	
-	<form action="formRead">
-		<label for="name">Please enter your name</label><br /> 
-		<input type="text" name="name" />
+	<s:form action="formRead" method="post">	
+		
+		<s:textfield name="number" label="Number" />
 		<br/>
 		Enter Student Name :: <input type="text" name="student.name" />
 		<br/>
@@ -20,8 +20,9 @@
 		<br/>
 		Enter Student age :: <input type="text" name="student.age" />
 		<br/>
-		<input type="submit" value="Say Hello" />
-	</form>
+		<s:submit name="submit" label="Submit" align="center" />
+		
+	</s:form>
 	
 </body>
 </html>

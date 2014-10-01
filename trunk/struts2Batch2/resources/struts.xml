@@ -7,11 +7,25 @@
 	<constant name="struts.devMode" value="true" />	
 	
 	<package name="general" extends="struts-default">
+	
+		<interceptors>			
+			<interceptor-stack name="defaultInterStack">
+				<interceptor-ref name="customInterceptor"></interceptor-ref>				
+				<interceptor-ref name="params"/>	
+				<interceptor-ref name="timer" />		
+			</interceptor-stack>
+			<interceptor name="customInterceptor" class="com.struts.interceptors.CutsomInterceptor"/>		
+		</interceptors>
+		
+	
+		
 		<action name="index" class="com.struts.sample.SampleAction">
+		
 			<result>../jsp/index.jsp</result>
 		</action>
 		
-		<action name="formRead" class="com.struts.sample.FormAction">
+		<action name="formRead" class="com.struts.sample.FormAction" method="execute">
+			<interceptor-ref name="defaultInterStack"></interceptor-ref>					
 			<result name="success">../jsp/form_values.jsp</result>
 			<result name="faliure">../jsp/failure.jsp</result>
 		</action>
