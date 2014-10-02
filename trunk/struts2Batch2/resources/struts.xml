@@ -6,6 +6,21 @@
 
 	<constant name="struts.devMode" value="true" />	
 	
+	<constant name="struts.custom.i18n.resources" value="global" />
+	
+	<package name="local" extends="struts-default" >	
+		 <action name="login">
+			<result>login.jsp</result>
+	   	</action>
+	   	<action name="validateUser" class="com.struts.sample.LoginAction">
+			<result name="SUCCESS">welcome.jsp</result>
+			<result name="input">login.jsp</result>
+	    </action>
+	    <action name="locale" class="com.struts.sample.LocaleAction">
+			<result name="SUCCESS">login.jsp</result>
+	    </action>
+	   
+	</package>
 	<package name="general" extends="struts-default">
 	
 		<interceptors>			
@@ -31,7 +46,7 @@
 	
 	<package name="abc" extends="struts-default" >	
 		<action name="register" class="com.struts.action.RegisterAction" >
-			<result name="success">/welcome.jsp</result>
+			<result name="success">/welcome1.jsp</result>
 			<result name="input">/index.jsp</result>
 		</action>	
 	</package>

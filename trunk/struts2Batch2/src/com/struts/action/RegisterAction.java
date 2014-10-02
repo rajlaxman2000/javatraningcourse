@@ -51,8 +51,8 @@ public class RegisterAction extends ActionSupport {
 	
 	public boolean cutomValidate(){
 		
-		if()
+	
 			
-		return false;
+		return true;
 	}
 }
