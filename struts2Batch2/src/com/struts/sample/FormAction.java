@@ -1,31 +1,16 @@
 package com.struts.sample;
 
-import com.opensymphony.xwork2.Action;
 import com.opensymphony.xwork2.ActionSupport;
 import com.struts.dto.Student;
 
 public class FormAction extends ActionSupport {
 
-	private static final long serialVersionUID = 1L;	
-
-	private int number;
+	private static final long serialVersionUID = 1L;
 	
 	private Student student;
 	
 	private Student student1;
 	
-	/* (non-Javadoc)
-	 * @see com.opensymphony.xwork2.ActionSupport#validate()
-	 */
-	//Shift+alt+j
-	public void validate(){
-		
-		if(number<0){
-			addFieldError("number", "can't be negative");
-		}
-		
-		
-	}
 	
 	public String execute(){
 		
@@ -34,34 +19,12 @@ public class FormAction extends ActionSupport {
 		System.out.println("Student Name::"+student.getName());
 		System.out.println("Student Sno ::"+student.getSno());
 		System.out.println("Student Age::"+student.getAge());
-		/*
-		if(student.getAge()<0){
-			return "faliure";
-		}
-		*/
+
 		student1 = new Student("Raghu Kumar",200,31);
 		
 		return "success";
 	}
 	
-
-
-	
-
-	/**
-	 * @return the number
-	 */
-	public int getNumber() {
-		return number;
-	}
-
-	/**
-	 * @param number the number to set
-	 */
-	public void setNumber(int number) {
-		this.number = number;
-	}
-
 	/**
 	 * @return the student1
 	 */
