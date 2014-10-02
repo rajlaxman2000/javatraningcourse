@@ -16,35 +16,24 @@
 			</interceptor-stack>
 			<interceptor name="customInterceptor" class="com.struts.interceptors.CutsomInterceptor"/>		
 		</interceptors>
-		
-	
-		
-		<action name="index" class="com.struts.sample.SampleAction">
-		
+			
+		<action name="index" class="com.struts.sample.SampleAction">		
 			<result>../jsp/index.jsp</result>
 		</action>
 		
 		<action name="formRead" class="com.struts.sample.FormAction" method="execute">
-			<interceptor-ref name="defaultInterStack"></interceptor-ref>					
-			<result name="success">../jsp/form_values.jsp</result>
-			<result name="faliure">../jsp/failure.jsp</result>
+			<!-- <interceptor-ref name="defaultInterStack"></interceptor-ref>	 -->				
+			<result name="success">/jsp/form_values.jsp</result>
+			<result name="faliure">/jsp/failure.jsp</result>
 		</action>
 		
 	</package>
 	
-	<!-- 
-	http://localhost:8080/struts2Batch2/general/index
-	<package name="student" extends="struts-default">
-		<action name="add">
-			<result>../jsp/index.jsp</result>
-		</action>
-		<action name="edit">
-			<result>../jsp/index.jsp</result>
-		</action>
-		<action name="search">
-			<result>../jsp/index.jsp</result>
-		</action>
+	<package name="abc" extends="struts-default" >	
+		<action name="register" class="com.struts.action.RegisterAction" >
+			<result name="success">/welcome.jsp</result>
+			<result name="input">/index.jsp</result>
+		</action>	
 	</package>
- -->
 	
 </struts>

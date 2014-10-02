@@ -12,7 +12,7 @@
 	
 	<s:form action="formRead" method="post">	
 		
-		<s:textfield name="number" label="Number" />
+		
 		<br/>
 		Enter Student Name :: <input type="text" name="student.name" />
 		<br/>
@@ -20,7 +20,7 @@
 		<br/>
 		Enter Student age :: <input type="text" name="student.age" />
 		<br/>
-		<s:submit name="submit" label="Submit" align="center" />
+		<s:submit Value="Submit" align="center" />
 		
 	</s:form>
 	
