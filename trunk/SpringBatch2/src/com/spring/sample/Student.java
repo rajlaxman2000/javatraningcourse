@@ -8,24 +8,42 @@ public class Student {
 	
 	private int age;
 	
+	private Address address;
+	
 	public String toString(){
 		
-		return "SNO ::"+sno+"; Name::"+name+"; Age::"+age;
+		return "SNO ::"+sno+"; Name::"+name+"; Age::"+age+"\n"+address.toString();
 	}
 	
 	public Student(){
 		
 	}	
 
-	public Student(int sno, String name, int age) {		
+	public Student(int sno, String name, int age, Address address) {		
 		this.sno = sno;
 		this.name = name;
 		this.age = age;
+		this.address = address;
 	}
 
+	
 
 
 
+
+	/**
+	 * @return the address
+	 */
+	public Address getAddress() {
+		return address;
+	}
+
+	/**
+	 * @param address the address to set
+	 */
+	public void setAddress(Address address) {
+		this.address = address;
+	}
 
 	/**
 	 * @return the sno

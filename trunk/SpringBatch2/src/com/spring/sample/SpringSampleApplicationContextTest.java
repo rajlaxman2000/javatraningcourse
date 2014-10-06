@@ -15,7 +15,7 @@ public class SpringSampleApplicationContextTest {
 		
 		ApplicationContext context = new ClassPathXmlApplicationContext("spring-beans-sample.xml");
 		
-		Student student = (Student)context.getBean("std");
+		Student student = (Student)context.getBean("student");
 		
 		
 		System.out.println(student);
