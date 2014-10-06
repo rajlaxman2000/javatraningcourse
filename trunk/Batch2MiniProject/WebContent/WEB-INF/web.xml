@@ -9,32 +9,14 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
- <!--   <servlet>
-    <description>This servlet is for student sub menu</description>
-    <display-name>studentSubMenu</display-name>
-    <servlet-name>studentSubMenu</servlet-name>
-    <servlet-class>com.subMenu.studentSubMenu</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>studentSubMenu</servlet-name>
-    <url-pattern>/html/student_submenu</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>MainMenu</display-name>
-    <servlet-name>MainMenu</servlet-name>
-    <servlet-class>com.subMenu.MainMenu</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>MainMenu</servlet-name>
-    <url-pattern>/html/main_menu.html</url-pattern>
-  </servlet-mapping>
-  -->
+
   <!-- THIS IS ALL ABOUT THE MINI PROJECT NAVIGATION ONLYYYYYYYYYYYYYY -->
   
   <!-- ***************************************************************** -->
   <!-- Student Navigation -->
   <servlet>
+  <description>This servlet is directed to student menu html</description>
+  <display-name>StudentMenu</display-name>
   <servlet-name>StudentMenuServlet</servlet-name>
   <servlet-class>com.miniproject.navigation.StudentMenuServlet</servlet-class>
   </servlet>
@@ -46,7 +28,7 @@
   <description>This servlet retrieves the list of all the students in the database </description>
   <display-name>GetAllStudents</display-name>
   <servlet-name>GetAllStudents</servlet-name>
-  <servlet-class>com.student.submenu.GetAllStudents</servlet-class>
+  <servlet-class>com.navigation.student.GetAllStudents</servlet-class>
   </servlet>
   <servlet-mapping>
   <servlet-name>GetAllStudents</servlet-name>
