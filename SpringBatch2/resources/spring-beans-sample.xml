@@ -4,10 +4,19 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans 
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
     
-    <bean id="std" class="com.spring.sample.Student" >
+    <bean id="student" class="com.spring.sample.Student" >
    		<property name="sno" value="1"/>
     	<property name="name" value="Adithya"/>
     	<property name="age" value="30"/>
+    	<property name="address" ref="student.address"/>
+    </bean>
+    
+    <bean id="student.address" class="com.spring.sample.Address">
+    	<property name="drno" value="12-13-34"/>
+   		<property name="streetName" value="Miyapur"/>
+		<property name="cityName" value="Hyderabad"/>
+		<property name="state" value="Telangana"/>
+		<property name="country" value="India"/>
     </bean>
     
 </beans>
