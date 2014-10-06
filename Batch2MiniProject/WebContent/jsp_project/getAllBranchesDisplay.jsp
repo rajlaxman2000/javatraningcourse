@@ -20,7 +20,7 @@
 <a href="branchMenu" id="two">Branch</a>
 </div>
 <br/>
-<a href="getAllBranches">Get All Branch Details</a>This is Retreive All branch JSP file.
+<a href="getAllBranches">Get All Branch Details</a>This is Retrieve All branch JSP file.
 <%
 List<SchoolBranch> branches =new ArrayList<SchoolBranch>();
 branches = (List<SchoolBranch>)session.getAttribute("branchList");
