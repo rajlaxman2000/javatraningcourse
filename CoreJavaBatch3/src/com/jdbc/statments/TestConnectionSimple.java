@@ -1,7 +1,8 @@
-package com.java.jdbc.sample;
+package com.jdbc.statments;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -18,9 +19,9 @@ public class TestConnectionSimple {
 		/// user name = root, psd = ""
 		
 		
-		Connection connection	= null;
-		Statement statement 	= null;		
-		ResultSet rs			= null;;
+		Connection connection					= null;
+		PreparedStatement preparedStatement 	= null;		
+		ResultSet rs							= null;
 		
 		try {
 		
@@ -34,47 +35,27 @@ public class TestConnectionSimple {
 		
 		String PASS= "";
 		
-		String DB_Complete_URL =  DB_URL+"?user="+USER+"&password="+PASS;
 		
-		//jdbc:mysql://localhost/test?user=root&password=
-		System.out.println(DB_Complete_URL);
-		
-		Properties properties = new Properties();
-		// you can use put also
-		properties.setProperty("user", USER);
-		properties.setProperty("password", PASS);
 		
 		//Step3 :  Create connection from DriverManegr with connection url and username and pass word
 		
 		/*
 		 * This is to pass the url and user name and pass word individually
-		 * connection = DriverManager.getConnection(DB_URL, USER, PASS);
 		 */
-	
-		
-		/*
-		 * This is to pass every thing in single url
-		 * connection = DriverManager.getConnection(DB_Complete_URL);
-		 */
-		
-		/*
-		 * This is to create connection by using properties object
-		 */
-		connection = DriverManager.getConnection(DB_URL,properties);
-		
-		
-		
-		//Step4: Create statement from connection object to play with quaries
-		statement = connection.createStatement();
-		
-		
-		
+		connection = DriverManager.getConnection(DB_URL, USER, PASS);
 		
 		// Data base query
-		String sql = "SELECT id, name, age FROM employee";
+		String sql = "SELECT id, name, age FROM employee where id=? or name=?";
 		
+		//Step4: Create statement from connection object to play with quaries
+		preparedStatement =connection.prepareStatement(sql);	
+	
+			preparedStatement.setInt(1, 2);
+			preparedStatement.setString(2, "Harsha21");
+		
+				
 		//Step5: Execution the query
-		rs = statement.executeQuery(sql);
+		rs = preparedStatement.executeQuery();
 		
 
 	
@@ -107,7 +88,7 @@ public class TestConnectionSimple {
 			try {
 				// STEP 6: Clean-up environment
 				rs.close();
-				statement.close();
+				preparedStatement.close();
 				connection.close();
 				
 			} catch (SQLException e) {
