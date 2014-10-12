@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml version="1.0" encoding="UTF-8"?> 
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" 
 	"http://struts.apache.org/dtds/struts-2.0.dtd">
 	
 <struts>
 
-<!-- 	<constant name="struts.devMode" value="true" />	
+	<constant name="struts.devMode" value="true" />	
 	
 	<constant name="struts.custom.i18n.resources" value="global" />
 	
 	<package name="local" extends="struts-default" >	
-	<action name="register" class="com.struts.action.RegisterAction" >
-			<result name="success">/welcome1.jsp</result>
-			<result name="input">/index.jsp</result>
+	<action name="register" class="com.struts.student.StudentSubMenu" >
+			<!-- <result name="success">/welcome1.jsp</result>
+			<result name="input">/index.jsp</result> -->
 		</action>	
-	</package> -->
+	</package>
 	
 </struts>
