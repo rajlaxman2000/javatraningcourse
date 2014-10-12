@@ -3,6 +3,7 @@
     <wb-module deploy-name="Batch2MiniProject">
         <wb-resource deploy-path="/" source-path="/WebContent"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/resources"/>
         <property name="context-root" value="Batch2MiniProject"/>
         <property name="java-output-path" value="/Batch2MiniProject/build/classes"/>
     </wb-module>
