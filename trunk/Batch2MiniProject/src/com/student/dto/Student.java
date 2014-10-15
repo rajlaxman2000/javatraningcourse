@@ -1,17 +1,14 @@
 package com.student.dto;
-
-
-
-public class Student
-{
+public class Student{
+	
 		private int studentID;
 		private String studentName;
 		private int branchLoc;
-		private Student(){
-			 
+
+		public Student(){
+			
 		}
-//		public Student(){
-//		}
+		
 		public Student(String studentName, int branchLoc){
 			
 			this.studentName = studentName;
@@ -57,9 +54,6 @@ public class Student
 
 		public void setBranchLoc(int branchLoc) {
 			this.branchLoc = branchLoc;
-		}
-
-
-		
+		}		
 		
 }
