@@ -10,10 +10,11 @@
 <body>
 
 	<h1>Student details</h1>
-	<s:iterator value="students" status="student" >
-		<s:property value="student.studentID"/><br/>
-		<s:property value="student.studentName"/><br/>
-		<s:property value="student.branchLoc"/><br/>
+	
+	<s:iterator value="students">
+		<s:property value="studentID"/>
+		<s:property value="studentName"/>
+		<s:property value="branchLoc"/></br>
 	</s:iterator>
 </body>
 </html>

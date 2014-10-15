@@ -16,16 +16,15 @@ public class StudentAction extends ActionSupport {
 	private static final long serialVersionUID = 1L;
 	
 	private StudentService studentService;
-	List<Student> students =null;
+	private  List<Student> students =null;
 	
 	public StudentAction(){
 		studentService = new StudentServiceImpl();
 	}
 	
-	public String displayAllStudents(){
-		List<Student> students =null;
+	public String displayAllStudents(){		
 			students = studentService.getAllStudents();
-		
+			
 		if(students==null || students.size()<=0){
 			return "failure";
 		}
@@ -59,7 +58,7 @@ public class StudentAction extends ActionSupport {
 	public void setStudents(List<Student> students) {
 		this.students = students;
 	}
-	
+
 	
 
 }
