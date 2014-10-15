@@ -102,9 +102,9 @@ public class StudentDAOImpl extends Dbconnection implements StudentDAO {
 			}
 				
 		}catch (ClassNotFoundException e) {
-			// TODO: handle exception
+			e.printStackTrace();
 		}catch (SQLException se) {
-			// TODO: handle exception
+			se.printStackTrace();
 		}finally{
 			closeThings(statement,rs);
 		}	
