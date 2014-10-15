@@ -10,7 +10,7 @@
 <body>
 
 	<h1>Student details</h1>
-	<s:iterator status="student" value="students" >
+	<s:iterator value="students" status="student" >
 		<s:property value="student.studentID"/><br/>
 		<s:property value="student.studentName"/><br/>
 		<s:property value="student.branchLoc"/><br/>
