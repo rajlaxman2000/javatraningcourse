@@ -9,7 +9,22 @@
 	<constant name="struts.custom.i18n.resources" value="global" />
 	
 	<package name="local" extends="struts-default" >	
-	<action name="register" class="com.struts.student.StudentSubMenu" >
+		<action name="studentMenu">
+			<result>html_project/student_menu.html</result>
+		</action>
+		<action name="getAllStudentDetails" class="com.struts.actions.StudentAction" method="displayAllStudents">
+			<result name="success">strutsJsps/students_display.jsp</result>
+			<result name="failure" type="redirect">html_project/student_menu.html</result>
+		</action>
+		
+		<action name="parentMenu">
+			<result>html_project/parent_menu.html</result>
+		</action>
+		<action name="branchMenu">
+			<result>html_project/branch_menu.html</result>
+		</action>
+		
+		<action name="register" class="com.struts.student.StudentSubMenu" >
 			<!-- <result name="success">/welcome1.jsp</result>
 			<result name="input">/index.jsp</result> -->
 		</action>	
