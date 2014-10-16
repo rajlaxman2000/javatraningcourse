@@ -10,7 +10,8 @@ public abstract class GenericDAO {
 	
 	public static Connection connection	= null;
 	
-	private final static String DB_URL =  "jdbc:mysql://localhost/test";
+	//private final static String DB_URL =  "jdbc:mysql://localhost/test_batch3";
+	private final static String DB_URL =  "jdbc:mysql://localhost/test_batch3";
 	
 	private final static String USER = "root";
 	
