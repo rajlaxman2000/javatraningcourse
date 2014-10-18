@@ -8,7 +8,7 @@ import java.sql.Statement;
 
 import com.jdbc.framework.*;
 
-public class EmployeeStatmentTest extends GenericDAO {
+public class EmployeeTransactionSavePointTest extends GenericDAO {
 
 	/**
 	 * @param args
