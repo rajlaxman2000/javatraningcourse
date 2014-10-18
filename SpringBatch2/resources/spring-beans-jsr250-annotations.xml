@@ -7,15 +7,15 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context-3.0.xsd">
     
-    <bean id="shapeTest" class="com.spring.annotations.ShapeTest">
+    <bean id="shapeTest" class="com.spring.jsr250annotations.ShapeTest">
    		<!-- <property name="shape" ref="shape.circle"/>-->   	
     </bean>
     
-    <bean id="circle" class="com.spring.annotations.Circle">
+    <bean id="circle" class="com.spring.jsr250annotations.Circle">
     	<property name="side" value="10"/>
     </bean>
     
-     <bean id="square" class="com.spring.annotations.Square">
+     <bean id="square" class="com.spring.jsr250annotations.Square">
     	<property name="side" value="5"/>
     </bean>
     
