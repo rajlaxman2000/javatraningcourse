@@ -1,45 +1,26 @@
 package com.student.dto;
 
-import javax.persistence.Column;
-import javax.persistence.Embedded;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-
-
-@Entity
-@Table(name="student")
-public class Student {
+public class StudentOld {
 	
-	@Id
-	@GeneratedValue
-	@Column(name="id")
 	private int id;
 	
-	@Column(name="first_name")
 	private String firstName;
 	
-	@Column(name="last_name")
 	private String lastName;
 	
-	@Column(name="email_id")
 	private String emailId;
 	
-	@Column(name="phone_number")
 	private String phoneNumber;
 	
-	@Embedded
 	private Address address;
 	
 	
-	public Student(){
+	public StudentOld(){
 		
 	}
 
 
-	public Student(int id, String firstName, String lastName, String emailId, String phoneNumber, Address address) {
+	public StudentOld(int id, String firstName, String lastName, String emailId, String phoneNumber, Address address) {
 		
 		this.id = id;
 		this.firstName = firstName;

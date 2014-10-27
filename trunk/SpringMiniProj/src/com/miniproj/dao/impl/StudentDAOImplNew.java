@@ -5,7 +5,7 @@ import com.miniproj.controllers.AppException;
 import com.miniproj.dao.StudentDAO;
 import com.student.dto.Student;
 
-public class StudentDAOImpl implements StudentDAO {
+public class StudentDAOImplNew implements StudentDAO {
 	
 	
 	private HibernateTemplate hibernateTemplate;
