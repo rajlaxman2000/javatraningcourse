@@ -50,6 +50,7 @@ public class StudentServiceImpl implements StudentService {
 	}
 
 	@Override
+	@Transactional(propagation = Propagation.REQUIRED, readOnly = false)
 	public boolean deleteStudent(String studentId) throws AppException {
 		boolean res;
 		try{

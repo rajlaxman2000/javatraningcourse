@@ -1,31 +1,22 @@
 package com.student.dto;
 
-import javax.persistence.Column;
-import javax.persistence.Embeddable;
-
-@Embeddable
-public class Address {
+public class AddressOld {
 	
-	@Column(name="dr_no")
 	private String drNo;
 	
-	@Column(name="street_name")
 	private String street;
 	
-	@Column(name="city_name")
 	private String city;
 	
-	@Column(name="state_name")
 	private String state;
 	
-	@Column(name="country")
 	private String country;
 	
-	public Address(){
+	public AddressOld(){
 		
 	}
 
-	public Address(String drNo, String street, String city, String state,String country) {
+	public AddressOld(String drNo, String street, String city, String state,String country) {
 	
 		this.drNo = drNo;
 		this.street = street;
