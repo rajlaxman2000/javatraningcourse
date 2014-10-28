@@ -8,10 +8,17 @@
 		<property name="hibernate.connection.username">root</property>
 		<property name="hibernate.connection.password"></property>	
 		
-		<!--  It will show the quaries in console -->	
+		<!--  It will show the quaries in console -->
 		<property name="show_sql">true</property> 
-		
+		 
+		 
 		<property name="hbm2ddl.auto">update</property>
+		
+		
+		<mapping resource="EmployeeOne2Many.hbm.xml" />
+		
+		
+		
 		
 		<!-- Second level cache 
 		<property name="hbm2ddl.auto">create</property>
@@ -20,7 +27,7 @@
 		<property name="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</property>
 		-->
 		
-		<mapping resource="Employee.hbm.xml" />
+		
 		
 		<!-- List of XML mapping files  
 		
