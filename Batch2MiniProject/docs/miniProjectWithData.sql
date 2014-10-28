@@ -1,8 +1,8 @@
-CREATE DATABASE  IF NOT EXISTS `test` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `test`;
+CREATE DATABASE  IF NOT EXISTS `test_batch2_mini_proj` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `test_batch2_mini_proj`;
 -- MySQL dump 10.13  Distrib 5.6.17, for Win32 (x86)
 --
--- Host: 127.0.0.1    Database: test
+-- Host: 127.0.0.1    Database: test_batch2_mini_proj
 -- ------------------------------------------------------
 -- Server version	5.6.20
 

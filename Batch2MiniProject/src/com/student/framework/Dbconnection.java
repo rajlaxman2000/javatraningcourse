@@ -11,7 +11,7 @@ public abstract class Dbconnection {
 	
 	public static Connection connection	= null;
 	
-	private final static String DB_URL =  "jdbc:mysql://localhost/test";
+	private final static String DB_URL =  "jdbc:mysql://localhost/test_batch2_mini_proj";
 	
 	private final static String USER = "root";
 	
