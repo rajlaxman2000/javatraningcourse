@@ -13,6 +13,9 @@ public class EmployeeDisplayTest {
 		ApplicationContext applicationContext = new  ClassPathXmlApplicationContext("spring-beans-empdisplay.xml");
 		
 			EmployeeDisplay empDisplay = 	(EmployeeDisplay)applicationContext.getBean("employeeDisplay");
+			
+			EmployeeDisplay empDisplay1 = 	(EmployeeDisplay)applicationContext.getBean("employeeDisplay");
+			
 				empDisplay.process();
 				
 				
