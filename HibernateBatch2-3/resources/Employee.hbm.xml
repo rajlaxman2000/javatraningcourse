@@ -4,8 +4,9 @@
 <hibernate-mapping>
 
 	<!-- sample mapping -->
-	<class name="com.hibernate.sample.Employee" table="Employee">
+	<class name="com.hibernate.caching.Employee" table="Employee">
 		<meta attribute="class-description"> This class contains the employee detail.</meta>
+		<cache usage="read-only"/>		
 		<id name="id" type="int" column="id">
 			<generator class="native" />
 		</id>	
