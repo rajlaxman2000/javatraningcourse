@@ -14,10 +14,14 @@
 		 
 		<property name="hbm2ddl.auto">update</property>
 		
-		<!-- 
-		<mapping resource="EmployeeOne2Many.hbm.xml" /> -->
-			<mapping resource="EmployeeMany2Many.hbm.xml"/>
 		
+		<mapping resource="EmployeeOne2One.hbm.xml"/>
+		
+		<!-- 
+			<mapping resource="EmployeeOne2Many.hbm.xml" /> 
+			<mapping resource="EmployeeMany2Many.hbm.xml"/>
+			<mapping resource="EmployeeMany2ONe.hbm.xml"/>
+		-->
 		
 		
 		<!-- Second level cache 
