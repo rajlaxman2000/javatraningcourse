@@ -1,37 +1,16 @@
-package com.hibernate.annotation;
+package com.hibernate.batchprocessing;
 
-import javax.persistence.Cacheable;
-import javax.persistence.Column;
-import javax.persistence.Embedded;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table(name="Employee")
-@Cacheable
 public class Employee {
 	
 	private static final long serialVersionUID = 1L;
 
-	@Id
-	@Column(name="id")
-	@GeneratedValue
 	private int id;
 	
-	@Column(name="first_name")
 	private  String firstName;
 	
-	@Column(name="last_name")
 	private String lastName;
 	
-	@Column(name="salary")
 	private int salary;
-	
-	@Embedded
-	private EmpSalary empSalary;
-	
 	
 	public Employee(){
 	}
@@ -107,20 +86,5 @@ public class Employee {
 	public void setSalary(int salary) {
 		this.salary = salary;
 	}
-
-	/**
-	 * @return the empSalary
-	 */
-	public EmpSalary getEmpSalary() {
-		return empSalary;
-	}
-
-	/**
-	 * @param empSalary the empSalary to set
-	 */
-	public void setEmpSalary(EmpSalary empSalary) {
-		this.empSalary = empSalary;
-	}
-
 	
 }
