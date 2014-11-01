@@ -16,10 +16,12 @@
 		<property name="hibernate.cache.use_second_level_cache">true</property> 	
 		<property name="hibernate.cache.use_query_cache">true</property>	
 		<property name="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</property>
+		<property name="hibernate.jdbc.batch_size">100</property>
 		
-		
+		<mapping resource="EmployeeBatchProcessing.hbm.xml"/>
+		<!-- 
 		<mapping class="com.hibernate.annotation.Employee"/>
-				
+			 -->	
 		<!-- 
 			<mapping resource="EmployeeOne2Many.hbm.xml" /> 
 			<mapping resource="EmployeeMany2Many.hbm.xml"/>
