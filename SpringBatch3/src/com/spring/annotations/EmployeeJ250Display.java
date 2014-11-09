@@ -1,16 +1,22 @@
-package com.spring.autowire;
+package com.spring.annotations;
 
-public class EmployeeDisplay {
+import javax.annotation.Resource;
+
+public class EmployeeJ250Display {
 	
+	
+	@Resource(name="employee1")
 	private Employee emp1;
 	
+	@Resource(name="emp2")
 	private Employee emp2;
 	
+	@Resource(name="student")
 	private Student student;
 	
 	
 	
-	public EmployeeDisplay(){
+	public EmployeeJ250Display(){
 		
 	}
 	
@@ -19,7 +25,7 @@ public class EmployeeDisplay {
 		System.out.println("Employee 1 Details :: \n");
 			System.out.println(emp1);
 		System.out.println("Employee 2 Details :: \n");
-			//System.out.println(emp2);
+			System.out.println(emp2);
 			
 		System.out.println("Student Details :: \n");
 			System.out.println(student);
@@ -48,7 +54,7 @@ public class EmployeeDisplay {
 
 	/**
 	 * @param emp2 the emp2 to set
-	 */
+	 */		
 	public void setEmp2(Employee emp2) {
 		this.emp2 = emp2;
 	}
