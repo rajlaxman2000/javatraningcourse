@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd" default-init-method="initMethod" default-destroy-method="destroyMethod">
+	
+	<bean id="employeeDisplay" class="com.spring.autowire.EmployeeDisplay" autowire="byName">
+		<!-- property name="emp1" ref="emp1"/>
+		<property name="emp2" ref="emp2"/>
+		<property name="student" ref="student"/>-->
+	</bean>
+	
+	<bean id="emp1" class="com.spring.autowire.Employee">
+		<property name="id" value="10"/>
+		<property name="name" value="RajeshReddy"/>
+		<property name="age" value="30"/>
+	</bean>
+   
+   	<bean id="emp2" class="com.spring.autowire.Employee">
+		<property name="id" value="22"/>
+		<property name="name" value="Raghu Kumar"/>
+		<property name="age" value="31"/>
+	</bean>
+	
+    <bean id="student" class="com.spring.autowire.Student" >
+    	<property name="id" value="101"/>
+		<property name="name" value="RajeshReddy"/>
+    </bean>
+    
+</beans>
