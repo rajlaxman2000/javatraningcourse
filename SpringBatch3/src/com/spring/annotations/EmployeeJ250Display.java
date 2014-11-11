@@ -2,9 +2,15 @@ package com.spring.annotations;
 
 import javax.annotation.Resource;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
 public class EmployeeJ250Display {
 	
-	
+	/*
+	@Autowired
+	@Qualifier("employee1")
+	 */
 	@Resource(name="employee1")
 	private Employee emp1;
 	

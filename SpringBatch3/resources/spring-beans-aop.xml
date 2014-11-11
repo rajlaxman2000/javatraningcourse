@@ -16,7 +16,7 @@
 	<bean id="student.bean" class="com.spring.aop.normal.StudentBean">
 		<property name="id" value="101" />
 		<property name="name" value="Raghu" />
-		<property name="age" value="-15" />
+		<property name="age" value="5" />
 		<property name="dob">
 			<bean factory-bean="dateFormat" factory-method="parse">
 				<constructor-arg value="2014-07-31" />
@@ -34,17 +34,19 @@
 	<bean id="logging" class="com.spring.aop.normal.Logging" />
 	
 	<aop:config>
+	
 		<aop:aspect id="log" ref="logging">
 	
 			<aop:pointcut id="serviceCall" expression="execution(* com.spring.aop.normal.SpringAOPService.*(..))" />		
 			 
-			<aop:after-throwing pointcut-ref="serviceCall" throwing="ex" method="AfterThrowingAdvice"/> 
+			<aop:after-throwing pointcut-ref="serviceCall" throwing="ex" method="AfterThrowingAdvice"/>
 			
 			<!-- 
 			<aop:before pointcut-ref="serviceCall" method="beforeAdvice" /> 
 			<aop:after pointcut-ref="serviceCall" method="afterAdvice" />	
 			<aop:around pointcut-ref="serviceCall" method="aroundMethod" />
 			<aop:after-returning pointcut-ref="serviceCall" returning="retVal" method="afterReturningAdvice"/> 
+			<aop:after-throwing pointcut-ref="serviceCall" throwing="ex" method="AfterThrowingAdvice"/> 
 			-->	
 				
 				

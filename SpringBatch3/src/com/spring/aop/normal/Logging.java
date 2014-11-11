@@ -25,9 +25,9 @@ public class Logging {
 	 * method execution.
 	 */
 	public void aroundMethod(ProceedingJoinPoint joinPoint) throws Throwable {
-		System.out.println("This logger method is being called before method starts");
+		System.out.println("********** This logger method is being called before method starts ***********");
 		joinPoint.proceed();	
-		System.out.println("This logger method called after method starts");
+		System.out.println("********** This logger method called after method Ends *****************");
 	}
 	
 
@@ -36,13 +36,15 @@ public class Logging {
 	 * returns.
 	*/
 	public void afterReturningAdvice(Object retVal) {
-		System.out.println("Printing the value which is returned from method:" + retVal.toString());
+		if(retVal!=null){
+			System.out.println("Printing the value which is returned from method:" + retVal.toString());
+		}
 	} 
 	/**
 	 * * This is the method which I would like to execute * if there is an
 	 * exception raised.
 	 */
-	public void AfterThrowingAdvice(IllegalArgumentException ex) {
+	public void AfterThrowingAdvice(Exception ex) {
 		System.out.println("There has been an exception: " + ex.toString());
 	}
 

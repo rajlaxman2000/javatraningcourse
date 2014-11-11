@@ -12,7 +12,7 @@ public class SpringAOPService {
 		this.studentBean = studentBean;
 	}
 	
-	/*	
+	/*
 	public String startProcess(){		
 		
 		System.out.println("Student details below ::");
@@ -22,12 +22,22 @@ public class SpringAOPService {
 	}
 	*/
 	
+	/*
+	public void startProcess(){		
+		
+		System.out.println("Student details below ::");
+		System.out.println("ID ::" + studentBean.getId() +"\n Name ::"+ studentBean.getName() + "\n Age ::" + 
+				studentBean.getAge() + "\n DOB ::"+ studentBean.getDob());	
+	}
+	*/
+	
+	
 	public void startProcess() throws Exception{
 		System.out.println("Student details below ::");
 		System.out.println("ID ::" + studentBean.getId() +"\n Name ::"+ studentBean.getName() + "\n Age ::" + 
 				studentBean.getAge() + "\n DOB ::"+ studentBean.getDob());
 		if(Integer.valueOf(studentBean.getAge())<0){
-			throw (new Exception("This is done intentionally"));
+			throw (new Exception("This excedption arised bcz age is negative"));
 		}else{
 			this.method2();
 		}
