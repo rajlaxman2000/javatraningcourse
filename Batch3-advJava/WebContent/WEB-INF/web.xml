@@ -24,4 +24,51 @@
   	<url-pattern>/formAction</url-pattern>  	
   </servlet-mapping>
   
+  
+  <servlet>
+  	<description>Servlet to to Handle all the error related requests</description>
+  	<display-name>ErrorServlet</display-name>
+  	<servlet-name>ErrorHandleServlet</servlet-name>
+  	<servlet-class>com.servlet.error.ErrorHandleServlet</servlet-class>
+  </servlet>
+  
+  	<!-- servlet mappings -->
+	<servlet-mapping>
+		<servlet-name>ErrorHandleServlet</servlet-name>
+		<url-pattern>/ErrorHandler</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- error-code related error pages -->
+	<error-page>
+		<error-code>404</error-code>
+		<location>/ErrorHandler</location>
+	</error-page>
+	<error-page>
+		<error-code>403</error-code>
+		<location>/ErrorHandler</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/ErrorHandler</location>
+	</error-page>
+
+	<!-- 
+	<error-page>
+		<error-code>500</error-code>
+		<location>/error.jsp</location>
+	</error-page>
+   -->
+  <servlet>
+	<description></description>
+	<display-name>ErrorTest</display-name>
+	<servlet-name>ErrorTest</servlet-name>
+	<servlet-class>com.servlet.error.ErrorTest</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+	<servlet-name>ErrorTest</servlet-name>
+	<url-pattern>/error</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
