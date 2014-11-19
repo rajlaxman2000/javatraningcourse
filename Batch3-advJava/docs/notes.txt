@@ -1,0 +1,4 @@
+Scripting elements/tags : 
+	Script tag : <% %>
+	Expression : <%= %> 
+	
